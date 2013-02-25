@@ -1,0 +1,21 @@
+<div class="image-tile">
+	<div class="image">
+		<%= link_to(image_tag(image.url), image_path(image)) %>
+	</div>
+
+	<div class="image-footer">
+		<div class="image-car">
+			<% unless image.cartaggings.empty? %>
+				<h2>
+					<%= image.cartaggings.first.car.year %>
+					<%= image.cartaggings.first.car.mfg %>
+					<%= image.cartaggings.first.car.model %>
+					<%= image.cartaggings.first.car.official_color %>
+				</h2>
+			<% end %>
+		</div>
+
+	</div>
+
+
+</div>

@@ -14,3 +14,79 @@
 
 @import "bootstrap";
 @import "bootstrap-styles";
+
+.image-tile {
+	width: 300px;
+	height: 325px;
+	float: left;
+	margin: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.image-tile:hover {
+	padding-top: 0;
+	padding-bottom: 0;
+	border-top: solid 2px red;
+	border-bottom: solid 2px red;
+}
+
+
+body {
+	background: image-url("escheresque.png");
+	padding-top: 60px;
+}
+
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 2em;
+	color: #fff;
+	letter-spacing: 1px;
+	padding-top: 7px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+#logo:hover {
+	text-decoration: none;
+}
+
+.simple_form .form-horizontal {
+	width: 500px;
+}
+
+h2 {
+	clear:both;
+}
+
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

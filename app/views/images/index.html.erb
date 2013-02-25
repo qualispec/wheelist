@@ -1,0 +1,170 @@
+<div>
+	<%= simple_form_for(@image, :url => search_images_path, :method => :get, 
+											html: { class: 'form-horizontal' }) do |f| %>
+
+		<%= f.simple_fields_for :cartaggings do |cartagging| %>
+
+			<% cars = Car.all.map { |car| ["#{car.year} #{car.mfg} #{car.model}
+															#{car.official_color} - #{car.id} ",
+															car.id] } %>
+			<%= cartagging.input :car_id, collection: cars.sort %>
+		<% end %>
+
+<!-- 		<p>Car Tags:</p>
+
+		<div class="cartag-dropdown">
+			<input id="cartag-input" type="text">
+			<ul class="dropdown-list"></ul>
+		</div>
+
+		<div class="cartag-dropdown">
+			<input id="carcolortag-input" type="text">
+			<ul class="carcolor-dropdown-list"></ul>
+		</div>
+
+		<div class="chosen-cartag">
+		</div> -->
+
+		<%= f.submit "Search", class: "btn btn-primary btn-small" %>
+	<% end %>
+
+</div>
+
+<% unless @images.empty? %>
+	<%= render @images %>
+<% else %>
+	<h1>Sorry, no matches found.</h1>
+<% end %>
+
+<script>
+
+	$(function() {
+
+		$.get("/cars.json", function(data) {
+			console.log(data);
+
+			carMfg = [];
+			carModel = [];
+			carColor = [];
+
+			$.each(data, function() {
+				carMfg.push(this.mfg);
+				carModel.push(this.model);
+				carColor.push(this.official_color);
+			})
+			console.log(carMfg);
+			console.log(carModel);
+			console.log(carColor);
+			cartags = data;
+		});
+
+		$('#cartag-input').focus(function(event) {
+			$('.dropdown-list').empty().show();
+
+			// $.each(cartags, function() {
+			// 	$('.dropdown-list').append('<li data-tag-id="' + this.id + '">' + this.year + ' ' + this.mfg + ' ' + this.model + ' ' +
+   //        this.official_color + '</li>' )
+			// })
+			$.each(modifiedCarList, function() {
+				$('.dropdown-list').append('<li>' + this + '</li>')
+			})
+		});
+
+		$('#cartag-input').blur(function(event) {
+			window.setTimeout(function() {
+				$('.dropdown-list').hide();
+			}, 200);
+		});
+
+		$('#cartag-input').keyup(autoCompleteHandler);
+
+		function autoCompleteHandler(event) {
+			string = $(this).val().toLowerCase();
+
+			$('.dropdown-list').empty();
+
+			for(var i in cartags) {
+				if (cartags[i].mfg.toLowerCase().match(string)) {
+					$('.dropdown-list').append(
+						$('<li data-tag-id="' + cartags[i].id + '">' + cartags[i].year + ' ' + cartags[i].mfg + ' ' + cartags[i].model + ' ' + 
+							cartags[i].official_color + '</li>')
+							// .addClass("listOption")
+					)
+				};
+			}
+		};
+			
+		$('.dropdown-list').on('click', 'li', function() {
+			console.log(this);
+			console.log($(this).text());
+			console.log($(this).attr('data-tag-id'));
+
+			$('#cartag-input').val($(this).text());
+
+			$('.chosen-cartag').append($(this).text() + " ");
+
+
+		});
+
+		$('.carcolor-dropdown-list').on('click', 'li', function() {
+			console.log(this);
+			console.log($(this).text());
+
+			$('#carcolortag-input').val($(this).text());
+
+			$('.dropdown-list').empty();
+
+			modifiedCarList = [];
+			for(var i in cartags) {
+				if (cartags[i].official_color == $(this).text()) {
+					$('.dropdown-list').append('<li>' + cartags[i].mfg + ' ' +
+						cartags[i].model + ' ' + cartags[i].official_color + '</li>' )
+						.hide();
+					modifiedCarList.push(cartags[i].mfg + ' ' +
+						cartags[i].model + ' ' + cartags[i].official_color)
+					console.log('found a color match');
+
+				}
+			};
+				console.log(modifiedCarList);
+		});
+
+
+		$('#carcolortag-input').focus(function(event) {
+			$('.carcolor-dropdown-list').empty().show();
+
+			$.each(carColor, function() {
+				$('.carcolor-dropdown-list').append('<li>' + this + '</li>' )
+			})
+		});
+
+		$('#carcolortag-input').blur(function(event) {
+			window.setTimeout(function() {
+				$('.carcolor-dropdown-list').hide();
+			}, 200);
+		});
+
+		$('#carcolortag-input').keyup(colorAutoCompleteHandler);
+
+		function colorAutoCompleteHandler(event) {
+			string = $(this).val().toLowerCase();
+
+			$('.carcolor-dropdown-list').empty();
+
+			for(var i in carColor) {
+				if (carColor[i].toLowerCase().match(string)) {
+					$('.carcolor-dropdown-list').append(
+						$('<li>' + carColor[i] + '</li>')
+							// .addClass("listOption")
+					)
+				};
+			}
+		};
+
+
+
+
+
+	});
+
+</script>

@@ -1,0 +1,49 @@
+<h1>Link an image</h1>
+
+<div>
+	<%= simple_form_for(@image, html: { class: "form-horizontal" } ) do |f| %>
+		<%= f.input :url, label: "URL" %>
+		<%= f.input :caption, label: "Caption" %>
+
+		<%= f.simple_fields_for :cartaggings do |cartagging| %>
+
+			<% cars = Car.all.map { |car| ["#{car.year} #{car.mfg} #{car.model}
+															#{car.official_color} - #{car.id}", car.id] } %>
+			<%= cartagging.input :car_id, collection: cars.sort %>
+		<% end %>
+
+		<%= f.simple_fields_for :wheeltaggings do |wheeltagging| %>
+
+			<% wheels = Wheel.all.map { |wheel| ["#{wheel.mfg} #{wheel.model} 
+																#{wheel.diameter} #{wheel.width} #{wheel.color} 
+																- #{wheel.id}", wheel.id] } %>
+			<%= wheeltagging.input :wheel_id, collection: wheels.sort %>
+		<% end %>
+
+		<%= f.submit "Link it!", class: "btn btn-primary btn-small" %>
+
+	<% end %>
+
+	<div class="image-preview">
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	
+	$(function() {
+
+		$('#image_url').blur(function() {
+			$('.image-preview').empty()
+			.append('<img src="' + $(this).val() + '">')
+			console.log('blur occurred');
+		});
+
+
+
+
+	})
+
+</script>
+
+
