@@ -5,6 +5,7 @@ class Image < ActiveRecord::Base
   # validates :caption, presence: true
 
   belongs_to :user
+  has_many :image_likes
   has_many :car_tags
   has_many :wheel_tags
   # has_many :wheels, through: :wheeltaggings

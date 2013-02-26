@@ -10,6 +10,10 @@ Wheelist::Application.routes.draw do
   	collection do
   		get 'search'
   	end
+
+    member do
+      post 'like'
+    end
   end
 
 

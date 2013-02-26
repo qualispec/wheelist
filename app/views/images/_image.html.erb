@@ -6,16 +6,26 @@
 	<div class="image-footer">
 		<div class="image-car">
 			<% unless image.car_tags.empty? %>
-				<h3>
+				<h4>
 					<%= image.car_tags.first.car_model.car_mfg.mfg %>
-					<%= image.car_tags.first.car_model.model %>
-					<%= image.car_tags.first.car_color.color %>
+					<%= image.car_tags.first.car_model.model %><br>
+					<%= image.car_tags.first.car_color.color %><br>
 					<%= image.user.user_name %>
-				</h3>
+				</h4>
 			<% end %>
 		</div>
-
+		<div class="image-timestamp muted">
+      <em><small><%= time_ago_in_words(image.created_at) %> ago</small></em>
+    </div>
+    <div class="image-like">
+      <div class="like-button">
+        <%= link_to raw("<i class=\"icon-wrench icon-white\"></i> Like"),
+          like_image_path(image),
+          id: "like_image_#{image.id}",
+          class: 'btn btn-primary btn-small',
+          method: :post %>
+      </div>
+      <div class="like-count"><%= image.image_likes.count %></div>
+    </div>
 	</div>
-
-
 </div>

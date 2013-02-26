@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
  	validates :password_confirmation, presence: true
 
  	has_many :images
+ 	has_many :image_likes
  	has_many :wheeltaggings
  	has_many :cartaggings
 
