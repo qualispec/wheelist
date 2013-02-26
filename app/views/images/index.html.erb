@@ -15,10 +15,35 @@
 
 			<%= car_tag.input :car_model_id, collection: car_models.sort %>
 
-			<% car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} 						- #{car_color.color } - #{car_color.id}", car_color.id] } %>
+			<% car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} - #{car_color.color } - #{car_color.id}", car_color.id] } %>
 
 			<%= car_tag.input :car_color_id, collection: car_colors.sort %>
 		
+		<% end %>
+
+		<%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
+
+			<% wheel_models = WheelModel.all.map { |wheel_model| ["#{wheel_model.model} 
+					- #{wheel_model.id}", wheel_model.id] } %>
+			
+			<%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
+
+			<% wheel_sizes = WheelSize.all.map { |wheel_size| ["#{wheel_size.diameter}
+					x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
+
+			<%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
+
+			<% wheel_offsets = WheelOffset.all.map { |wheel_offset|  
+					["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
+
+			<%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
+
+			<% wheel_colors = WheelColor.all.map { |wheel_color| 
+				["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
+					wheel_color.id] } %>
+
+			<%= wheel_tag.input :wheel_color_id, collection: wheel_colors.sort %>
+
 		<% end %>
 
 <!-- 		<p>Car Tags:</p>
