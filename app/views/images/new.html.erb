@@ -5,19 +5,46 @@
 		<%= f.input :url, label: "URL" %>
 		<%= f.input :caption, label: "Caption" %>
 
-		<%= f.simple_fields_for :cartaggings do |cartagging| %>
+		<%= f.simple_fields_for :car_tags do |car_tag| %>
 
-			<% cars = Car.all.map { |car| ["#{car.year} #{car.mfg} #{car.model}
-															#{car.official_color} - #{car.id}", car.id] } %>
-			<%= cartagging.input :car_id, collection: cars.sort %>
+			<% car_mfgs = CarMfg.all.map { |car_mfg| ["#{car_mfg.mfg}",
+																									 car_mfg.id] } %>
+
+			<%#= car_tag.input :car_mfg_id, collection: car_mfgs.sort %>
+
+			<% car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
+
+			<%= car_tag.input :car_model_id, collection: car_models.sort %>
+
+			<% car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} - #{car_color.color } - #{car_color.id}", car_color.id] } %>
+
+			<%= car_tag.input :car_color_id, collection: car_colors.sort %>
+
 		<% end %>
 
-		<%= f.simple_fields_for :wheeltaggings do |wheeltagging| %>
+		<%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
 
-			<% wheels = Wheel.all.map { |wheel| ["#{wheel.mfg} #{wheel.model} 
-																#{wheel.diameter} #{wheel.width} #{wheel.color} 
-																- #{wheel.id}", wheel.id] } %>
-			<%= wheeltagging.input :wheel_id, collection: wheels.sort %>
+			<% wheel_models = WheelModel.all.map { |wheel_model| 
+					["#{wheel_model.model} - #{wheel_model.id}", wheel_model.id] } %>
+
+			<%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
+
+			<% wheel_sizes = WheelSize.all.map { |wheel_size| 
+					["#{wheel_size.diameter} x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
+
+			<%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
+
+			<% wheel_offsets = WheelOffset.all.map { |wheel_offset| 
+					["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
+
+			<%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
+
+			<% wheel_colors = WheelColor.all.map { |wheel_color| 
+					["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
+						wheel_color.id] } %>
+
+			<%= wheel_tag.input :wheel_color_id, collection: wheel_colors.sort %>
+
 		<% end %>
 
 		<%= f.submit "Link it!", class: "btn btn-primary btn-small" %>
@@ -45,5 +72,4 @@
 	})
 
 </script>
-
 

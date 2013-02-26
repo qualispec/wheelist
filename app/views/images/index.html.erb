@@ -2,12 +2,23 @@
 	<%= simple_form_for(@image, :url => search_images_path, :method => :get, 
 											html: { class: 'form-horizontal' }) do |f| %>
 
-		<%= f.simple_fields_for :cartaggings do |cartagging| %>
 
-			<% cars = Car.all.map { |car| ["#{car.year} #{car.mfg} #{car.model}
-															#{car.official_color} - #{car.id} ",
-															car.id] } %>
-			<%= cartagging.input :car_id, collection: cars.sort %>
+		<%= f.simple_fields_for :car_tags do |car_tag| %>
+
+			<% car_mfgs = CarMfg.all.map { |car_mfg| ["#{car_mfg.mfg}
+																			- #{car_mfg.id}", car_mfg.id] } %>
+
+			<%#= f.input :car_mfg_id, collection: car_mfgs.sort, input_html:
+			{ name: "anything" } %> 
+
+			<% car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
+
+			<%= car_tag.input :car_model_id, collection: car_models.sort %>
+
+			<% car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} 						- #{car_color.color } - #{car_color.id}", car_color.id] } %>
+
+			<%= car_tag.input :car_color_id, collection: car_colors.sort %>
+		
 		<% end %>
 
 <!-- 		<p>Car Tags:</p>

@@ -5,13 +5,13 @@
 
 	<div class="image-footer">
 		<div class="image-car">
-			<% unless image.cartaggings.empty? %>
-				<h2>
-					<%= image.cartaggings.first.car.year %>
-					<%= image.cartaggings.first.car.mfg %>
-					<%= image.cartaggings.first.car.model %>
-					<%= image.cartaggings.first.car.official_color %>
-				</h2>
+			<% unless image.car_tags.empty? %>
+				<h3>
+					<%= image.car_tags.first.car_model.car_mfg.mfg %>
+					<%= image.car_tags.first.car_model.model %>
+					<%= image.car_tags.first.car_color.color %>
+					<%= image.user.user_name %>
+				</h3>
 			<% end %>
 		</div>
 

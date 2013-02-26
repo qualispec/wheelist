@@ -2,8 +2,8 @@ class ImagesController < ApplicationController
 
 	def new
 		@image = Image.new
-		@image.cartaggings.build
-		@image.wheeltaggings.build
+		@image.car_tags.build
+		@image.wheel_tags.build
 	end
 
 	def create
@@ -20,7 +20,7 @@ class ImagesController < ApplicationController
 
 	def index
 		@image = Image.new
-		@image.cartaggings.build
+		@image.car_tags.build
 		# @image.wheeltaggings.build
 
 		@images = Image.all
@@ -35,10 +35,25 @@ class ImagesController < ApplicationController
 
 		@image = Image.new
 
-		car_id = params[:image][:cartaggings_attributes]["0"][:car_id]
+		car_model_id = params[:image][:car_tags_attributes]["0"][:car_model_id]
+		car_color_id = params[:image][:car_tags_attributes]["0"][:car_color_id]
 
-		@image.cartaggings.build(car_id: car_id)
-		@images = Image.joins(:cartaggings).where('car_id = ?', car_id).all
+	  @image.car_tags.build(car_model_id: car_model_id, car_color_id: car_color_id)
+
+	  if car_model_id.present? && car_color_id.present?
+	  	@images = Image.joins(:car_tags)
+									 .where(car_tags: { car_model_id: car_model_id, 
+									 										car_color_id: car_color_id })
+									 .all
+		elsif car_model_id.present?
+			@images = Image.joins(:car_tags)
+									 .where(car_tags: { car_model_id: car_model_id })
+									 .all
+		else
+			@images = Image.joins(:car_tags)
+									 .where(car_tags: { car_color_id: car_color_id })
+									 .all
+		end
 
 		render 'index'
 	end

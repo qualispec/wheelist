@@ -1,19 +1,12 @@
 <h1><%= @image.caption %></h1>
 
-<% unless @image.cartaggings.empty? %>
-	<h2><%= @image.cartaggings.first.car.mfg %>
-			<%= @image.cartaggings.first.car.model %></h2>
+<% unless @image.car_tags.empty? %>
+	<h2><%= @image.car_tags.first.car_model.car_mfg.mfg %>
+			<%= @image.car_tags.first.car_model.model %>
+			<%= @image.car_tags.first.car_color.color %>
+	</h2>
 <% end %>
 
-<% unless @image.wheeltaggings.empty? %>
-	<ul><%= @image.wheeltaggings.first.wheel.mfg %>
-			<%= @image.wheeltaggings.first.wheel.model %>
-		<li><%= @image.wheeltaggings.first.wheel.diameter %> x
-				<%= @image.wheeltaggings.first.wheel.width %></li>
-		<li><%= @image.wheeltaggings.first.wheel.offset %> offset</li>
-	</ul>
 
-
-<% end %>
 
 <%= image_tag(@image.url) %>

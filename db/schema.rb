@@ -11,7 +11,44 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223070131) do
+ActiveRecord::Schema.define(:version => 20130226065910) do
+
+  create_table "car_color_options", :force => true do |t|
+    t.integer  "car_model_id"
+    t.integer  "car_color_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "car_colors", :force => true do |t|
+    t.string   "color"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "paint_name"
+  end
+
+  create_table "car_mfgs", :force => true do |t|
+    t.string   "mfg"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "car_models", :force => true do |t|
+    t.string   "model"
+    t.integer  "car_mfg_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "year"
+  end
+
+  create_table "car_tags", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "image_id"
+    t.integer  "car_model_id"
+    t.integer  "car_color_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "cars", :force => true do |t|
     t.string   "mfg"
@@ -44,6 +81,71 @@ ActiveRecord::Schema.define(:version => 20130223070131) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_token"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "wheel_color_options", :force => true do |t|
+    t.integer  "wheel_model_id"
+    t.integer  "wheel_color_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "wheel_colors", :force => true do |t|
+    t.string   "paint_name"
+    t.string   "color"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "wheel_mfgs", :force => true do |t|
+    t.string   "mfg"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "wheel_models", :force => true do |t|
+    t.string   "model"
+    t.integer  "wheel_mfg_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "wheel_offset_options", :force => true do |t|
+    t.integer  "wheel_model_id"
+    t.integer  "wheeL_offset_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "wheel_offsets", :force => true do |t|
+    t.integer  "offset"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "wheel_size_options", :force => true do |t|
+    t.integer  "wheel_model_id"
+    t.integer  "wheel_size_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "wheel_sizes", :force => true do |t|
+    t.integer  "diameter"
+    t.float    "width"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "wheel_tags", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "image_id"
+    t.integer  "wheel_model_id"
+    t.integer  "wheel_size_id"
+    t.integer  "wheel_offset_id"
+    t.integer  "wheel_color_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
