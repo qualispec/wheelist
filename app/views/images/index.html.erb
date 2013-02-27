@@ -100,20 +100,23 @@
 		// })();
 
 		// setting the Simple_Form above to remote:true turns it into an ajax request
-		$('#search-form').on('ajax:success', function(event, data) {
-			$('#images').html(data);
-			console.log(data);
-		} );
-
 		$('#search-form select').change(function(event){
 			$('#search-form').submit();
 		});
 
+		$('#search-form').on('ajax:success', function(event, data) {
+			$('#images').html(data);
+		} );
+
 		// like-button link is set to remote: trie, which turns it into an ajax request
-		$('.like-button a').on('ajax:success', function(event, data) {
+		// $('.like-button a').on('ajax:success', function(event, data) {
+		// 	$(this).closest('.image-like').find('.like-count').html(data);
+		// })
+
+		$('.image-like').on('ajax:success', '.like-button a', function(event, data) {
+			console.log(this);
 			$(this).closest('.image-like').find('.like-count').html(data);
 		})
-
 
 		// $.get("/cars.json", function(data) {
 		// 	console.log(data);

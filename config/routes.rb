@@ -1,5 +1,7 @@
 Wheelist::Application.routes.draw do
 
+  devise_for :users
+
   root :to => "images#index"
 
   resources :users do
@@ -14,14 +16,10 @@ Wheelist::Application.routes.draw do
     member do
       post 'like'
     end
+
+    # resources :comments
   end
 
-
-  resources :sessions
   resources :cars
-
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy'
 
 end

@@ -30,10 +30,10 @@ wheel_model_1_color_3 = wheel_model_1.wheel_colors.create!(paint_name: 'Nickel',
 wheel_model_1_color_4 = wheel_model_1.wheel_colors.create!(paint_name: 'Matte Bronze',
 																													 color: 'Bronze')
 
-wheel_silver =			 WheelColor.create!(paint_name: 'Silver', color: 'Silver')
-wheel_black = 			 WheelColor.create!(paint_name: 'Black', color: 'Black')
-wheel_nickel =			 WheelColor.create!(paint_name: 'Nickel', color: 'Chrome')
-wheel_matte_bronze = WheelColor.create!(paint_name: 'Matte Bronze', color: 'Bronze')
+# wheel_silver =			 WheelColor.create!(paint_name: 'Silver', color: 'Silver')
+# wheel_black = 			 WheelColor.create!(paint_name: 'Black', color: 'Black')
+# wheel_nickel =			 WheelColor.create!(paint_name: 'Nickel', color: 'Chrome')
+# wheel_matte_bronze = WheelColor.create!(paint_name: 'Matte Bronze', color: 'Bronze')
 
 #-------------------------------------------------------------------------------
 

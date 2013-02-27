@@ -14,4 +14,5 @@ class Image < ActiveRecord::Base
   accepts_nested_attributes_for :car_tags
   accepts_nested_attributes_for :wheel_tags
 
+  # default_scope order: 'images.id DESC'
 end

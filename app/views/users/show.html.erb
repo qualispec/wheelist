@@ -8,5 +8,9 @@
 	<h2>Images that <%= @user.user_name %> linked</h2>
 	<%= render @user.images %>
 
+  <h2>Images that <%= @user.user_name %> liked</h2>
+  <%= render @user.image_likes.includes(:image).all.map { |image_like|
+        image_like.image }.uniq %>
+
 	<h2>Images that <%= @user.user_name %> parked</h2>
 </div>

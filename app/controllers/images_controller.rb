@@ -23,7 +23,7 @@ class ImagesController < ApplicationController
 		@image.car_tags.build
 		@image.wheel_tags.build
 
-		@images = Image.all
+		@images = Image.order('id DESC').all
 
 	end
 
@@ -51,6 +51,8 @@ class ImagesController < ApplicationController
 			if value.present?
 				@images = @images.joins(:car_tags)
 												 .where(car_tags: { key => value } )
+												 .order('image_likes_count DESC')
+												 .order('id DESC')
 			end
 		end
 
@@ -58,10 +60,12 @@ class ImagesController < ApplicationController
 			if value.present?
 				@images = @images.joins(:wheel_tags)
 												 .where(wheel_tags: { key => value} )
+												 .order('image_likes_count DESC')
+												 .order('id DESC')
 			end
 		end
 
-		@images = @images.all
+		@images = @images.order('id DESC').all
 
 
 		if request.xhr?				# if it's an AJAX request
