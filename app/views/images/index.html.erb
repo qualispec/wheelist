@@ -89,7 +89,7 @@
 
 		// var images = $('#image-list').data('images');
 
-		var = ['blue', 'red', 'green']
+		// var = ['blue', 'red', 'green']
 
 		// $.each(images, function() {
 		// 	$('#image-list').append(this.url);
@@ -109,8 +109,9 @@
 			$('#search-form').submit();
 		});
 
+		// like-button link is set to remote: trie, which turns it into an ajax request
 		$('.like-button a').on('ajax:success', function(event, data) {
-			$(this).
+			$(this).closest('.image-like').find('.like-count').html(data);
 		})
 
 

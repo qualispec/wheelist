@@ -79,7 +79,11 @@ class ImagesController < ApplicationController
 		@image = Image.new
 		@images = Image.all
 
-		render 'index'
+		if request.xhr?
+			render :json => image.image_likes.count
+		else
+			render 'index'
+		end
 
 	end
 

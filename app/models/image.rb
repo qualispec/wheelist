@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  attr_accessible :caption, :url, :car_tags_attributes, :wheel_tags_attributes
+  attr_accessible :user_id, :caption, :url, :car_tags_attributes, :wheel_tags_attributes
 
   validates :url, :format => { :with => /\.(jpg|JPG|png|PNG|bmp|BMP)$/ }
   # validates :caption, presence: true

@@ -1,12 +1,9 @@
-<h1><%= @image.caption %></h1>
-
 <% unless @image.car_tags.empty? %>
 	<h2><%= @image.car_tags.first.car_model.car_mfg.mfg %>
-			<%= @image.car_tags.first.car_model.model %>
-			<%= @image.car_tags.first.car_color.color %>
+			<%= @image.car_tags.first.car_model.model %><br>
+			<%= @image.car_tags.first.car_color.color %><br>
+      <%= @image.caption %>
 	</h2>
 <% end %>
-
-
 
 <%= image_tag(@image.url) %>
