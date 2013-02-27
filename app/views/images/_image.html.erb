@@ -1,4 +1,4 @@
-<div class="image-tile">
+<div class="image-tile" style="background: <%= image.car_tags.first.car_color.color %>">
 	<div class="image">
 		<%= link_to(image_tag(image.url), image_path(image)) %>
 	</div>
@@ -23,6 +23,7 @@
           like_image_path(image),
           id: "like_image_#{image.id}",
           class: 'btn btn-primary btn-small',
+          remote: true,
           method: :post %>
       </div>
       <div class="like-count"><%= image.image_likes.count %></div>
