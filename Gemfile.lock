@@ -96,6 +96,7 @@ GEM
     multi_json (1.6.1)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
+    pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.11.4)
       coderay (~> 1.0.5)
@@ -193,6 +194,7 @@ DEPENDENCIES
   growl
   guard-rspec
   jquery-rails
+  pg
   rails (= 3.2.11)
   rb-fsevent
   rspec-rails
