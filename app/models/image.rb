@@ -6,6 +6,7 @@ class Image < ActiveRecord::Base
 
   belongs_to :user
   has_many :image_likes
+  has_many :comments
   has_many :car_tags
   has_many :wheel_tags
   # has_many :wheels, through: :wheeltaggings
@@ -14,5 +15,6 @@ class Image < ActiveRecord::Base
   accepts_nested_attributes_for :car_tags
   accepts_nested_attributes_for :wheel_tags
 
-  # default_scope order: 'images.id DESC'
+  scope :by_newest, order('id DESC')
+  scope :by_popularity, order('image_likes_count DESC, id DESC')
 end

@@ -51,8 +51,7 @@ class ImagesController < ApplicationController
 			if value.present?
 				@images = @images.joins(:car_tags)
 												 .where(car_tags: { key => value } )
-												 .order('image_likes_count DESC')
-												 .order('id DESC')
+												 .by_popularity
 			end
 		end
 

@@ -113,7 +113,7 @@
 		// 	$(this).closest('.image-like').find('.like-count').html(data);
 		// })
 
-		$('.image-like').on('ajax:success', '.like-button a', function(event, data) {
+		$('#images').on('ajax:success', '.like-button a', function(event, data) {
 			console.log(this);
 			$(this).closest('.image-like').find('.like-count').html(data);
 		})
