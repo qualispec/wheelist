@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227235024) do
+ActiveRecord::Schema.define(:version => 20130228024416) do
 
   create_table "car_color_options", :force => true do |t|
     t.integer  "car_model_id"
@@ -86,10 +86,10 @@ ActiveRecord::Schema.define(:version => 20130227235024) do
   create_table "images", :force => true do |t|
     t.string   "url"
     t.string   "caption"
-    t.string   "user_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.integer  "image_likes_count"
+    t.integer  "user_id"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.integer  "image_likes_count", :default => 0
   end
 
   create_table "users", :force => true do |t|
