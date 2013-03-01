@@ -1,13 +1,15 @@
 <div class="image-tile">
-	<div class="image">
-		<%= link_to(image_tag(image.url), image_path(image)) %>
-	</div>
+  <div class="image-frame <%= image.car_tags.first.car_color.color.downcase %>">
+  	<div class="image">
+  		<%= link_to(image_tag(image.url), image_path(image)) %>
+  	</div>
+  </div>
   <div class="color-bars clearfix">
 	  <div class="car-color-bar <%= image.car_tags.first.car_color.color.downcase %>"></div>
     <div class="wheel-color-bar "></div>
   </div>
 
-	<div class="image-footer">
+	<div class="image-footer silver">
 		<div class="image-car">
 			<% unless image.car_tags.empty? %>
 				<h3>
@@ -17,7 +19,7 @@
 				</h3>
 			<% end %>
 		</div>
-		<div class="image-author-info muted">
+		<div class="image-author-info">
       posted by <strong><%= image.user.user_name %></strong>
       <em><%= time_ago_in_words(image.created_at) %> ago</em>
     </div>

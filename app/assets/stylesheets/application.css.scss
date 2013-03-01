@@ -41,19 +41,70 @@ $silver:							#c0c0c0;
 
 .image-tile {
 	background: white;
-	width: 280px;
+	width: 300px;
 	height: 320px;
 	float: left;
-	margin: 5px;
-	border-radius: 8px;
-	padding: 10px;
+	margin: 3px;
+	border-radius: 5px;
+	padding: 1px;
 }
 
 .image-tile:hover {
-	padding-top: 8px;
+/*	padding-top: 8px;
 	padding-bottom: 8px;
 	border-top: solid 2px gray;
-	border-bottom: solid 2px gray;
+	border-bottom: solid 2px gray;*/
+
+	.image-frame {
+		opacity: 0.8;
+	}
+	
+	.image-frame.black {
+		background: black;
+	}
+
+	.image-frame.blue {
+		background: blue;
+	}
+
+	.image-frame.blue {
+		background: blue;
+	}
+
+	.image-frame.gray {
+		background: gray;
+	}
+
+	.image-frame.green {
+		background: green;
+	}
+
+	.image-frame.orange {
+		background: orange;
+	}
+
+	.image-frame.red {
+		background: red;
+	}
+
+	.image-frame.silver {
+		background: $silver;
+	}
+
+	.image-frame.white {
+		background: white;
+
+/*		.image-tile {
+			padding: 0px;
+			border: solid 1px gray;
+		}*/
+	}
+
+	.image-footer.silver {
+		background: $grayLighter;	
+	}
+
+
 }
 
 .image {
@@ -61,6 +112,7 @@ $silver:							#c0c0c0;
 	height: 210px;
 	overflow: hidden;
 	margin: auto;
+	padding-top: 10px;
 	padding-bottom: 4px;
 }
 
@@ -74,8 +126,27 @@ $silver:							#c0c0c0;
 
 .image-tile h3 {
 	margin: 0;
+	padding-left: 10px;
 	font-size: 16px;
 	line-height: 32px;
+}
+
+.image-author-info {
+	/*muted*/
+	padding-left: 10px;
+}
+
+.image-frame {
+	width: auto;
+	height: 230px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.image-footer {
+	width: auto;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .image-author-info {
@@ -83,7 +154,7 @@ $silver:							#c0c0c0;
 	padding-bottom: 3px;
 }
 
-.car-color-bar {
+/*.car-color-bar {
 	height: 15px;
 	width: 49%;
 	float: left;
@@ -135,7 +206,7 @@ $silver:							#c0c0c0;
 	float: right;
 	opacity: 0.8;
 }
-
+*/
 
 
 
@@ -150,7 +221,7 @@ $silver:							#c0c0c0;
 }
 
 body {
-	background: image-url("escheresque.png");
+	/*background: image-url("escheresque.png");*/
 	padding-top: 60px;
 /*	width: 100%;*/
 }
