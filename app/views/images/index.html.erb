@@ -1,6 +1,7 @@
 <div>
+<div class="form-wrapper">
 	<%= simple_form_for(@image, :url => search_images_path, :method => :get, 
-											:remote => true, html: { id: 'search-form', class: 'form-horizontal' }) do |f| %>
+											:remote => true, html: { id: 'search-form', class: 'clearfix form-inline' }) do |f| %>
 
 
 		<%= f.simple_fields_for :car_tags do |car_tag| %>
@@ -11,11 +12,23 @@
 			<%#= f.input :car_mfg_id, collection: car_mfgs.sort, input_html:
 			{ name: "anything" } %> 
 
-			<% car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
+			<%# car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
+
+			<% car_models = CarModel.all
+															.select { |car_model| 
+																CarTag.where(:car_model_id => car_model.id).exists? }
+															.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
 
 			<%= car_tag.input :car_model_id, collection: car_models.sort %>
 
-			<% car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} - #{car_color.color } - #{car_color.id}", car_color.id] } %>
+			<%# car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} - #{car_color.color } - #{car_color.id}", car_color.id] } %>
+
+			<% car_colors = CarColor.all
+															.select { |car_color|
+																CarTag.where(:car_color_id => car_color.id).exists? }
+															.map { |car_color| ["#{car_color.paint_name} - 
+																#{car_color.color } - #{car_color.id}", car_color.id] } %>
+
 
 			<%= car_tag.input :car_color_id, collection: car_colors.sort %>
 		
@@ -61,9 +74,17 @@
 		<div class="chosen-cartag">
 		</div> -->
 
-		<%= f.submit "Search", class: "btn btn-primary btn-small" %>
+		<%= f.submit "Search", class: "btn btn-primary btn-small", id: "search-btn" %>
 	<% end %>
+</div>
 
+
+
+</div>
+
+<div class="toggle-image-list-format">
+	<a href="#" id="most-popular" class="btn btn-primary btn-large">By Most Popular</a>
+	<a href="#" id="most-recent" class="btn btn-primary btn-large btn-pressed">By Most Recent</a>
 </div>
 
 <div id="images">
@@ -117,6 +138,30 @@
 			console.log(this);
 			$(this).closest('.image-like').find('.like-count').html(data);
 		})
+
+		$('#most-popular').click(function() {
+			var form_params = $('#search-form').serializeArray();
+			form_params.push({ name: 'most_popular', value: true });
+
+			$.get('/images/search', form_params, function(data) {
+				$('#images').html(data);
+			} );
+
+			$(this).addClass('btn-pressed');
+			$('#most-recent').removeClass('btn-pressed');
+		});
+
+		$('#most-recent').click(function() {
+			var form_params = $('#search-form').serializeArray();
+
+			$.get('/images/search', form_params, function(data) {
+				$('#images').html(data);
+			} );
+
+			$(this).addClass('btn-pressed');
+			$('#most-popular').removeClass('btn-pressed');
+		});
+
 
 		// $.get("/cars.json", function(data) {
 		// 	console.log(data);

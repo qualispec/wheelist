@@ -15,6 +15,6 @@ class Image < ActiveRecord::Base
   accepts_nested_attributes_for :car_tags
   accepts_nested_attributes_for :wheel_tags
 
-  scope :by_newest, order('id DESC')
-  scope :by_popularity, order('image_likes_count DESC, id DESC')
+  scope :by_most_recent, order('id DESC')
+  scope :by_most_popular, order('image_likes_count DESC, id DESC')
 end

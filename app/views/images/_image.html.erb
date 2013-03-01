@@ -2,23 +2,26 @@
 	<div class="image">
 		<%= link_to(image_tag(image.url), image_path(image)) %>
 	</div>
-	<div class="color-patch" style="background: <%= image.car_tags.first.car_color.color %>">
-	</div>
+  <div class="color-bars clearfix">
+	  <div class="car-color-bar <%= image.car_tags.first.car_color.color.downcase %>"></div>
+    <div class="wheel-color-bar "></div>
+  </div>
+
 	<div class="image-footer">
 		<div class="image-car">
 			<% unless image.car_tags.empty? %>
-				<h4>
+				<h3>
 					<%= image.car_tags.first.car_model.car_mfg.mfg %>
 					<%= image.car_tags.first.car_model.model %><br>
-					<%= image.car_tags.first.car_color.color %><br>
-					<%= image.user.user_name %>
-				</h4>
+					<%#= image.car_tags.first.car_color.color %>
+				</h3>
 			<% end %>
 		</div>
-		<div class="image-timestamp muted">
-      <em><small><%= time_ago_in_words(image.created_at) %> ago</small></em>
+		<div class="image-author-info muted">
+      posted by <strong><%= image.user.user_name %></strong>
+      <em><%= time_ago_in_words(image.created_at) %> ago</em>
     </div>
-    <div class="image-like">
+    <span class="image-like">
       <span class="like-button">
         <%= link_to raw("<i class=\"icon-wrench icon-white\"></i> Like"),
           like_image_path(image),
@@ -28,8 +31,14 @@
           method: :post %>
       </span>
       <span class="like-count">
-      	<%= image.image_likes.count %>
+      	<%#= image.image_likes.count %>
+        <%= image.image_likes_count %>
       </span>
-    </div>
+    </span>
+    <span class="comment-summary">Comments:</span>
+    <span class="comment-count">
+        <%= image.comments_count %>
+    </span>
+
 	</div>
 </div>

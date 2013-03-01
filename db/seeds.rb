@@ -395,11 +395,137 @@ car_tag_20 = CarTag.create!(
 
 # 15x8, nickel
 
+image_21 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/6ul_2.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
 
+car_tag_21 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_21.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
+# 15x9, bronze
 
+image_22 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/6ul_3.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
 
+car_tag_22 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_22.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
+# 15x9, bronze
+
+image_23 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/6ul_1.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_23 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_23.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+# 15x9, bronze
+
+image_24 = Image.create!(url: 'http://i131.photobucket.com/albums/p288/ej815/2.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_24 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_24.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+# 15x8, silver
+
+image_25 = Image.create!(url: 'http://lh6.ggpht.com/_Isc5Ihv4tU0/Smpr8JurXaI/AAAAAAAAA6Q/wp1Xi0nJkxM/s512/IMG_1848.JPG',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_25 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_25.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
+
+# 15x8, nickel
+
+image_26 = Image.create!(url: 'http://farm3.static.flickr.com/2448/3758845237_ee394ea57c_o.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_26 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_26.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+# 15x8, black
+
+image_27 = Image.create!(url: 'http://farm3.static.flickr.com/2546/3759643438_06c880dc25_o.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_27 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_27.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+# 15x8, black
+
+image_28 = Image.create!(url: 'http://farm3.static.flickr.com/2647/3759642414_43a9ed567d_o.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_28 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_28.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+# 15x8, black
+
+image_29 = Image.create!(url: 'http://farm4.static.flickr.com/3439/3758846729_ce898c79ab_o.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_29 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_29.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+# 15x8, black
+
+image_30 = Image.create!(url: 'http://chows.smugmug.com/photos/606574126_yDoNC-XL-1.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_30 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_30.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
+
+# 15x8, nickel
+
+image_31 = Image.create!(url: 'http://i27.photobucket.com/albums/c194/Nis01/Digital%20Photo%20Album/IMG_1744.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_31 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_31.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'White').first.id)
+
+# 15x8, bronze
 
 
 

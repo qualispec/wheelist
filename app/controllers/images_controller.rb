@@ -23,16 +23,17 @@ class ImagesController < ApplicationController
 		@image.car_tags.build
 		@image.wheel_tags.build
 
-		@images = Image.order('id DESC').all
-
+		@images = Image.by_most_recent.all
 	end
 
 	def show
 		@image = Image.find(params[:id])
+
+		@comment = Comment.new
+		@comments = Comment.where(:image_id => params[:id]).all
 	end
 
 	def search
-
 		@image = Image.new
 
 		car_params   = params[:image][:car_tags_attributes]["0"]
@@ -51,7 +52,7 @@ class ImagesController < ApplicationController
 			if value.present?
 				@images = @images.joins(:car_tags)
 												 .where(car_tags: { key => value } )
-												 .by_popularity
+												 # .by_most_popular
 			end
 		end
 
@@ -59,20 +60,22 @@ class ImagesController < ApplicationController
 			if value.present?
 				@images = @images.joins(:wheel_tags)
 												 .where(wheel_tags: { key => value} )
-												 .order('image_likes_count DESC')
-												 .order('id DESC')
+												 # .order('image_likes_count DESC')
+												 # .order('id DESC')
 			end
 		end
 
-		@images = @images.order('id DESC').all
-
+		if params[:most_popular]
+			@images = @images.by_most_popular.all
+		else
+			@images = @images.order('id DESC').all
+		end
 
 		if request.xhr?				# if it's an AJAX request
 			render '_search', :layout => false
 		else
 			render 'index'
 		end
-
 	end
 
 	def like
@@ -83,11 +86,11 @@ class ImagesController < ApplicationController
 		@images = Image.all
 
 		if request.xhr?
-			render :json => image.image_likes.count
+			# render :json => image.image_likes.count
+			render :json => image.image_likes_count
 		else
 			render 'index'
 		end
-
 	end
 
 end

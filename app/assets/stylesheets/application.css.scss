@@ -15,37 +15,149 @@
 @import "bootstrap";
 @import "bootstrap-styles";
 
-.image-tile {
-	background: white;
-	width: 300px;
-	height: 380px;
+$bronze:							#cd7f32;
+$silver:							#c0c0c0;
+
+#search-form .control-group {
 	float: left;
 	margin: 5px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+}
+
+#image_car_tags_attributes_0_car_color_id {
+	width: 170px;
+}
+
+#image_wheel_tags_attributes_0_wheel_size_id {
+	width: 120px;
+}
+
+#image_wheel_tags_attributes_0_wheel_offset_id {
+	width: 80px;	
+}	
+
+.form-wrapper {
+	background: $grayLight;
+}
+
+.image-tile {
+	background: white;
+	width: 280px;
+	height: 320px;
+	float: left;
+	margin: 5px;
+	border-radius: 8px;
+	padding: 10px;
 }
 
 .image-tile:hover {
-	padding-top: 0;
-	padding-bottom: 0;
-	border-top: solid 2px red;
-	border-bottom: solid 2px red;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-top: solid 2px gray;
+	border-bottom: solid 2px gray;
 }
 
 .image {
-	height: 225px;
+	width: 280px;
+	height: 210px;
 	overflow: hidden;
+	margin: auto;
+	padding-bottom: 4px;
 }
 
-.color-patch {
-	height: 25px;
+.image img {
+	width: auto;
+	max-width: inherit;
+	height: 100%;
+	display: block;
+	margin: auto;
+}
+
+.image-tile h3 {
+	margin: 0;
+	font-size: 16px;
+	line-height: 32px;
+}
+
+.image-author-info {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.car-color-bar {
+	height: 15px;
+	width: 49%;
+	float: left;
+	opacity: 0.8;
+}
+
+	.car-color-bar.black {
+		background: black;
+	}
+
+	.car-color-bar.blue {
+		background: blue;
+	}
+
+	.car-color-bar.gray {
+		background: gray;
+	}
+
+	.car-color-bar.green {
+		background: green;
+	}
+
+	.car-color-bar.orange {
+		background: orange;
+	}
+
+	.car-color-bar.red {
+		background: red;
+	}
+
+	.car-color-bar.silver {
+		background: $silver;
+	}
+
+	.car-color-bar.white {
+		background: white;
+		height: 13px;
+		border: solid 1px $grayLight;
+	}
+
+	.car-color-bar.yellow {
+		background: yellow;
+	}
+
+.wheel-color-bar {
+	background: $bronze;
+	height: 15px;
+	width: 49%;
+	float: right;
+	opacity: 0.8;
+}
+
+
+
+
+
+
+.btn-pressed {
+	background: $red;
+}
+
+#search-btn {
+	display: none;
 }
 
 body {
 	background: image-url("escheresque.png");
 	padding-top: 60px;
+/*	width: 100%;*/
 }
 
+.container {
+	/*width: 100%;*/
+}
 
 #logo {
 	float: left;
@@ -62,9 +174,9 @@ body {
 	text-decoration: none;
 }
 
-.simple_form .form-horizontal {
+/*.simple_form .form-horizontal {
 	width: 500px;
-}
+}*/
 
 h2 {
 	clear:both;
