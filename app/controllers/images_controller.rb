@@ -18,6 +18,22 @@ class ImagesController < ApplicationController
 		end
 	end
 
+	def update
+		p params
+		@image = Image.find(params[:id])
+
+		if @image.update_attributes(params[:image])
+			flash[:success] = "Update successful!"
+		else
+		end
+
+		if request.xhr?				# if it's an AJAX request
+			render '_wheel_tags', :layout => false
+		else
+			render image_path(@image)
+		end
+	end
+
 	def index
 		@image = Image.new
 		@image.car_tags.build

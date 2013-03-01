@@ -170,6 +170,30 @@ $silver:							#c0c0c0;
 	padding-bottom: 3px;
 }
 
+.image-show {
+	width: 600px;
+	float: left;
+}
+
+.wheel-tags {
+}
+
+.wheel-tag {
+	height: 25px;
+	width: 100px;
+	border: solid 2px gray;
+	border-radius: 5px;
+	margin: 2px;
+}
+
+.wheel-tag:hover {
+	background: $grayLighter;
+}
+
+#edit-form {
+	display: none;
+}
+
 /*.car-color-bar {
 	height: 15px;
 	width: 49%;

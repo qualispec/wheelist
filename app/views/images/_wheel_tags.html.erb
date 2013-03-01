@@ -1,0 +1,22 @@
+  <% unless @image.wheel_tags.empty? %>
+    <% unless @image.wheel_tags.first.wheel_model.wheel_mfg.nil? %>
+      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_model.wheel_mfg.mfg %>
+      </div>
+    <% end %>
+
+    <% unless @image.wheel_tags.first.wheel_model.nil? %>
+      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_model.model %></div>
+    <% end %>
+
+    <% unless @image.wheel_tags.first.wheel_size.nil? %>
+      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_size.diameter %>x<%= @image.wheel_tags.first.wheel_size.width %></div>
+    <% end %>
+    
+    <% unless @image.wheel_tags.first.wheel_offset.nil? %> 
+      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_offset.offset %></div>
+    <% end %>
+
+    <% unless @image.wheel_tags.first.wheel_color.nil? %>
+      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_color.paint_name %></div>
+    <% end %>
+  <% end %>
