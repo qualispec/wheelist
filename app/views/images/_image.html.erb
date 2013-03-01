@@ -9,7 +9,7 @@
     <div class="wheel-color-bar "></div>
   </div>
 
-	<div class="image-footer silver">
+	<div class="image-footer <%= image.wheel_tags.first.wheel_color.color.downcase %>">
 		<div class="image-car">
 			<% unless image.car_tags.empty? %>
 				<h3>

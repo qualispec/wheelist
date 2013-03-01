@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+	# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -10,30 +10,58 @@
 user_1 = User.create!(user_name: 'qualispec', email: 'vhchang@gmail.com', 
 						 					password: 'asdfasdf', password_confirmation: 'asdfasdf')
 
-wheel_1 = WheelMfg.create!(mfg: '949 Racing')
-wheel_2 = WheelMfg.create!(mfg: 'Volk Racing')
+#-------------------------------------------------------------------------------
 
-wheel_model_1 = wheel_1.wheel_models.create!(model: '6UL')
+wheel_949_racing =  WheelMfg.create!(mfg: '949 Racing')
+wheel_advan = 		  WheelMfg.create!(mfg: 'Advan')
+wheel_enkei = 		  WheelMfg.create!(mfg: 'Enkei')
+wheel_volk_racing = WheelMfg.create!(mfg: 'Volk Racing')
+wheel_work = 				WheelMfg.create!(mfg: 'Work')
 
-wheel_model_1_size_1 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 7.5)
-wheel_model_1_size_2 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 8)
-wheel_model_1_size_3 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 9)
+wheel_6ul = wheel_949_racing.wheel_models.create!(model: '6UL')
 
-wheel_model_1_offset_1 = wheel_model_1.wheel_offsets.create!(offset: 36)
+# wheel_model_1_size_1 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 7.5)
+# wheel_model_1_size_2 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 8)
+# wheel_model_1_size_3 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 9)
 
-wheel_model_1_color_1 = wheel_model_1.wheel_colors.create!(paint_name: 'Silver',
-																													 color: 'Silver')
-wheel_model_1_color_2 = wheel_model_1.wheel_colors.create!(paint_name: 'Black',
-																													 color: 'Black')
-wheel_model_1_color_3 = wheel_model_1.wheel_colors.create!(paint_name: 'Nickel',
-																													 color: 'Chrome')
-wheel_model_1_color_4 = wheel_model_1.wheel_colors.create!(paint_name: 'Matte Bronze',
-																													 color: 'Bronze')
+size_15x75 = WheelSize.create!(diameter: 15, width: 7.5)
+size_15x8 =  WheelSize.create!(diameter: 15, width: 8)
+size_15x9 =  WheelSize.create!(diameter: 15, width: 9)
 
-# wheel_silver =			 WheelColor.create!(paint_name: 'Silver', color: 'Silver')
-# wheel_black = 			 WheelColor.create!(paint_name: 'Black', color: 'Black')
-# wheel_nickel =			 WheelColor.create!(paint_name: 'Nickel', color: 'Chrome')
-# wheel_matte_bronze = WheelColor.create!(paint_name: 'Matte Bronze', color: 'Bronze')
+offset_36 = WheelOffset.create!(offset: 36)
+
+wheel_black  = WheelColor.create!(paint_name: 'Black', color: 'Black')
+wheel_matte_bronze = WheelColor.create!(paint_name: 'Matte Bronze', color: 'Bronze')
+wheel_nickel = WheelColor.create!(paint_name: 'Nickel', color: 'Chrome')
+wheel_silver = WheelColor.create!(paint_name: 'Silver', color: 'Silver')
+
+# wheel_model_1_offset_1 = wheel_model_1.wheel_offsets.create!(offset: 36)
+
+# wheel_model_1_color_1 = wheel_model_1.wheel_colors.create!(paint_name: 'Silver',
+# 																													 color: 'Silver')
+# wheel_model_1_color_2 = wheel_model_1.wheel_colors.create!(paint_name: 'Black',
+# 																													 color: 'Black')
+# wheel_model_1_color_3 = wheel_model_1.wheel_colors.create!(paint_name: 'Nickel',
+# 																													 color: 'Chrome')
+# wheel_model_1_color_4 = wheel_model_1.wheel_colors.create!(paint_name: 'Matte Bronze',
+# 																													 color: 'Bronze')
+
+wheel_6ul_sizes = [size_15x75, size_15x8, size_15x9]
+wheel_6ul_offsets = [offset_36]
+wheel_6ul_colors = [wheel_black, wheel_matte_bronze, wheel_nickel, wheel_silver]
+
+wheel_6ul_sizes.each do |size|
+	wheel_6ul.wheel_sizes << size
+end
+
+wheel_6ul_offsets.each do |offset|
+	wheel_6ul.wheel_offsets << offset
+end
+
+wheel_6ul_colors.each do |color|
+	wheel_6ul.wheel_colors << color
+end
+
 
 #-------------------------------------------------------------------------------
 
@@ -158,12 +186,12 @@ car_tag_1 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
-# wheel_tag_1 = WheelTag.create!(
-# 									:image_id => image_1.id,
-# 									:wheel_model_id => wheel_model_1.id
-# 									:wheel_size_id => wheel_model_1_size_2.id
-# 									:wheel_offset_id => wheel_model_1_offset_1.id
-# 									:wheel_color_id => w)
+wheel_tag_1 = WheelTag.create!(
+									:image_id => image_1.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
 
 # 15x8, matte_bronze
 
@@ -177,6 +205,13 @@ car_tag_2 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
+wheel_tag_2 = WheelTag.create!(
+									:image_id => image_2.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
 # 15x8, matte_bronze
 
 image_3 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181277-2/P6184374.jpg',
@@ -188,6 +223,13 @@ car_tag_3 = CarTag.create!(
 									:image_id => image_3.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
+
+wheel_tag_3 = WheelTag.create!(
+									:image_id => image_3.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
 
 # 15x8, matte_bronze
 
@@ -201,6 +243,13 @@ car_tag_4 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
+wheel_tag_4 = WheelTag.create!(
+									:image_id => image_4.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
 # 15x8, matte_bronze
 
 image_5 = Image.create!(url: 'http://i442.photobucket.com/albums/qq148/jaymoneill/Miata1.jpg',
@@ -213,6 +262,12 @@ car_tag_5 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
+wheel_tag_5 = WheelTag.create!(
+									:image_id => image_5.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
 # 15x8, nickel
 
 image_6 = Image.create!(url: 'http://i442.photobucket.com/albums/qq148/jaymoneill/Miata3.jpg',
@@ -224,6 +279,13 @@ car_tag_6 = CarTag.create!(
 									:image_id => image_6.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_6 = WheelTag.create!(
+									:image_id => image_6.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
 
 # 15x8, nickel
 
@@ -237,6 +299,13 @@ car_tag_7 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
+wheel_tag_7 = WheelTag.create!(
+									:image_id => image_7.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
 # 15x8, nickel
 
 image_8 = Image.create!(url: 'http://www.949racing.com/genii/15x8_6ULN_KW_1.jpg',
@@ -248,6 +317,13 @@ car_tag_8 = CarTag.create!(
 									:image_id => image_8.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_8 = WheelTag.create!(
+									:image_id => image_8.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
 
 # 15x8, nickel
 
@@ -261,6 +337,13 @@ car_tag_9 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
+wheel_tag_9 = WheelTag.create!(
+									:image_id => image_9.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
 # 15x8, matte_bronze
 
 image_10 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181301-2/P6214390.jpg',
@@ -272,6 +355,13 @@ car_tag_10 = CarTag.create!(
 									:image_id => image_10.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
+
+wheel_tag_10 = WheelTag.create!(
+									:image_id => image_10.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
 
 # 15x8, matte_bronze
 
@@ -285,6 +375,13 @@ car_tag_11 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
+wheel_tag_11 = WheelTag.create!(
+									:image_id => image_11.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
 # 15x8, matte_bronze
 
 image_12 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181307-2/P6214395.jpg',
@@ -296,6 +393,13 @@ car_tag_12 = CarTag.create!(
 									:image_id => image_12.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
+
+wheel_tag_12 = WheelTag.create!(
+									:image_id => image_12.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
 
 # 15x8, matte_bronze
 
@@ -309,6 +413,13 @@ car_tag_13 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
+wheel_tag_13 = WheelTag.create!(
+									:image_id => image_13.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
 # 15x8, matte_bronze
 
 image_14 = Image.create!(url: 'http://i81.photobucket.com/albums/j221/cococarbine/IMG_1917.jpg',
@@ -320,6 +431,13 @@ car_tag_14 = CarTag.create!(
 									:image_id => image_14.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
+
+wheel_tag_14 = WheelTag.create!(
+									:image_id => image_14.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
 
 # 15x8, nickel
 
@@ -333,6 +451,13 @@ car_tag_15 = CarTag.create!(
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
+wheel_tag_15 = WheelTag.create!(
+									:image_id => image_15.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
 # 15x8, nickel
 
 image_16 = Image.create!(url: 'http://chows.smugmug.com/photos/574274739_rQcC6-L.jpg',
@@ -344,6 +469,13 @@ car_tag_16 = CarTag.create!(
 									:image_id => image_16.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
+
+wheel_tag_16 = WheelTag.create!(
+									:image_id => image_16.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
 
 # 15x9, nickel
 
@@ -357,6 +489,13 @@ car_tag_17 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
 
+wheel_tag_17 = WheelTag.create!(
+									:image_id => image_17.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
 # 15x9, nickel
 
 image_18 = Image.create!(url: 'http://chows.smugmug.com/photos/574240232_jeWEj-L.jpg',
@@ -368,6 +507,13 @@ car_tag_18 = CarTag.create!(
 									:image_id => image_18.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
+
+wheel_tag_18 = WheelTag.create!(
+									:image_id => image_18.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
 
 # 15x9, nickel
 
@@ -381,6 +527,13 @@ car_tag_19 = CarTag.create!(
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
 
+wheel_tag_19 = WheelTag.create!(
+									:image_id => image_19.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
 # 15x8, nickel
 
 image_20 = Image.create!(url: 'http://i514.photobucket.com/albums/t346/84im2008/100_2761.jpg',
@@ -392,6 +545,13 @@ car_tag_20 = CarTag.create!(
 									:image_id => image_20.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
+
+wheel_tag_20 = WheelTag.create!(
+									:image_id => image_20.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
 
 # 15x8, nickel
 
@@ -405,6 +565,13 @@ car_tag_21 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
+wheel_tag_21 = WheelTag.create!(
+									:image_id => image_21.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
 # 15x9, bronze
 
 image_22 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/6ul_3.jpg',
@@ -416,6 +583,13 @@ car_tag_22 = CarTag.create!(
 									:image_id => image_22.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_22 = WheelTag.create!(
+									:image_id => image_22.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
 
 # 15x9, bronze
 
@@ -429,6 +603,13 @@ car_tag_23 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
+wheel_tag_23 = WheelTag.create!(
+									:image_id => image_23.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
 # 15x9, bronze
 
 image_24 = Image.create!(url: 'http://i131.photobucket.com/albums/p288/ej815/2.jpg',
@@ -440,6 +621,13 @@ car_tag_24 = CarTag.create!(
 									:image_id => image_24.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_24 = WheelTag.create!(
+									:image_id => image_24.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_silver.id)
 
 # 15x8, silver
 
@@ -453,6 +641,13 @@ car_tag_25 = CarTag.create!(
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
+wheel_tag_25 = WheelTag.create!(
+									:image_id => image_25.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
 # 15x8, nickel
 
 image_26 = Image.create!(url: 'http://farm3.static.flickr.com/2448/3758845237_ee394ea57c_o.jpg',
@@ -465,9 +660,16 @@ car_tag_26 = CarTag.create!(
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
+wheel_tag_26 = WheelTag.create!(
+									:image_id => image_26.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
 # 15x8, black
 
-image_27 = Image.create!(url: 'http://farm3.static.flickr.com/2546/3759643438_06c880dc25_o.jpg',
+image_27 = Image.create!(url: 'http://farm3.static.flickr.com/2646/3759643438_06c880dc25_o.jpg',
 												caption: 'test caption',
 												user_id: user_1.id)
 
@@ -476,6 +678,13 @@ car_tag_27 = CarTag.create!(
 									:image_id => image_27.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_27 = WheelTag.create!(
+									:image_id => image_27.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
 
 # 15x8, black
 
@@ -489,6 +698,13 @@ car_tag_28 = CarTag.create!(
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
+wheel_tag_28 = WheelTag.create!(
+									:image_id => image_28.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
 # 15x8, black
 
 image_29 = Image.create!(url: 'http://farm4.static.flickr.com/3439/3758846729_ce898c79ab_o.jpg',
@@ -500,6 +716,13 @@ car_tag_29 = CarTag.create!(
 									:image_id => image_29.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_29 = WheelTag.create!(
+									:image_id => image_29.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
 
 # 15x8, black
 
@@ -513,6 +736,13 @@ car_tag_30 = CarTag.create!(
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
 
+wheel_tag_30 = WheelTag.create!(
+									:image_id => image_30.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
 # 15x8, nickel
 
 image_31 = Image.create!(url: 'http://i27.photobucket.com/albums/c194/Nis01/Digital%20Photo%20Album/IMG_1744.jpg',
@@ -524,6 +754,13 @@ car_tag_31 = CarTag.create!(
 									:image_id => image_31.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'White').first.id)
+
+wheel_tag_31 = WheelTag.create!(
+									:image_id => image_31.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
 
 # 15x8, bronze
 

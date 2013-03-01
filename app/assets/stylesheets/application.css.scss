@@ -41,7 +41,7 @@ $silver:							#c0c0c0;
 
 .image-tile {
 	background: white;
-	width: 300px;
+	width: 290px;
 	height: 320px;
 	float: left;
 	margin: 3px;
@@ -56,6 +56,10 @@ $silver:							#c0c0c0;
 	border-bottom: solid 2px gray;*/
 
 	.image-frame {
+		opacity: 0.8;
+	}
+
+	.image-footer {
 		opacity: 0.8;
 	}
 	
@@ -100,8 +104,20 @@ $silver:							#c0c0c0;
 		}*/
 	}
 
+	.image-footer.black {
+		background: black;	
+	}
+
+	.image-footer.bronze {
+		background: $bronze;	
+	}
+
+	.image-footer.chrome {
+		background: $grayLight;	
+	}
+
 	.image-footer.silver {
-		background: $grayLighter;	
+		background: $silver;	
 	}
 
 
@@ -112,7 +128,7 @@ $silver:							#c0c0c0;
 	height: 210px;
 	overflow: hidden;
 	margin: auto;
-	padding-top: 10px;
+	padding-top: 5px;
 	padding-bottom: 4px;
 }
 
@@ -138,7 +154,7 @@ $silver:							#c0c0c0;
 
 .image-frame {
 	width: auto;
-	height: 230px;
+	height: 220px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }

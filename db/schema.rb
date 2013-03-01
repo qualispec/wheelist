@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(:version => 20130228220921) do
 
   create_table "wheel_offset_options", :force => true do |t|
     t.integer  "wheel_model_id"
-    t.integer  "wheeL_offset_id"
+    t.integer  "wheel_offset_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
