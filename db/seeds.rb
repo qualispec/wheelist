@@ -764,6 +764,661 @@ wheel_tag_31 = WheelTag.create!(
 
 # 15x8, bronze
 
+image_32 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181622-2/P8084573.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_32 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_32.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
+
+wheel_tag_32 = WheelTag.create!(
+									:image_id => image_32.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x8, bronze
+
+image_33 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/photoshoot/069.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_33 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_33.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
+
+wheel_tag_33 = WheelTag.create!(
+									:image_id => image_33.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x9, black
+
+image_34 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/photoshoot/070.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_34 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_34.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
+
+wheel_tag_34 = WheelTag.create!(
+									:image_id => image_34.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x9, black
+
+image_35 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/photoshoot/073.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_35 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_35.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
+
+wheel_tag_35 = WheelTag.create!(
+									:image_id => image_35.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x9, black
+
+image_36 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/photoshoot/071.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_36 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_36.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
+
+wheel_tag_36 = WheelTag.create!(
+									:image_id => image_36.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x9, black
+
+image_37 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/photoshoot/083.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_37 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_37.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
+
+wheel_tag_37 = WheelTag.create!(
+									:image_id => image_37.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x9, black
+
+image_38 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/photoshoot/076.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_38 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_38.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
+
+wheel_tag_38 = WheelTag.create!(
+									:image_id => image_38.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x9, black
+
+image_39 = Image.create!(url: 'http://chows.smugmug.com/photos/576363591_xZmc9-M-1.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_39 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_39.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
+
+wheel_tag_39 = WheelTag.create!(
+									:image_id => image_39.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
+# 15x9, nickel
+
+image_40 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/DSCF2786.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_40 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_40.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_40 = WheelTag.create!(
+									:image_id => image_40.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_41 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/DSCF2840.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_41 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_41.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_41 = WheelTag.create!(
+									:image_id => image_41.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_42 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/DSCF2842.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_42 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_42.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_42 = WheelTag.create!(
+									:image_id => image_42.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_43 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/DSCF2841.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_43 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_43.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_43 = WheelTag.create!(
+									:image_id => image_43.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_44 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/DSCF2832.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_44 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_44.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_44 = WheelTag.create!(
+									:image_id => image_44.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_45 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/DSCF2847.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_45 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_45.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_45 = WheelTag.create!(
+									:image_id => image_45.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_46 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/IMG_1986.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_46 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_46.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_46 = WheelTag.create!(
+									:image_id => image_46.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_47 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/IMG_1974.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_47 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_47.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_47 = WheelTag.create!(
+									:image_id => image_47.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_48 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/IMG_1965.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_48 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_48.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_48 = WheelTag.create!(
+									:image_id => image_48.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_49 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/IMG_1982.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_49 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_49.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_49 = WheelTag.create!(
+									:image_id => image_49.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_50 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpcivic/IMG_1975.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_50 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_50.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_50 = WheelTag.create!(
+									:image_id => image_50.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_black.id)
+
+# 15x8, black
+
+image_51 = Image.create!(url: 'http://i43.tinypic.com/2pzzjv4.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_51 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_51.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
+
+wheel_tag_51 = WheelTag.create!(
+									:image_id => image_51.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
+# 15x8, nickel
+
+image_52 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied/09b2e5ef.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_52 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_52.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_52 = WheelTag.create!(
+									:image_id => image_52.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x8, matte bronze
+
+image_53 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied/155b523c.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_53 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_53.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_53 = WheelTag.create!(
+									:image_id => image_53.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x8, matte bronze
+
+image_54 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied/DSC_1050.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_54 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_54.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_54 = WheelTag.create!(
+									:image_id => image_54.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x8, matte bronze
+
+image_55 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied/DSC_1057.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_55 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_55.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_55 = WheelTag.create!(
+									:image_id => image_55.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x8, matte bronze
+
+image_56 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied/Miata_Pescadero4.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_56 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_56.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_56 = WheelTag.create!(
+									:image_id => image_56.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x8, matte bronze
+
+image_57 = Image.create!(url: 'http://farm3.static.flickr.com/2720/4305473494_9d346da380_b.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_57 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_57.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_57 = WheelTag.create!(
+									:image_id => image_57.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 15x9, silver
+
+image_58 = Image.create!(url: 'http://farm3.static.flickr.com/2749/4305474196_a17cf56f68_b.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_58 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_58.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_58 = WheelTag.create!(
+									:image_id => image_58.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 15x9, silver
+
+image_59 = Image.create!(url: 'http://farm3.static.flickr.com/2708/4304732117_7f69e44432_b.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_59 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_59.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_59 = WheelTag.create!(
+									:image_id => image_59.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 15x9, silver
+
+image_60 = Image.create!(url: 'http://farm5.static.flickr.com/4016/4305475532_2295d0c5cb_b.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_60 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_60.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_60 = WheelTag.create!(
+									:image_id => image_60.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 15x9, silver
+
+image_61 = Image.create!(url: 'http://farm5.static.flickr.com/4065/4304733371_106199a75e_b.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_61 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_61.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_61 = WheelTag.create!(
+									:image_id => image_61.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 15x9, silver
+
+image_62 = Image.create!(url: 'http://i47.tinypic.com/i3733l.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_62 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_62.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
+
+wheel_tag_62 = WheelTag.create!(
+									:image_id => image_62.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x8, bronze
+
+image_63 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/sideskirts_iphone_1.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_63 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_63.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_63 = WheelTag.create!(
+									:image_id => image_63.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x9.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_matte_bronze.id)
+
+# 15x9, bronze
+
+image_64 = Image.create!(url: 'http://photos-d.ak.fbcdn.net/hphotos-ak-ash1/hs431.ash1/23833_343130307960_619027960_3522644_2735470_n.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_64 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_64.id,
+									:car_model_id => car_model_3.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+wheel_tag_64 = WheelTag.create!(
+									:image_id => image_64.id,
+									:wheel_model_id => wheel_6ul.id,
+									:wheel_size_id => size_15x8.id,
+									:wheel_offset_id => offset_36.id,
+									:wheel_color_id => wheel_nickel.id)
+
+# 15x8, nickel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

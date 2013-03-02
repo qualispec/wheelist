@@ -111,11 +111,11 @@ $silver:							#c0c0c0;
 
 .image-tile {
 	background: white;
-	width: 290px;
+	width: 300px;
 	height: 320px;
 	float: left;
-	margin: 3px;
-	border-radius: 5px;
+	margin: 5px;
+	/*border-radius: 5px;*/
 	padding: 1px;
 }
 
@@ -126,51 +126,39 @@ $silver:							#c0c0c0;
 	border-bottom: solid 2px gray;*/
 
 	.image-frame {
-		opacity: 0.8;
-	}
-
-	.image {
-		opacity: 1.0;
-	}
-
-	.image-footer {
-		opacity: 0.8;
+/*		opacity: 0.8;*/
 	}
 	
 	.image-frame.black {
-		background: black;
+		background: rgba(0, 0, 0, 0.7);
 	}
 
 	.image-frame.blue {
-		background: blue;
-	}
-
-	.image-frame.blue {
-		background: blue;
+		background: rgba(0, 0, 255, 0.7);
 	}
 
 	.image-frame.gray {
-		background: gray;
+		background: rgba(190, 190, 190, 0.7);
 	}
 
 	.image-frame.green {
-		background: green;
+		background: rgba(0, 255, 0, 0.7);
 	}
 
 	.image-frame.orange {
-		background: orange;
+		background: rgba(255, 165, 0, 0.7);
 	}
 
 	.image-frame.red {
-		background: red;
+		background: rgba(255, 0, 0, 0.7);
 	}
 
 	.image-frame.silver {
-		background: $silver;
+		background: rgba(192, 192, 192, 0.7);
 	}
 
 	.image-frame.white {
-		background: white;
+		background: rgba(255, 255, 255, 0.7);
 
 /*		.image-tile {
 			padding: 0px;
@@ -179,27 +167,31 @@ $silver:							#c0c0c0;
 	}
 
 	.image-footer.black {
-		background: black;	
+		background: rgba(0, 0, 0, 0.7);
+
+		h3 {
+			color: white;
+		}
 	}
 
 	.image-footer.bronze {
-		background: $bronze;	
+		background: rgba(205, 127, 50, 0.7);
 	}
 
 	.image-footer.chrome {
-		background: $grayLight;	
+		background: rgba(192, 192, 192, 0.7);
 	}
 
 	.image-footer.silver {
-		background: $silver;	
+		background: rgba(192, 192, 192, 0.7);
 	}
 
 
 }
 
 .image {
-	width: 280px;
-	height: 210px;
+	width: 300px;
+	height: 225px;
 	overflow: hidden;
 	margin: auto;
 	padding-top: 5px;
@@ -228,9 +220,9 @@ $silver:							#c0c0c0;
 
 .image-frame {
 	width: auto;
-	height: 220px;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	height: 235px;
+/*	border-top: 5px;
+	border-bottom: 5px;*/
 }
 
 .image-footer {
