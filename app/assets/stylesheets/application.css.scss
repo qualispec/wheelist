@@ -19,24 +19,94 @@ $bronze:							#cd7f32;
 $silver:							#c0c0c0;
 
 #search-form .control-group {
-	float: left;
+	/*float: left;*/
 	margin: 5px;
 }
 
+.url.control-label {
+	width: 70px;	
+}
+
+.url .controls {
+	margin-left: 80px;
+}
+
+.string.control-label {
+	width: 70px;	
+}
+
+.string .controls {
+	margin-left: 80px;
+}
+
+.car-inputs .control-group {
+	width: 200px;
+}
+
+.car-inputs .control-label {
+	width: 70px;
+}
+
+.car-inputs .control-group .controls {
+	margin-left: 80px;
+}
+
+.wheel-inputs .control-label {
+	width: 90px;
+}
+
+.wheel-inputs .control-group .controls {
+	margin-left: 100px;
+}
+
+.car-inputs {
+	background: $grayLighter;
+	float: left;
+	width: 33%;
+}
+
+.wheel-inputs.model-size {
+	background: $grayLighter;
+	float: left;
+	width: 33%;
+}
+
+.wheel-inputs.offset-color {
+	background: $grayLighter;
+	float: left;
+	width: 33%;
+}
+
 #image_car_tags_attributes_0_car_color_id {
-	width: 170px;
+/*	width: 160px;*/
+}
+
+#image_wheel_tags_attributes_0_wheel_model_id {
+	width: 200px;
 }
 
 #image_wheel_tags_attributes_0_wheel_size_id {
-	width: 120px;
+	width: 200px;
 }
 
 #image_wheel_tags_attributes_0_wheel_offset_id {
-	width: 80px;	
+	width: 200px;	
 }	
 
+#image_wheel_tags_attributes_0_wheel_color_id {
+	width: 200px;	
+}	
+
+#image_url {
+	width: 600px;
+}
+
+#image_caption {
+	width: 600px;
+}
+
 .form-wrapper {
-	background: $grayLight;
+	/*background: $grayLight;*/
 }
 
 .image-tile {
@@ -57,6 +127,10 @@ $silver:							#c0c0c0;
 
 	.image-frame {
 		opacity: 0.8;
+	}
+
+	.image {
+		opacity: 1.0;
 	}
 
 	.image-footer {
@@ -171,11 +245,14 @@ $silver:							#c0c0c0;
 }
 
 .image-show {
-	width: 600px;
+	width: 70%;
 	float: left;
 }
 
 .wheel-tags {
+	float: left;
+	width: 30%;
+	height: 440px;
 }
 
 .wheel-tag {
@@ -184,6 +261,8 @@ $silver:							#c0c0c0;
 	border: solid 2px gray;
 	border-radius: 5px;
 	margin: 2px;
+	clear: left;
+	float: left;
 }
 
 .wheel-tag:hover {
@@ -194,6 +273,33 @@ $silver:							#c0c0c0;
 	display: none;
 }
 
+.comment-container {
+	width: 70%;
+	height: auto;
+	background: $grayLight;
+
+}
+.comments-container textarea {
+	width: 70%;
+	height: 200px;
+}
+
+.comments-container .controls {
+	margin-left: 0;
+}
+
+.like-button {
+	margin-left: 5px;	
+}
+
+.image-preview {
+	width: 50%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+
+.wheel-tag
 /*.car-color-bar {
 	height: 15px;
 	width: 49%;
@@ -248,9 +354,21 @@ $silver:							#c0c0c0;
 }
 */
 
+.navbar {
+	background: image-url("escheresque.png");
+}
 
+.navbar-inner {
+	background: image-url("escheresque.png");
+}
 
+.navbar li:hover {
+	border-bottom: solid 2px red;
+}
 
+/*.nav-search-btn {
+	background: green;
+}*/
 
 .btn-pressed {
 	background: $red;
@@ -274,7 +392,7 @@ body {
 	float: left;
 	margin-right: 10px;
 	font-size: 2em;
-	color: #fff;
+	color: black;
 	letter-spacing: 1px;
 	padding-top: 7px;
 	font-weight: bold;
@@ -299,26 +417,5 @@ h2 {
 	width: 100%;
 	margin-top: 45px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

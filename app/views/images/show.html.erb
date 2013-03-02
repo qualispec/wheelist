@@ -9,6 +9,9 @@
   <% end %>
 </div>
 
+<div class="image-show clearfix">
+  <%= image_tag(@image.url) %>
+</div>
 
 <div class="wheel-tags clearfix">
   <% unless @image.wheel_tags.empty? %>
@@ -35,9 +38,6 @@
   <% end %>
 </div>
 
-<div class="image-show clearfix">
-  <%= image_tag(@image.url) %>
-</div>
 
 <div id="edit-tag-btn" class="btn btn-primary btn-small">Edit Tags</div>
 
@@ -109,9 +109,9 @@
       class: 'form-horizontal' }) do |f| %>
       <%= f.hidden_field :image_id, :value => @image.id %>
       
-      <%= f.input :body %>
+      <%= f.input :body, :label => false %>
 
-      <%= f.submit "Comment", class: "btn btn-primary btn-small" %>
+      <%= f.submit "Add comment", class: "btn btn-primary btn-small" %>
     <% end %>
 
 </div>
@@ -138,6 +138,11 @@
     $('#comment-form').on('ajax:success', function(event, data) {
       $('.existing-comments').html(data);
       $('#comment-body').empty();
+    });
+
+    $('.comments-container').on('ajax:success', '.existing-comments a', function(event, data) {
+      console.log("hi");
+      $('.existing-comments').html(data);
     });
 
 

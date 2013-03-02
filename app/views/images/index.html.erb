@@ -1,7 +1,7 @@
 <div>
 <div class="form-wrapper">
 	<%= simple_form_for(@image, :url => search_images_path, :method => :get, 
-											:remote => true, html: { id: 'search-form', class: 'clearfix form-inline' }) do |f| %>
+											:remote => true, html: { id: 'search-form', class: 'clearfix form-horizontal' }) do |f| %>
 
 
 		<%= f.simple_fields_for :car_tags do |car_tag| %>
@@ -14,6 +14,7 @@
 
 			<%# car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
 
+		<div class="car-inputs">
 			<% car_models = CarModel.all
 															.select { |car_model| 
 																CarTag.where(:car_model_id => car_model.id).exists? }
@@ -31,11 +32,13 @@
 
 
 			<%= car_tag.input :car_color_id, collection: car_colors.sort %>
-		
+		</div>
+
 		<% end %>
 
 		<%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
 
+		<div class="wheel-inputs model-size">
 			<% wheel_models = WheelModel.all.map { |wheel_model| ["#{wheel_model.model} 
 					- #{wheel_model.id}", wheel_model.id] } %>
 			
@@ -45,7 +48,9 @@
 					x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
 
 			<%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
+		</div>
 
+		<div class="wheel-inputs offset-color">
 			<% wheel_offsets = WheelOffset.all.map { |wheel_offset|  
 					["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
 
@@ -56,7 +61,7 @@
 					wheel_color.id] } %>
 
 			<%= wheel_tag.input :wheel_color_id, collection: wheel_colors.sort %>
-
+		</div>
 		<% end %>
 
 <!-- 		<p>Car Tags:</p>
@@ -160,6 +165,11 @@
 
 			$(this).addClass('btn-pressed');
 			$('#most-popular').removeClass('btn-pressed');
+		});
+
+		$('.nav-search-btn').click(function() {
+
+
 		});
 
 

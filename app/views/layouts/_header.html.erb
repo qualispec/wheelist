@@ -1,12 +1,12 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top ">
 	<div class="navbar-inner">
 		<div class="container">
 			<%= link_to "wheelistic", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to "#", "#" %></li>
+					<li class-"nav-search-btn"><%= link_to "Search", "#" %></li>
 					<% if signed_in? %>
-						<li><%= link_to "Link a photo", new_image_path %> 
+						<li><%= link_to "Post", new_image_path %> 
 
 						<li id="fat-menu" class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">

@@ -1,7 +1,7 @@
-<div class="comment-container">
-  <% unless comment.body.empty? %>
-    <h4>
-      <%= comment.body %>
-    </h4>
-  <% end %>
-</div>
+<% unless comment.body.empty? %>
+  <div class="comment-container">
+    <p><%= comment.body %></p>
+    <p>posted by <%= comment.user.user_name %> <%= time_ago_in_words(comment.created_at) %></p>
+    <%= link_to "Delete Comment", comment_path(comment), :remote => true, :method => :delete %>
+  </div>
+<% end %>
