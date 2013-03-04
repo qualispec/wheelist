@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1><%= @comment_user.user_name %> just commented on your photo, <%= @image_user.user_name %>!</h1>
+    <p>
+      <%= @comment_user.user_name %> said the following:<br>
+      "<%= @comment_body %>"
+    <p>
+      To view the comment, just follow this link: <%= @url %>.
+    </p>
+    <p>Thanks and have a great day!</p>
+  </body>
+</html>

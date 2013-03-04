@@ -34,4 +34,10 @@ Wheelist::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Recommended by Devise gem documentation
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Recommended by Letter Opener gem documentation
+  config.action_mailer.delivery_method = :letter_opener
 end

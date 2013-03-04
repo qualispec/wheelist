@@ -12,6 +12,7 @@ gem 'devise'
 gem 'simple_form'
 
 group :development do
+  gem 'letter_opener'
   gem 'sqlite3'
 end
 
