@@ -21,8 +21,10 @@
 							</ul>
 						</li>
 					<% else %>
-						<li><%= link_to "Sign Up", new_user_registration_path %></li>
-						<li><%= link_to "Sign In", new_user_session_path %><li>
+						<li><%#= link_to "Sign Up", new_user_registration_path %></li>
+						<li><a href="#signUpModal" role="button" data-toggle="modal">Sign Up</a></li>
+						<li><%#= link_to "Sign In", new_user_session_path %><li>
+						<li><a href="#signInModal" role="button" data-toggle="modal">Sign In</a></li>
 					<% end %>
 				</ul>
 			</nav>
