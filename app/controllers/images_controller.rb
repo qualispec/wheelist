@@ -39,7 +39,8 @@ class ImagesController < ApplicationController
 		@image.car_tags.build
 		@image.wheel_tags.build
 
-		@images = Image.by_most_recent.all
+		# @images = Image.by_most_recent.all
+		@images = Image.by_most_recent.page(params[:page]).per(18)
 	end
 
 	def show
@@ -82,9 +83,11 @@ class ImagesController < ApplicationController
 		end
 
 		if params[:most_popular]
-			@images = @images.by_most_popular.all
+			# @images = @images.by_most_popular.all
+			@images = @images.by_most_popular.page(1).per(18)
 		else
-			@images = @images.order('id DESC').all
+			# @images = @images.order('id DESC').all
+			@images = @images.order('id DESC').page(1).per(18)
 		end
 
 		if request.xhr?				# if it's an AJAX request

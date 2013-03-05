@@ -97,31 +97,12 @@
 	<% end %>
 </div>
 
+<%= paginate @images %>
 
 
-
-<div id="image-list" data-images="<%= @images.to_json %>">
-</div>
 
 <script>
-
 	$(function() {
-
-		// (function populateImages() {
-		// console.log($('#image-list').data('images'));
-
-		// var images = $('#image-list').data('images');
-
-		// var = ['blue', 'red', 'green']
-
-		// $.each(images, function() {
-		// 	$('#image-list').append(this.url);
-		// 	$('#image-list').append('<br>');
-		// 	$('#image-list').append('<div class="image-tile"><div class="image"><a href="localhost:3000/images/"' + this.id + '><img src="' + this.url + '"></a></div></div>');
-		// });
-
-		// })();
-
 		// setting the Simple_Form above to remote:true turns it into an ajax request
 		$('#search-form select').change(function(event){
 			$('#search-form').submit();
@@ -131,7 +112,7 @@
 			$('#images').html(data);
 		} );
 
-		// like-button link is set to remote: trie, which turns it into an ajax request
+		// like-button link is set to remote: true, which turns it into an ajax request
 		// $('.like-button a').on('ajax:success', function(event, data) {
 		// 	$(this).closest('.image-like').find('.like-count').html(data);
 		// })
@@ -295,7 +276,6 @@
 				};
 			}
 		};
-
 
 	});
 

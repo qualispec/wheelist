@@ -8,6 +8,7 @@ gem 'bcrypt-ruby'
 gem 'better_errors'
 gem 'devise'
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'rails', '3.2.11'
 gem 'simple_form'
 
