@@ -1,5 +1,4 @@
-<div>
-<div class="form-wrapper">
+<div class="search-form-wrapper">
 	<%= simple_form_for(@image, :url => search_images_path, :method => :get, 
 											:remote => true, html: { id: 'search-form', class: 'clearfix form-horizontal' }) do |f| %>
 
@@ -85,8 +84,6 @@
 
 
 
-</div>
-
 <div class="toggle-image-list-format">
 	<a href="#" id="most-popular" class="btn btn-primary btn-large">By Most Popular</a>
 	<a href="#" id="most-recent" class="btn btn-primary btn-large btn-pressed">By Most Recent</a>
@@ -168,7 +165,12 @@
 		});
 
 		$('.nav-search-btn').click(function() {
-
+			console.log('hi');
+			if($('#search-form').is(':visible')) {
+				$('#search-form').slideUp('slow');				
+			} else {
+				$('#search-form').slideDown('slow');
+			};
 
 		});
 
