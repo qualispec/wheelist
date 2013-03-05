@@ -8,5 +8,4 @@ class WheelTag < ActiveRecord::Base
   belongs_to :wheel_size
   belongs_to :wheel_offset
   belongs_to :wheel_color
-
 end

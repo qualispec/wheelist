@@ -4,5 +4,4 @@ class CarColor < ActiveRecord::Base
 	has_many :car_color_options
 	has_many :car_models, through: :car_color_options
 	has_many :car_tags
-
 end

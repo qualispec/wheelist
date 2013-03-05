@@ -3,5 +3,4 @@ class CarColorOption < ActiveRecord::Base
 
   belongs_to :car_model
   belongs_to :car_color
-
 end

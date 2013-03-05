@@ -3,5 +3,4 @@ class WheelOffsetOption < ActiveRecord::Base
 
   belongs_to :wheel_model
   belongs_to :wheel_offset
-
 end

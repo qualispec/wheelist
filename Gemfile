@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
-gem 'bootstrap-sass'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'better_errors'
 gem 'devise'
+gem 'jquery-rails'
+gem 'rails', '3.2.11'
 gem 'simple_form'
 
 group :development do
@@ -32,14 +32,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
 group :test, :development do
-	gem 'rspec-rails'
-	gem 'guard-rspec'
-	gem 'rb-fsevent'
-	gem 'growl'
 	gem 'capybara'
+  gem 'growl'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+  gem 'rspec-rails'
 end
 
 group :test do

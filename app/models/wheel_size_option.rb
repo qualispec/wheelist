@@ -3,5 +3,4 @@ class WheelSizeOption < ActiveRecord::Base
 
   belongs_to :wheel_model
   belongs_to :wheel_size
-
 end

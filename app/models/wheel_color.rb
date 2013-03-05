@@ -4,5 +4,4 @@ class WheelColor < ActiveRecord::Base
   has_many :wheel_color_options
   has_many :wheel_models, through: :wheel_color_options
   has_many :wheel_tags
-
 end

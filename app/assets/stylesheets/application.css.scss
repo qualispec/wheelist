@@ -186,7 +186,6 @@ $silver:							#c0c0c0;
 		background: rgba(192, 192, 192, 0.7);
 	}
 
-
 }
 
 .image {
@@ -227,8 +226,8 @@ $silver:							#c0c0c0;
 
 .image-footer {
 	width: auto;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+/*	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;*/
 }
 
 .image-author-info {
@@ -362,8 +361,13 @@ $silver:							#c0c0c0;
 	background: green;
 }*/
 
+.image-order-toggler .btn {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
 .btn-pressed {
-	background: $red;
+	border: solid 2px black;
 }
 
 #search-btn {
@@ -410,6 +414,10 @@ body {
 
 h2 {
 	clear:both;
+}
+
+.image-order-toggler {
+	margin: auto;
 }
 
 

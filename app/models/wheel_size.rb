@@ -3,6 +3,5 @@ class WheelSize < ActiveRecord::Base
 
   has_many :wheel_size_options
   has_many :wheel_models, through: :wheel_size_options
-  has_many :wheel_tags	
-
+  has_many :wheel_tags
 end

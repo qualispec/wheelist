@@ -7,5 +7,4 @@ class Wheel < ActiveRecord::Base
   validates :width, inclusion: { in: 6..12 }
 
   has_many :wheeltaggings
-
 end

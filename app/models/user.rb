@@ -24,5 +24,4 @@ class User < ActiveRecord::Base
  	has_many :car_tags
 
  	# before_save { self.email.downcase! }
-
 end
