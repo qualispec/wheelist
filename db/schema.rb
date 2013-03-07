@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130305203415) do
+ActiveRecord::Schema.define(:version => 20130307174537) do
 
   create_table "car_color_options", :force => true do |t|
     t.integer  "car_model_id"
@@ -48,24 +48,6 @@ ActiveRecord::Schema.define(:version => 20130305203415) do
     t.integer  "car_color_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-  end
-
-  create_table "cars", :force => true do |t|
-    t.string   "mfg"
-    t.string   "model"
-    t.integer  "year"
-    t.string   "official_color"
-    t.string   "color"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
-  create_table "cartaggings", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "image_id"
-    t.integer  "car_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "comments", :force => true do |t|
@@ -190,14 +172,6 @@ ActiveRecord::Schema.define(:version => 20130305203415) do
     t.string   "color"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-  end
-
-  create_table "wheeltaggings", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "image_id"
-    t.integer  "wheel_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end
