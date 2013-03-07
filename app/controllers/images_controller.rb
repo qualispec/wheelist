@@ -41,6 +41,12 @@ class ImagesController < ApplicationController
 
 		# @images = Image.by_most_recent.all
 		@images = Image.by_most_recent.page(params[:page]).per(18)
+
+		if request.xhr?				# if it's an AJAX request
+			render 'index', :layout => false
+		else
+			render 'index'
+		end
 	end
 
 	def show

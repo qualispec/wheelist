@@ -79,7 +79,7 @@
 	<% else %>
 		<h1>Sorry, no matches found.</h1>
 	<% end %>
-	<%= paginate @images %>
+	<%= paginate @images, :remote => true %>
 </div>
 
 
@@ -152,6 +152,13 @@
 			};
 
 		});
+
+		$('#images').on('ajax:success', '.pagination li', function(event, data) {
+				console.log('hi');
+				$('#images').html(data);
+				$('html, body').animate({ scrollTop: 0}, 800);
+			});
+
 
 
 	});

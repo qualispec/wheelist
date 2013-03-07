@@ -3,4 +3,4 @@
 <% else %>
 	<h1>Sorry, no matches found.</h1>
 <% end %>
-<%= paginate @images %>
+<%= paginate @images, :remote => true %>

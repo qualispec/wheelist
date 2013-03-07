@@ -133,9 +133,13 @@ html, body {
 	float: left;
 	margin: 5px;
 	padding: 1px;
+	overflow: hidden;
 }
 
 .image-tile:hover {
+
+	padding: 0;
+	border: solid 1px black;
 
 	.image-frame.black {
 		background: rgba(0, 0, 0, 0.7);
@@ -176,6 +180,7 @@ html, body {
 
 	.image-footer.black {
 		background: rgba(0, 0, 0, 0.7);
+		z-index: 1;
 
 		h3 {
 			color: white;
@@ -188,14 +193,17 @@ html, body {
 
 	.image-footer.bronze {
 		background: rgba(205, 127, 50, 0.7);
+		z-index: 1;
 	}
 
 	.image-footer.chrome {
 		background: rgba(192, 192, 192, 0.7);
+		z-index: 1;
 	}
 
 	.image-footer.silver {
 		background: rgba(192, 192, 192, 0.7);
+		z-index: 1;
 	}
 
 }
@@ -209,6 +217,8 @@ html, body {
 	text-align: center;
 	width: auto;
 	height: 95px;
+	position: relative;
+	z-index: 1;
 }
 
 .image {
@@ -217,7 +227,7 @@ html, body {
 	overflow: hidden;
 	margin: auto;
 	padding-top: 5px;
-	padding-bottom: 4px;
+	padding-bottom: 5px;
 }
 
 .image img {
@@ -230,14 +240,12 @@ html, body {
 
 .image-tile h3 {
 	margin: 0;
-	padding-left: 10px;
 	font-size: 16px;
 	line-height: 32px;
 }
 
-.image-author-info {
-	padding-top: 3px;
-	padding-bottom: 3px;
+.image-like-comment {
+	height: 33px;
 }
 
 #edit-form {
@@ -402,6 +410,34 @@ h2 {
 .like-button {
 	margin-left: 5px;	
 }
+
+.like-box {
+	width: auto;
+	height: 33px;
+	text-align: center;
+	position: relative;
+	bottom: -33px;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+
+	transition: bottom 0.5s;
+	-moz-transition: bottom 0.5s; /* Firefox 4 */
+	-webkit-transition: bottom 0.5s; /* Safari and Chrome */
+	-o-transition: bottom 0.5s; /* Opera */
+}
+
+.image-tile:hover {
+	.like-box {
+	bottom: 33px;
+	}
+}
+
+/* Pagination */
+
+.pagination {
+	clear: both;
+}
+
 
 /* Debug and misc */
 
