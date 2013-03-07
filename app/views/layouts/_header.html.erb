@@ -5,7 +5,7 @@
 			<nav>
 				<ul class="nav pull-right">
 					<li class="nav-search-btn"><%= link_to "Search", "#" %></li>
-					<% if signed_in? %>
+					<% if user_signed_in? %>
 						<li><%= link_to "Post", new_image_path %> 
 
 						<li id="fat-menu" class="dropdown">

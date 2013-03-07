@@ -3,4 +3,7 @@ class ImageLike < ActiveRecord::Base
 
 	belongs_to :image, counter_cache: true
 	belongs_to :user
+
+  # validates_uniqueness_of :image_id, :scope => :user_id
+
 end

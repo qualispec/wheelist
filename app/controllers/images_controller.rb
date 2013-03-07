@@ -99,15 +99,34 @@ class ImagesController < ApplicationController
 
 	def like
 		image = Image.find(params[:id])
-		image.image_likes.create!(:user_id => current_user.id)
 
-		@image = Image.new
-		@images = Image.all
+		if user_signed_in?
+			image.image_likes.create!(:user_id => current_user.id)
+		else
+			flash[:error] = "Please sign in to Like an image!"
+		end
 
 		if request.xhr?
-			# render :json => image.image_likes.count
-			render :json => image.image_likes_count
+			render :json => image.reload.image_likes_count
 		else
+			@image = Image.new
+			@images = Image.all
+			render 'index'
+		end
+	end
+
+	def unlike
+		image = Image.find(params[:id])
+
+		if image.image_likes.where(:user_id => current_user.id).present?
+			image.image_likes.where(:user_id => current_user.id).first.destroy
+		end
+		
+		if request.xhr?
+			render :json => image.reload.image_likes_count
+		else
+			@image = Image.new
+			@images = Image.all
 			render 'index'
 		end
 	end

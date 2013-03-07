@@ -105,6 +105,17 @@ $silver:							#c0c0c0;
 	width: 600px;
 }
 
+/* Sign up page */
+
+.signup-form label.string.control-label {
+	width: 160px;
+}
+
+.signup-form .string .controls {
+	margin-left: 180px;
+}
+
+
 .form-wrapper {
 	/*background: $grayLight;*/
 }
@@ -172,6 +183,10 @@ $silver:							#c0c0c0;
 		h3 {
 			color: white;
 		}
+
+		p {
+			color: white;
+		}
 	}
 
 	.image-footer.bronze {
@@ -186,6 +201,10 @@ $silver:							#c0c0c0;
 		background: rgba(192, 192, 192, 0.7);
 	}
 
+}
+
+.image-footer {
+	text-align: center;
 }
 
 .image {
@@ -211,6 +230,7 @@ $silver:							#c0c0c0;
 	font-size: 16px;
 	line-height: 32px;
 }
+
 
 .image-author-info {
 	/*muted*/
@@ -289,7 +309,6 @@ $silver:							#c0c0c0;
 	margin-bottom: 20px;
 }
 
-
 .wheel-tag
 /*.car-color-bar {
 	height: 15px;
@@ -361,6 +380,10 @@ $silver:							#c0c0c0;
 	background: green;
 }*/
 
+.image-order-toggler {
+	text-align: center;
+}
+
 .image-order-toggler .btn {
 	margin-left: 5px;
 	margin-right: 5px;
@@ -416,10 +439,24 @@ h2 {
 	clear:both;
 }
 
-.image-order-toggler {
-	margin: auto;
+/* Like Button */
+
+.like-button .like-btn {
+	display: inline-block;
+	width: 51px;
 }
 
+.like-button.liked .like-btn {
+	display: none;
+}
+
+.like-button .unlike-btn {
+	display: none;
+}
+
+.like-button.liked .unlike-btn {
+	display: inline-block;
+}
 
 .debug_dump {
 	clear: both;
