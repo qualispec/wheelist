@@ -1,106 +1,127 @@
 <div class="car-tags">
   <% unless @image.car_tags.empty? %>
 
-  	<h2><%= @image.car_tags.first.car_model.car_mfg.mfg %>
+  	<h3><%= @image.car_tags.first.car_model.year %>
+        <%= @image.car_tags.first.car_model.car_mfg.mfg %>
   			<%= @image.car_tags.first.car_model.model %><br>
   			<%= @image.car_tags.first.car_color.paint_name %><br>
-        <%= @image.caption %>
-  	</h2>
+
+  	</h3>
   <% end %>
 </div>
 
-<div class="image-show clearfix">
-  <%= image_tag(@image.url) %>
+<div class="image-modification-container">
+  <div class="image-show clearfix">
+    <%= image_tag(@image.url) %>
+  </div>
+
+  <div class="wheel-box clearfix">
+    <b>Wheels</b>
+    <table class="table-bordered">
+      <tr>
+      <td><b>Manufacturer</b></td>
+      <td>
+      <% unless @image.wheel_tags.first.wheel_model.wheel_mfg.nil? %>
+        <%= @image.wheel_tags.first.wheel_model.wheel_mfg.mfg %>
+      <% end %>
+      </td>
+      </tr>
+      <tr>
+      <td><b>Model</b></td>
+      <td>
+      <% unless @image.wheel_tags.first.wheel_model.nil? %>
+        <%= @image.wheel_tags.first.wheel_model.model %>
+      <% end %>
+      </td>
+      </tr>
+      <tr>
+      <td><b>Size</b></td>
+      <td>
+      <% unless @image.wheel_tags.first.wheel_size.nil? %>
+        <%= @image.wheel_tags.first.wheel_size.diameter %>x<%= @image.wheel_tags.first.wheel_size.width %>
+      <% end %>
+      </td>
+      </tr>
+      <tr>
+      <td><b>Offset</b></td>
+      <td>
+      <% unless @image.wheel_tags.first.wheel_offset.nil? %> 
+        <%= @image.wheel_tags.first.wheel_offset.offset %></div>
+      <% end %>
+      </td>
+      </tr>
+      <tr>
+      <td><b>Color</b></td>
+      <td>
+      <% unless @image.wheel_tags.first.wheel_color.nil? %>
+        <%= @image.wheel_tags.first.wheel_color.paint_name %>
+      <% end %>
+      </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="edit-tag-btn" class="btn btn-primary btn-small">Edit Tags</div>
+
+  <div>
+    <%= simple_form_for(@image, :url => image_path(@image), :method => :put,
+      :remote => true, html: { id: "edit-form", class: "form-horizontal" } ) do |f| %>
+      
+      <%#= f.input :caption, label: "Caption" %>
+
+      <%= f.simple_fields_for :car_tags do |car_tag| %>
+
+        <% car_mfgs = CarMfg.all.map { |car_mfg| ["#{car_mfg.mfg}",
+                                                     car_mfg.id] } %>
+
+        <%#= car_tag.input :car_mfg_id, collection: car_mfgs.sort %>
+
+        <% car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
+
+        <%= car_tag.input :car_model_id, collection: car_models.sort %>
+
+        <% car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} - #{car_color.color } - #{car_color.id}", car_color.id] } %>
+
+        <%= car_tag.input :car_color_id, collection: car_colors.sort %>
+
+      <% end %>
+
+      <%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
+
+        <% wheel_models = WheelModel.all.map { |wheel_model| 
+            ["#{wheel_model.model} - #{wheel_model.id}", wheel_model.id] } %>
+
+        <%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
+
+        <% wheel_sizes = WheelSize.all.map { |wheel_size| 
+            ["#{wheel_size.diameter} x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
+
+        <%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
+
+        <% wheel_offsets = WheelOffset.all.map { |wheel_offset| 
+            ["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
+
+        <%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
+
+        <% wheel_colors = WheelColor.all.map { |wheel_color| 
+            ["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
+              wheel_color.id] } %>
+
+        <%= wheel_tag.input :wheel_color_id, collection: wheel_colors.sort %>
+
+      <% end %>
+
+      <%= f.submit "Update!", class: "btn btn-primary btn-small" %>
+
+    <% end %>
+
+
+  </div>
+
 </div>
 
-<div class="wheel-tags clearfix">
-  <% unless @image.wheel_tags.empty? %>
-    <% unless @image.wheel_tags.first.wheel_model.wheel_mfg.nil? %>
-      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_model.wheel_mfg.mfg %>
-      </div>
-    <% end %>
 
-    <% unless @image.wheel_tags.first.wheel_model.nil? %>
-      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_model.model %></div>
-    <% end %>
-
-    <% unless @image.wheel_tags.first.wheel_size.nil? %>
-      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_size.diameter %>x<%= @image.wheel_tags.first.wheel_size.width %></div>
-    <% end %>
-    
-    <% unless @image.wheel_tags.first.wheel_offset.nil? %> 
-      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_offset.offset %></div>
-    <% end %>
-
-    <% unless @image.wheel_tags.first.wheel_color.nil? %>
-      <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_color.paint_name %></div>
-    <% end %>
-  <% end %>
-</div>
-
-
-<div id="edit-tag-btn" class="btn btn-primary btn-small">Edit Tags</div>
-
-<div>
-  <%= simple_form_for(@image, :url => image_path(@image), :method => :put,
-    :remote => true, html: { id: "edit-form", class: "form-horizontal" } ) do |f| %>
-    
-    <%= f.input :caption, label: "Caption" %>
-
-    <%= f.simple_fields_for :car_tags do |car_tag| %>
-
-      <% car_mfgs = CarMfg.all.map { |car_mfg| ["#{car_mfg.mfg}",
-                                                   car_mfg.id] } %>
-
-      <%#= car_tag.input :car_mfg_id, collection: car_mfgs.sort %>
-
-      <% car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
-
-      <%= car_tag.input :car_model_id, collection: car_models.sort %>
-
-      <% car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} - #{car_color.color } - #{car_color.id}", car_color.id] } %>
-
-      <%= car_tag.input :car_color_id, collection: car_colors.sort %>
-
-    <% end %>
-
-    <%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
-
-      <% wheel_models = WheelModel.all.map { |wheel_model| 
-          ["#{wheel_model.model} - #{wheel_model.id}", wheel_model.id] } %>
-
-      <%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
-
-      <% wheel_sizes = WheelSize.all.map { |wheel_size| 
-          ["#{wheel_size.diameter} x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
-
-      <%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
-
-      <% wheel_offsets = WheelOffset.all.map { |wheel_offset| 
-          ["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
-
-      <%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
-
-      <% wheel_colors = WheelColor.all.map { |wheel_color| 
-          ["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
-            wheel_color.id] } %>
-
-      <%= wheel_tag.input :wheel_color_id, collection: wheel_colors.sort %>
-
-    <% end %>
-
-    <%= f.submit "Update!", class: "btn btn-primary btn-small" %>
-
-  <% end %>
-
-
-</div>
-
-
-
-
-
-<div class="comments-container clearfix">
+<div class="comments-container">
   <div class="existing-comments">
     <%= render @comments %>
   </div>
@@ -114,6 +135,11 @@
       <%= f.submit "Add comment", class: "btn btn-primary btn-small" %>
     <% end %>
 </div>
+
+
+
+
+
 
 
 
@@ -134,6 +160,7 @@
     });
 
     $('#comment-form').on('ajax:success', function(event, data) {
+      console.log(data);
       $('.existing-comments').html(data);
       $('#comment-body').empty();
     });

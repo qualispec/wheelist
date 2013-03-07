@@ -1,7 +1,9 @@
 <% unless comment.body.empty? %>
-  <div class="comment-container">
+  <div class="existing-comment">
     <p><%= comment.body %></p>
-    <p>posted by <%= comment.user.user_name %> <%= time_ago_in_words(comment.created_at) %></p>
-    <%= link_to "Delete Comment", comment_path(comment), :remote => true, :method => :delete %>
+    <p><%= comment.user.user_name %>, <%= time_ago_in_words(comment.created_at) %> ago</p>
+    <% if current_user && comment.user_id == current_user.id %>
+      <%= link_to "Delete Comment", comment_path(comment), :remote => true, :method => :delete %>
+    <% end %>
   </div>
 <% end %>

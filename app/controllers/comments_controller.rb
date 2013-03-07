@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      UserMailer.new_comment_email(@comment).deliver
+      # UserMailer.new_comment_email(@comment).deliver
     else
       flash[:error] = "There was an error with your comment."
     end

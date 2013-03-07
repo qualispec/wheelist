@@ -65,13 +65,13 @@
 
 		<%= f.submit "Search", class: "btn btn-primary btn-small", id: "search-btn" %>
 	<% end %>
+
+	<div class="image-order-toggler">
+		<a href="#" id="most-popular" class="btn">Sort by Most Popular</a>
+		<a href="#" id="most-recent" class="btn btn-pressed">Sort by Most Recent</a>
+	</div>
 </div>
 
-
-<div class="image-order-toggler">
-	<a href="#" id="most-popular" class="btn">Sort by Most Popular</a>
-	<a href="#" id="most-recent" class="btn btn-pressed">Sort by Most Recent</a>
-</div>
 
 <div id="images">
 	<% unless @images.empty? %>
@@ -79,9 +79,9 @@
 	<% else %>
 		<h1>Sorry, no matches found.</h1>
 	<% end %>
+	<%= paginate @images %>
 </div>
 
-<%= paginate @images %>
 
 
 <script>
@@ -153,109 +153,6 @@
 
 		});
 
-
-		// $('#cartag-input').focus(function(event) {
-		// 	$('.dropdown-list').empty().show();
-
-		// 	// $.each(cartags, function() {
-		// 	// 	$('.dropdown-list').append('<li data-tag-id="' + this.id + '">' + this.year + ' ' + this.mfg + ' ' + th`is.model + ' ' +
-  //  //        this.official_color + '</li>' )
-		// 	// })
-		// 	$.each(modifiedCarList, function() {
-		// 		$('.dropdown-list').append('<li>' + this + '</li>')
-		// 	})
-		// });
-
-		// $('#cartag-input').blur(function(event) {
-		// 	window.setTimeout(function() {
-		// 		$('.dropdown-list').hide();
-		// 	}, 200);
-		// });
-
-		// $('#cartag-input').keyup(autoCompleteHandler);
-
-		// function autoCompleteHandler(event) {
-		// 	string = $(this).val().toLowerCase();
-
-		// 	$('.dropdown-list').empty();
-
-		// 	for(var i in cartags) {
-		// 		if (cartags[i].mfg.toLowerCase().match(string)) {
-		// 			$('.dropdown-list').append(
-		// 				$('<li data-tag-id="' + cartags[i].id + '">' + cartags[i].year + ' ' + cartags[i].mfg + ' ' + cartags[i].model + ' ' + 
-		// 					cartags[i].official_color + '</li>')
-		// 					// .addClass("listOption")
-		// 			)
-		// 		};
-		// 	}
-		// };
-			
-		// $('.dropdown-list').on('click', 'li', function() {
-		// 	console.log(this);
-		// 	console.log($(this).text());
-		// 	console.log($(this).attr('data-tag-id'));
-
-		// 	$('#cartag-input').val($(this).text());
-
-		// 	$('.chosen-cartag').append($(this).text() + " ");
-
-
-		// });
-
-		// $('.carcolor-dropdown-list').on('click', 'li', function() {
-		// 	console.log(this);
-		// 	console.log($(this).text());
-
-		// 	$('#carcolortag-input').val($(this).text());
-
-		// 	$('.dropdown-list').empty();
-
-		// 	modifiedCarList = [];
-		// 	for(var i in cartags) {
-		// 		if (cartags[i].official_color == $(this).text()) {
-		// 			$('.dropdown-list').append('<li>' + cartags[i].mfg + ' ' +
-		// 				cartags[i].model + ' ' + cartags[i].official_color + '</li>' )
-		// 				.hide();
-		// 			modifiedCarList.push(cartags[i].mfg + ' ' +
-		// 				cartags[i].model + ' ' + cartags[i].official_color)
-		// 			console.log('found a color match');
-
-		// 		}
-		// 	};
-		// 		console.log(modifiedCarList);
-		// });
-
-
-		// $('#carcolortag-input').focus(function(event) {
-		// 	$('.carcolor-dropdown-list').empty().show();
-
-		// 	$.each(carColor, function() {
-		// 		$('.carcolor-dropdown-list').append('<li>' + this + '</li>' )
-		// 	})
-		// });
-
-		// $('#carcolortag-input').blur(function(event) {
-		// 	window.setTimeout(function() {
-		// 		$('.carcolor-dropdown-list').hide();
-		// 	}, 200);
-		// });
-
-		// $('#carcolortag-input').keyup(colorAutoCompleteHandler);
-
-		// function colorAutoCompleteHandler(event) {
-		// 	string = $(this).val().toLowerCase();
-
-		// 	$('.carcolor-dropdown-list').empty();
-
-		// 	for(var i in carColor) {
-		// 		if (carColor[i].toLowerCase().match(string)) {
-		// 			$('.carcolor-dropdown-list').append(
-		// 				$('<li>' + carColor[i] + '</li>')
-		// 					// .addClass("listOption")
-		// 			)
-		// 		};
-		// 	}
-		// };
 
 	});
 

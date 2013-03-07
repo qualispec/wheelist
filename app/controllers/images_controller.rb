@@ -46,7 +46,7 @@ class ImagesController < ApplicationController
 	def show
 		@image = Image.find(params[:id])
 
-		@comment = Comment.new
+		@comment = Comment.new(body: "Add a comment...")
 		@comments = Comment.where(:image_id => params[:id]).all
 	end
 
@@ -84,10 +84,11 @@ class ImagesController < ApplicationController
 
 		if params[:most_popular]
 			# @images = @images.by_most_popular.all
-			@images = @images.by_most_popular.page(1).per(18)
+			@images = @images.by_most_popular.page(params[:page]).per(18)
 		else
 			# @images = @images.order('id DESC').all
-			@images = @images.order('id DESC').page(1).per(18)
+			@images = @images.order('id DESC').page(params[:page]).per(18)
+			@images = @images.order('id DESC').page(params[:page]).per(18)
 		end
 
 		if request.xhr?				# if it's an AJAX request
@@ -121,7 +122,7 @@ class ImagesController < ApplicationController
 		if image.image_likes.where(:user_id => current_user.id).present?
 			image.image_likes.where(:user_id => current_user.id).first.destroy
 		end
-		
+
 		if request.xhr?
 			render :json => image.reload.image_likes_count
 		else

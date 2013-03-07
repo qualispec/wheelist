@@ -18,6 +18,10 @@
 $bronze:							#cd7f32;
 $silver:							#c0c0c0;
 
+html, body {
+	height: 100%;
+}
+
 #search-form .control-group {
 	/*float: left;*/
 	margin: 5px;
@@ -120,26 +124,19 @@ $silver:							#c0c0c0;
 	/*background: $grayLight;*/
 }
 
+/* Image Tile */
+
 .image-tile {
 	background: white;
 	width: 300px;
-	height: 320px;
+	height: 330px;
 	float: left;
 	margin: 5px;
-	/*border-radius: 5px;*/
 	padding: 1px;
 }
 
 .image-tile:hover {
-/*	padding-top: 8px;
-	padding-bottom: 8px;
-	border-top: solid 2px gray;
-	border-bottom: solid 2px gray;*/
 
-	.image-frame {
-/*		opacity: 0.8;*/
-	}
-	
 	.image-frame.black {
 		background: rgba(0, 0, 0, 0.7);
 	}
@@ -203,8 +200,15 @@ $silver:							#c0c0c0;
 
 }
 
+.image-frame {
+	width: auto;
+	height: 235px;
+}
+
 .image-footer {
 	text-align: center;
+	width: auto;
+	height: 95px;
 }
 
 .image {
@@ -231,77 +235,61 @@ $silver:							#c0c0c0;
 	line-height: 32px;
 }
 
-
-.image-author-info {
-	/*muted*/
-	padding-left: 10px;
-}
-
-.image-frame {
-	width: auto;
-	height: 235px;
-/*	border-top: 5px;
-	border-bottom: 5px;*/
-}
-
-.image-footer {
-	width: auto;
-/*	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;*/
-}
-
 .image-author-info {
 	padding-top: 3px;
 	padding-bottom: 3px;
-}
-
-.image-show {
-	width: 70%;
-	float: left;
-}
-
-.wheel-tags {
-	float: left;
-	width: 30%;
-	height: 440px;
-}
-
-.wheel-tag {
-	height: 25px;
-	width: 100px;
-	border: solid 2px gray;
-	border-radius: 5px;
-	margin: 2px;
-	clear: left;
-	float: left;
-}
-
-.wheel-tag:hover {
-	background: $grayLighter;
 }
 
 #edit-form {
 	display: none;
 }
 
-.comment-container {
-	width: 70%;
-	height: auto;
-	background: $grayLight;
+/* Image Show page */
 
+.car-tags {
+	padding: 10px;
 }
-.comments-container textarea {
-	width: 70%;
-	height: 200px;
+
+.image-modification-container {
+	padding: 10px;
+	width: 700px;
+	float: left;
+}
+
+.wheel-box {
+	margin: 10px;
+	border: solid 1px black;
+	width: 200px;
+}
+
+
+/* Comments */
+
+.comments-container {
+	width: 210px;
+	padding-top: 10px;
+	float: left;
+	height: auto;
+}
+
+.existing-comment {
+	height: auto;
+	padding: 5px;
+	margin-bottom: 5px;
+	background: $grayLighter;
+	border: solid 1px black;
+	border-radius: 5px;
 }
 
 .comments-container .controls {
 	margin-left: 0;
 }
 
-.like-button {
-	margin-left: 5px;	
+#comment-form textarea {
+	width: 200px;
+	height: 50px;
 }
+
 
 .image-preview {
 	width: 50%;
@@ -309,60 +297,6 @@ $silver:							#c0c0c0;
 	margin-bottom: 20px;
 }
 
-.wheel-tag
-/*.car-color-bar {
-	height: 15px;
-	width: 49%;
-	float: left;
-	opacity: 0.8;
-}
-
-	.car-color-bar.black {
-		background: black;
-	}
-
-	.car-color-bar.blue {
-		background: blue;
-	}
-
-	.car-color-bar.gray {
-		background: gray;
-	}
-
-	.car-color-bar.green {
-		background: green;
-	}
-
-	.car-color-bar.orange {
-		background: orange;
-	}
-
-	.car-color-bar.red {
-		background: red;
-	}
-
-	.car-color-bar.silver {
-		background: $silver;
-	}
-
-	.car-color-bar.white {
-		background: white;
-		height: 13px;
-		border: solid 1px $grayLight;
-	}
-
-	.car-color-bar.yellow {
-		background: yellow;
-	}
-
-.wheel-color-bar {
-	background: $bronze;
-	height: 15px;
-	width: 49%;
-	float: right;
-	opacity: 0.8;
-}
-*/
 
 .navbar {
 	background: image-url("escheresque.png");
@@ -376,11 +310,8 @@ $silver:							#c0c0c0;
 	border-bottom: solid 2px red;
 }
 
-/*.nav-search-btn {
-	background: green;
-}*/
-
 .image-order-toggler {
+	width: 100%;
 	text-align: center;
 }
 
@@ -396,24 +327,34 @@ $silver:							#c0c0c0;
 #search-btn {
 	display: none;
 }
-/*
+
 .search-form-wrapper {
-	display: none;
+	padding: 15px 0;
+	position: fixed;
+	background: white;
+	width: 940px;
+	top: 40px;
 }
-*/
+
 
 #search-form {
 	display: none;
+	/*position: fixed;*/
 }
 
 body {
-	/*background: image-url("escheresque.png");*/
-	padding-top: 60px;
-/*	width: 100%;*/
+	background: image-url("escheresque_ste.png");
+/*	padding-top: 60px;*/
+	width: 100%;
 }
 
-.container {
-	/*width: 100%;*/
+.spacer {
+	padding-top: 60px;
+}
+
+.main {
+	background: white;
+	min-height: 100%;
 }
 
 #logo {
@@ -458,11 +399,20 @@ h2 {
 	display: inline-block;
 }
 
+.like-button {
+	margin-left: 5px;	
+}
+
+/* Debug and misc */
+
 .debug_dump {
 	clear: both;
 	float: left;
-	width: 100%;
+	width: 938px;
+	padding: 0;
 	margin-top: 45px;
 }
 
-
+.clearfix {
+	clear: both;
+}
