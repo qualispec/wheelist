@@ -24,6 +24,5 @@ Wheelist::Application.routes.draw do
   end
 
   resources :comments
-  resources :cars
 
 end

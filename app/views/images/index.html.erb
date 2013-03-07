@@ -1,66 +1,68 @@
 <div class="search-form-wrapper">
-	<%= simple_form_for(@image, :url => search_images_path, :method => :get, 
-											:remote => true, html: { id: 'search-form', class: 'clearfix form-horizontal' }) do |f| %>
-
+	<%= simple_form_for(@image, :url => search_images_path, 
+															:method => :get, 
+															:remote => true, 
+															:html => { id: 'search-form', 
+																				 class: 'clearfix form-horizontal' }) do |f| %>
 
 		<%= f.simple_fields_for :car_tags do |car_tag| %>
-
 			<% car_mfgs = CarMfg.all.map { |car_mfg| ["#{car_mfg.mfg}
 																			- #{car_mfg.id}", car_mfg.id] } %>
 
 			<%#= f.input :car_mfg_id, collection: car_mfgs.sort, input_html:
 			{ name: "anything" } %> 
 
-			<%# car_models = CarModel.all.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
+			<%# car_models = CarModel.all.map { |car_model| ["#{car_model.year} 
+											#{car_model.model} - #{car_model.id}", car_model.id] } %>
 
-		<div class="car-inputs">
-			<% car_models = CarModel.all
-															.select { |car_model| 
-																CarTag.where(:car_model_id => car_model.id).exists? }
-															.map { |car_model| ["#{car_model.year} #{car_model.model} - #{car_model.id}", car_model.id] } %>
+			<div class="car-inputs">
+				<% car_models = CarModel.all
+																.select { |car_model| 
+																	CarTag.where(:car_model_id => car_model.id).exists? }
+																.map { |car_model| ["#{car_model.year} #{car_model.model}
+																				 - #{car_model.id}", car_model.id] } %>
 
-			<%= car_tag.input :car_model_id, collection: car_models.sort %>
+				<%= car_tag.input :car_model_id, collection: car_models.sort %>
 
-			<%# car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name} - #{car_color.color } - #{car_color.id}", car_color.id] } %>
+				<%# car_colors = CarColor.all.map { |car_color| ["#{car_color.paint_name}
+													 - #{car_color.color } - #{car_color.id}", car_color.id] } %>
 
-			<% car_colors = CarColor.all
-															.select { |car_color|
-																CarTag.where(:car_color_id => car_color.id).exists? }
-															.map { |car_color| ["#{car_color.paint_name} - 
-																#{car_color.color } - #{car_color.id}", car_color.id] } %>
+				<% car_colors = CarColor.all
+																.select { |car_color|
+																	CarTag.where(:car_color_id => car_color.id).exists? }
+																.map { |car_color| ["#{car_color.paint_name} - 
+																	#{car_color.color } - #{car_color.id}", car_color.id] } %>
 
-
-			<%= car_tag.input :car_color_id, collection: car_colors.sort %>
-		</div>
-
+				<%= car_tag.input :car_color_id, collection: car_colors.sort %>
+			</div>
 		<% end %>
 
 		<%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
 
-		<div class="wheel-inputs model-size">
-			<% wheel_models = WheelModel.all.map { |wheel_model| ["#{wheel_model.model} 
-					- #{wheel_model.id}", wheel_model.id] } %>
-			
-			<%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
+			<div class="wheel-inputs model-size">
+				<% wheel_models = WheelModel.all.map { |wheel_model| ["#{wheel_model.model} 
+						- #{wheel_model.id}", wheel_model.id] } %>
+				
+				<%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
 
-			<% wheel_sizes = WheelSize.all.map { |wheel_size| ["#{wheel_size.diameter}
-					x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
+				<% wheel_sizes = WheelSize.all.map { |wheel_size| ["#{wheel_size.diameter}
+						x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
 
-			<%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
-		</div>
+				<%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
+			</div>
 
-		<div class="wheel-inputs offset-color">
-			<% wheel_offsets = WheelOffset.all.map { |wheel_offset|  
-					["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
+			<div class="wheel-inputs offset-color">
+				<% wheel_offsets = WheelOffset.all.map { |wheel_offset|  
+						["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
 
-			<%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
+				<%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
 
-			<% wheel_colors = WheelColor.all.map { |wheel_color| 
-				["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
-					wheel_color.id] } %>
+				<% wheel_colors = WheelColor.all.map { |wheel_color| 
+					["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
+						wheel_color.id] } %>
 
-			<%= wheel_tag.input :wheel_color_id, collection: wheel_colors.sort %>
-		</div>
+				<%= wheel_tag.input :wheel_color_id, collection: wheel_colors.sort %>
+			</div>
 		<% end %>
 
 		<%= f.submit "Search", class: "btn btn-primary btn-small", id: "search-btn" %>
@@ -81,7 +83,6 @@
 	<% end %>
 	<%= paginate @images, :remote => true %>
 </div>
-
 
 
 <script>
@@ -130,6 +131,7 @@
 
 			$(this).addClass('btn-pressed');
 			$('#most-recent').removeClass('btn-pressed');
+
 		});
 
 		$('#most-recent').click(function() {
@@ -146,9 +148,11 @@
 		$('.nav-search-btn').click(function() {
 			console.log('hi');
 			if($('#search-form').is(':visible')) {
-				$('#search-form').slideUp('slow');				
+				$('#search-form').slideUp('slow');
+				$('#images').animate({ 'margin-top': '40px' });				
 			} else {
 				$('#search-form').slideDown('slow');
+				$('#images').animate({ 'margin-top': '140px' });
 			};
 
 		});
@@ -158,8 +162,6 @@
 				$('#images').html(data);
 				$('html, body').animate({ scrollTop: 0}, 800);
 			});
-
-
 
 	});
 
