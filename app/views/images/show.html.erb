@@ -11,23 +11,23 @@
     <%= image_tag(@image.url) %>
   </div>
 
+  <div class="image-caption clearfix">
+    <%= @image.caption if @image.caption %>
+  </div> 
+
   <div class="wheel-box clearfix">
     <b>Wheels</b>
     <table class="table-bordered">
       <tr>
       <td><b>Manufacturer</b></td>
       <td>
-      <%# unless @image.wheel_tags.first.wheel_model.wheel_mfg.nil? %>
         <%= @image.wheel_tags.first.wheel_model.wheel_mfg.mfg if @image.wheel_tags.first.wheel_model %>
-      <%# end %>
       </td>
       </tr>
       <tr>
       <td><b>Model</b></td>
       <td>
-      <%# unless @image.wheel_tags.first.wheel_model.nil? %>
         <%= @image.wheel_tags.first.wheel_model.model if @image.wheel_tags.first.wheel_model %>
-      <%# end %>
       </td>
       </tr>
       <tr>
@@ -41,17 +41,13 @@
       <tr>
       <td><b>Offset</b></td>
       <td>
-      <%# unless @image.wheel_tags.first.wheel_offset.nil? %> 
         <%= @image.wheel_tags.first.wheel_offset.offset if @image.wheel_tags.first.wheel_offset %>
-      <%# end %>
       </td>
       </tr>
       <tr>
       <td><b>Color</b></td>
       <td>
-      <%# unless @image.wheel_tags.first.wheel_color.nil? %>
         <%= @image.wheel_tags.first.wheel_color.paint_name if @image.wheel_tags.first.wheel_color %>
-      <%# end %>
       </td>
       </tr>
     </table>

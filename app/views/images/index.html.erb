@@ -44,24 +44,36 @@
 		<%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
 
 			<div class="wheel-inputs model-size">
-				<% wheel_models = WheelModel.all.map { |wheel_model| ["#{wheel_model.model} 
-						- #{wheel_model.id}", wheel_model.id] } %>
+				<% wheel_models = WheelModel.all
+																		.select { |wheel_model| 
+																			WheelTag.where(:wheel_model_id => wheel_model.id).exists? }
+																		.map { |wheel_model| ["#{wheel_model.model} 
+																			- #{wheel_model.id}", wheel_model.id] } %>
 				
 				<%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
 
-				<% wheel_sizes = WheelSize.all.map { |wheel_size| ["#{wheel_size.diameter}
-						x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
+				<% wheel_sizes = WheelSize.all
+																	.select { |wheel_size|
+																		WheelTag.where(:wheel_size_id => wheel_size.id).exists? }
+																	.map { |wheel_size| ["#{wheel_size.diameter}
+									x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
 
 				<%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
 			</div>
 
 			<div class="wheel-inputs offset-color">
-				<% wheel_offsets = WheelOffset.all.map { |wheel_offset|  
+				<% wheel_offsets = WheelOffset.all
+																			.select { |wheel_offset|
+																				WheelTag.where(:wheel_offset_id => wheel_offset.id).exists? }	
+																			.map { |wheel_offset|  
 						["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
 
 				<%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
 
-				<% wheel_colors = WheelColor.all.map { |wheel_color| 
+				<% wheel_colors = WheelColor.all
+																		.select { |wheel_color|
+																			WheelTag.where(:wheel_color_id => wheel_color.id).exists? }
+																		.map { |wheel_color| 
 					["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
 						wheel_color.id] } %>
 

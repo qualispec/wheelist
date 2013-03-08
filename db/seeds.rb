@@ -19,21 +19,38 @@ wheel_volk_racing = WheelMfg.create!(mfg: 'Volk Racing')
 wheel_work = 				WheelMfg.create!(mfg: 'Work')
 
 wheel_6ul = wheel_949_racing.wheel_models.create!(model: '6UL')
+wheel_rpf1 = wheel_enkei.wheel_models.create!(model: 'RP-F1')
 
 # wheel_model_1_size_1 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 7.5)
 # wheel_model_1_size_2 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 8)
 # wheel_model_1_size_3 = wheel_model_1.wheel_sizes.create!(diameter: 15, width: 9)
 
+size_14x7 =  WheelSize.create!(diameter: 14, width: 7)
+size_15x7 =  WheelSize.create!(diameter: 15, width: 7)
 size_15x75 = WheelSize.create!(diameter: 15, width: 7.5)
 size_15x8 =  WheelSize.create!(diameter: 15, width: 8)
 size_15x9 =  WheelSize.create!(diameter: 15, width: 9)
 
+offset_23 = WheelOffset.create!(offset: 23)
+offset_24 = WheelOffset.create!(offset: 24)
+offset_25 = WheelOffset.create!(offset: 25)
+offset_26 = WheelOffset.create!(offset: 26)
+offset_27 = WheelOffset.create!(offset: 27)
+offset_28 = WheelOffset.create!(offset: 28)
+offset_29 = WheelOffset.create!(offset: 29)
+offset_30 = WheelOffset.create!(offset: 30)
+offset_31 = WheelOffset.create!(offset: 31)
+offset_32 = WheelOffset.create!(offset: 32)
+offset_33 = WheelOffset.create!(offset: 33)
+offset_34 = WheelOffset.create!(offset: 34)
+offset_35 = WheelOffset.create!(offset: 35)
 offset_36 = WheelOffset.create!(offset: 36)
 
 wheel_black  = WheelColor.create!(paint_name: 'Black', color: 'Black')
 wheel_matte_bronze = WheelColor.create!(paint_name: 'Matte Bronze', color: 'Bronze')
 wheel_nickel = WheelColor.create!(paint_name: 'Nickel', color: 'Chrome')
 wheel_silver = WheelColor.create!(paint_name: 'Silver', color: 'Silver')
+wheel_white = WheelColor.create!(paint_name: 'White', color: 'White')
 
 # wheel_model_1_offset_1 = wheel_model_1.wheel_offsets.create!(offset: 36)
 
@@ -70,6 +87,7 @@ car_mfg_1 = CarMfg.create!(mfg: 'Mazda')
 car_model_1 = car_mfg_1.car_models.create!(year: 1993, model: 'Miata NA6')
 car_model_2 = car_mfg_1.car_models.create!(year: 1997, model: 'Miata NA8')
 car_model_3 = car_mfg_1.car_models.create!(year: 2005, model: 'Miata NB')
+car_model_4 = car_mfg_1.car_models.create!(year: 2006, model: 'Miata NC')
 
 black_cherry_mica = 		CarColor.create!(paint_name: 'Black Cherry Mica',	 
 																			    		color: 'Black')
@@ -1391,11 +1409,157 @@ wheel_tag_64 = WheelTag.create!(
 
 # 15x8, nickel
 
+image_65 = Image.create!(url: 'http://i640.photobucket.com/albums/uu128/97mmiata/RPF1_rearview.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
 
+car_tag_65 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_65.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
 
+wheel_tag_65 = WheelTag.create!(
+									:image_id => image_65.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_14x7.id,
+									:wheel_offset_id => offset_27.id,
+									:wheel_color_id => wheel_silver.id)
 
+# 14x7, silver, offset unknown
 
+image_66 = Image.create!(url: 'http://i640.photobucket.com/albums/uu128/97mmiata/RPF1_sideview2.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
 
+car_tag_66 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_66.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
+
+wheel_tag_66 = WheelTag.create!(
+									:image_id => image_66.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_14x7.id,
+									:wheel_offset_id => offset_27.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 14x7, silver, offset unknown
+
+image_67 = Image.create!(url: 'http://farm3.static.flickr.com/2775/4518592608_8bd880e836_z.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_67 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_67.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_67 = WheelTag.create!(
+									:image_id => image_67.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_15x7.id,
+									:wheel_offset_id => offset_35.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 15x7, silver
+
+image_68 = Image.create!(url: 'http://farm4.static.flickr.com/3141/3165211747_12c28789dd_z.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_68 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_68.id,
+									:car_model_id => car_model_1.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
+
+wheel_tag_68 = WheelTag.create!(
+									:image_id => image_68.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_15x7.id,
+									:wheel_offset_id => offset_35.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 15x7, silver
+
+image_69 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/2009/12/DSC_4545sm.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_69 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_69.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
+
+wheel_tag_69 = WheelTag.create!(
+									:image_id => image_69.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_14x7.id,
+									:wheel_offset_id => offset_27.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 14x7, silver, offset unknown
+
+image_70 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/2009/11/DSC_4249_sm.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_70 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_70.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
+
+wheel_tag_70 = WheelTag.create!(
+									:image_id => image_70.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_14x7.id,
+									:wheel_offset_id => offset_27.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 14x7, silver, offset unknown
+
+image_71 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/2010/11/DSC_8048.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_71 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_71.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
+
+wheel_tag_71 = WheelTag.create!(
+									:image_id => image_71.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_14x7.id,
+									:wheel_offset_id => offset_27.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 14x7, silver, offset unknown
+
+image_72 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/2010/07/top1.jpg',
+												caption: 'test caption',
+												user_id: user_1.id)
+
+car_tag_72 = CarTag.create!(
+									:user_id => user_1.id, 
+									:image_id => image_72.id,
+									:car_model_id => car_model_2.id,
+	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
+
+wheel_tag_72 = WheelTag.create!(
+									:image_id => image_72.id,
+									:wheel_model_id => wheel_rpf1.id,
+									:wheel_size_id => size_14x7.id,
+									:wheel_offset_id => offset_27.id,
+									:wheel_color_id => wheel_silver.id)
+
+# 14x7, silver, offset unknown
 
 
 
