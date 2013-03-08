@@ -5,7 +5,8 @@ class ImagesController < ApplicationController
 		@image.user_id = current_user.id
 
 		if @image.save
-			redirect_to current_user
+			redirect_to images_path
+			# redirect_to current_user
 			# redirect_to user_images_path(current_user)
 		else
 			render 'new'

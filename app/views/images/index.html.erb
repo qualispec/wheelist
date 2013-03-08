@@ -79,7 +79,7 @@
 </div>
 
 
-<div id="images">
+<div id="images" class="<%= 'dropdown' if @dropdown %>">
 	<% unless @images.empty? %>
 		<%= render @images %>
 	<% else %>
@@ -158,7 +158,9 @@
 
 			if($('#search-form').is(':visible')) {
 				$('#search-form').slideUp('slow');
-				$('#images').animate({ 'margin-top': '40px' });				
+				$('#images').animate({ 'margin-top': '40px' });
+				// $('#search-form').removeClass('search-form-show');
+				// $('#images').removeClass('dropdown');				
 			} else {
 				$('#search-form').slideDown('slow');
 				$('#images').animate({ 'margin-top': '140px' });

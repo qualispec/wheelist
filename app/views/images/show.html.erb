@@ -1,6 +1,6 @@
 <div class="car-tags">
   	<h3><%= @image.car_tags.first.car_model.year if @image.car_tags.first.car_model %>
-        <%= @image.car_tags.first.car_model.car_mfg.mfg if @image.car_tags.first.car_model.car_mfg %>
+        <%= @image.car_tags.first.car_model.car_mfg.mfg if @image.car_tags.first.car_model %>
   			<%= @image.car_tags.first.car_model.model if @image.car_tags.first.car_model %><br>
   			<%= @image.car_tags.first.car_color.paint_name if @image.car_tags.first.car_color %><br>
   	</h3>
@@ -17,17 +17,17 @@
       <tr>
       <td><b>Manufacturer</b></td>
       <td>
-      <% unless @image.wheel_tags.first.wheel_model.wheel_mfg.nil? %>
-        <%= @image.wheel_tags.first.wheel_model.wheel_mfg.mfg %>
-      <% end %>
+      <%# unless @image.wheel_tags.first.wheel_model.wheel_mfg.nil? %>
+        <%= @image.wheel_tags.first.wheel_model.wheel_mfg.mfg if @image.wheel_tags.first.wheel_model %>
+      <%# end %>
       </td>
       </tr>
       <tr>
       <td><b>Model</b></td>
       <td>
-      <% unless @image.wheel_tags.first.wheel_model.nil? %>
-        <%= @image.wheel_tags.first.wheel_model.model %>
-      <% end %>
+      <%# unless @image.wheel_tags.first.wheel_model.nil? %>
+        <%= @image.wheel_tags.first.wheel_model.model if @image.wheel_tags.first.wheel_model %>
+      <%# end %>
       </td>
       </tr>
       <tr>
@@ -41,17 +41,17 @@
       <tr>
       <td><b>Offset</b></td>
       <td>
-      <% unless @image.wheel_tags.first.wheel_offset.nil? %> 
-        <%= @image.wheel_tags.first.wheel_offset.offset %></div>
-      <% end %>
+      <%# unless @image.wheel_tags.first.wheel_offset.nil? %> 
+        <%= @image.wheel_tags.first.wheel_offset.offset if @image.wheel_tags.first.wheel_offset %>
+      <%# end %>
       </td>
       </tr>
       <tr>
       <td><b>Color</b></td>
       <td>
-      <% unless @image.wheel_tags.first.wheel_color.nil? %>
-        <%= @image.wheel_tags.first.wheel_color.paint_name %>
-      <% end %>
+      <%# unless @image.wheel_tags.first.wheel_color.nil? %>
+        <%= @image.wheel_tags.first.wheel_color.paint_name if @image.wheel_tags.first.wheel_color %>
+      <%# end %>
       </td>
       </tr>
     </table>
@@ -146,7 +146,7 @@
     });
 
     $('#edit-form').on('ajax:success', function(event, data) {
-      $('.wheel-tags').html(data);
+      console.log(data);
     });
 
     $('#comment-form').on('ajax:success', function(event, data) {

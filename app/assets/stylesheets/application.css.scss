@@ -193,6 +193,14 @@ html, body {
 		p {
 			color: white;
 		}
+
+		.like-count {
+			color: white;
+		}
+
+		.comment-count {
+			color: white;
+		}
 	}
 
 	.image-footer.bronze {
@@ -371,6 +379,10 @@ html, body {
 
 #images {
 	margin-top: 42px;
+}
+
+#images.dropdown {
+	margin-top: 140px;
 }
 
 #search-form {

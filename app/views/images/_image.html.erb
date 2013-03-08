@@ -19,10 +19,10 @@
 
 		<div class="image-description">
       <h3>
-				  <%= image.car_tags.first.car_model.car_mfg.mfg if image.car_tags.first.car_model.car_mfg %>
+				  <%= image.car_tags.first.car_model.car_mfg.mfg if image.car_tags.first.car_model %>
 				  <%= image.car_tags.first.car_model.model if image.car_tags.first.car_model %>
           on
-          <%= image.wheel_tags.first.wheel_model.wheel_mfg.mfg if image.wheel_tags.first.wheel_model.wheel_mfg %>
+          <%= image.wheel_tags.first.wheel_model.wheel_mfg.mfg if image.wheel_tags.first.wheel_model %>
           <%= image.wheel_tags.first.wheel_model.model if image.wheel_tags.first.wheel_model %>
       </h3>
 		</div>
