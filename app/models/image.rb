@@ -9,8 +9,8 @@ class Image < ActiveRecord::Base
   has_many :comments
   has_many :car_tags
   has_many :wheel_tags
-  # has_many :wheels, through: :wheeltaggings
-  # has_many :cars, 	through: :cartaggings
+
+  validates :url, presence: true
 
   accepts_nested_attributes_for :car_tags
   accepts_nested_attributes_for :wheel_tags

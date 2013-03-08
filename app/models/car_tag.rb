@@ -5,4 +5,6 @@ class CarTag < ActiveRecord::Base
   belongs_to :image
   belongs_to :car_model
   belongs_to :car_color
+
+  # validates :car_model_id, presence: true
 end

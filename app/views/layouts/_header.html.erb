@@ -1,10 +1,10 @@
-<header class="navbar navbar-fixed-top ">
+<header class="navbar navbar-fixed-top navbar-inverse ">
 	<div class="navbar-inner">
 		<div class="container">
 			<%= link_to "wheelistic", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li class="nav-search-btn"><%= link_to "Search", "#" %></li>
+					<li class="nav-search-btn"><%= link_to "Search", images_path %></li>
 					<% if user_signed_in? %>
 						<li><%= link_to "Post", new_image_path %> 
 

@@ -3,7 +3,7 @@
 															:method => :get, 
 															:remote => true, 
 															:html => { id: 'search-form', 
-																				 class: 'clearfix form-horizontal' }) do |f| %>
+																				 class: 'form-horizontal clearfix' }) do |f| %>
 
 		<%= f.simple_fields_for :car_tags do |car_tag| %>
 			<% car_mfgs = CarMfg.all.map { |car_mfg| ["#{car_mfg.mfg}
@@ -113,12 +113,12 @@
 			console.log(data);
 
 			if($(this).closest('.like-button').hasClass('liked')) {
-				$(this).closest('.like-button').removeClass('liked')
+				$(this).closest('.like-button').removeClass('liked');
 			} else {
-				$(this).closest('.like-button').addClass('liked')
+				$(this).closest('.like-button').addClass('liked');
 			};
 	
-			$(this).closest('.image-like').find('.like-count').html(data);
+			$(this).closest('.image-tile').find('.like-count').html(data + ' likes');
 		});
 
 		$('#most-popular').click(function() {
@@ -145,8 +145,15 @@
 			$('#most-popular').removeClass('btn-pressed');
 		});
 
-		$('.nav-search-btn').click(function() {
+		$('.nav-search-btn').click(function(event) {
 			console.log('hi');
+
+			if($('#search-form').length == 0) {
+				return true;
+			} else {
+				event.preventDefault();
+			}
+
 			if($('#search-form').is(':visible')) {
 				$('#search-form').slideUp('slow');
 				$('#images').animate({ 'margin-top': '40px' });				
@@ -159,6 +166,7 @@
 
 		$('#images').on('ajax:success', '.pagination li', function(event, data) {
 				console.log('hi');
+				console.log(data);
 				$('#images').html(data);
 				$('html, body').animate({ scrollTop: 0}, 800);
 			});

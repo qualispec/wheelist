@@ -8,4 +8,7 @@ class WheelTag < ActiveRecord::Base
   belongs_to :wheel_size
   belongs_to :wheel_offset
   belongs_to :wheel_color
+
+  # validates :wheel_model_id, presence: true
+  # validates :wheel_size_id,  presence: true
 end
