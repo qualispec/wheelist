@@ -137,16 +137,13 @@ html, body {
 	overflow: hidden;
 	position: relative;
 
-	-moz-box-shadow: -1px 1px 2px #000;
-	-webkit-box-shadow: -1px 1px 2px #000;
-	box-shadow: -1px 1px 2px #000;
+/*	-moz-box-shadow: -1px 1px 2px #000;
+	-webkit-box-shadow: -0.5px 0.5px 1px #000;
+	box-shadow: -1px 1px 2px #000;*/
 
 }
 
 .image-tile:hover {
-
-	padding: 0;
-	border: solid 1px black;
 
 	.image-frame.black {
 		background: rgba(0, 0, 0, 0.7);
@@ -332,11 +329,11 @@ html, body {
 
 
 .navbar {
-	background: image-url("escheresque.png");
+	background: image-url("escheresque_ste.png");
 }
 
 .navbar-inner {
-	background: image-url("escheresque.png");
+	background: image-url("escheresque_ste.png");
 }
 
 .navbar li:hover {
@@ -364,7 +361,8 @@ html, body {
 .search-form-wrapper {
 	padding-bottom: 15px;
 	position: fixed;
-	background: white;
+	/*background: white;*/
+	background: image-url("escheresque.png");
 	width: 940px;
 	top: 42px;
 	padding-top: 40px;
@@ -372,7 +370,7 @@ html, body {
 }
 
 #images {
-	margin-top: 40px;
+	margin-top: 42px;
 }
 
 #search-form {
@@ -380,33 +378,42 @@ html, body {
 	/*position: fixed;*/
 }
 
+#search-form.search-form-show {
+	display: block;
+}
+
+
 body {
-	background: image-url("escheresque_ste.png");
+	background: image-url("escheresque.png");
 /*	padding-top: 60px;*/
 	width: 100%;
 }
 
 .spacer {
 	height: 40px;
-	background: white;
+	/*background: white;*/
+	background: image-url("escheresque.png");
 	padding-top: 42px;
 	position: relative;
 	z-index: 1000;
 }
 
 .main {
-	background: white;
+	/*background: white;*/
+	background: image-url("escheresque.png");
 	min-height: 100%;
 }
 
 #logo {
+	font-family: 'Playball', cursive;
+	color: #9933cc;
 	float: left;
 	margin-right: 10px;
 	font-size: 2em;
-	color: white;
+	/*color: white;*/
 	letter-spacing: 1px;
 	padding-top: 7px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	line-height: 1;
 }
 
@@ -414,9 +421,6 @@ body {
 	text-decoration: none;
 }
 
-/*.simple_form .form-horizontal {
-	width: 500px;
-}*/
 
 h2 {
 	clear:both;

@@ -1,9 +1,13 @@
 <div class="search-form-wrapper">
+
+	<% search_form_class = 'form-horizontal clearfix' 
+	search_form_class += ' search-form-show' if @dropdown %>
+
 	<%= simple_form_for(@image, :url => search_images_path, 
 															:method => :get, 
 															:remote => true, 
 															:html => { id: 'search-form', 
-																				 class: 'form-horizontal clearfix' }) do |f| %>
+																				 class: search_form_class }) do |f| %>
 
 		<%= f.simple_fields_for :car_tags do |car_tag| %>
 			<% car_mfgs = CarMfg.all.map { |car_mfg| ["#{car_mfg.mfg}
@@ -146,8 +150,6 @@
 		});
 
 		$('.nav-search-btn').click(function(event) {
-			console.log('hi');
-
 			if($('#search-form').length == 0) {
 				return true;
 			} else {
@@ -165,7 +167,6 @@
 		});
 
 		$('#images').on('ajax:success', '.pagination li', function(event, data) {
-				console.log('hi');
 				console.log(data);
 				$('#images').html(data);
 				$('html, body').animate({ scrollTop: 0}, 800);

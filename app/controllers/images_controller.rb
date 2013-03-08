@@ -42,6 +42,8 @@ class ImagesController < ApplicationController
 		# @images = Image.by_most_recent.all
 		@images = Image.by_most_recent.page(params[:page]).per(18)
 
+		@dropdown = !!params[:dropdown]
+	
 		if request.xhr?				# if it's an AJAX request
 			render '_search', :layout => false
 		else

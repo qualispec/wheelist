@@ -73,8 +73,10 @@
 
 		$('#image_url').blur(function() {
 
-			$('.image-preview').html('<img src="' + $(this).val() + '">')
-			console.log('blur occurred');
+			if($(this).val().match(/\.(jpg|JPG|png|PNG|bmp|BMP)$/)) {
+				$('.image-preview').html('<img src="' + $(this).val() + '">')
+				console.log('blur occurred');
+			}
 		});
 
 
