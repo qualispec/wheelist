@@ -28,7 +28,7 @@ html, body {
 }
 
 .url.control-label {
-	width: 70px;	
+	width: 70px;
 }
 
 .url .controls {
@@ -36,7 +36,7 @@ html, body {
 }
 
 .string.control-label {
-	width: 70px;	
+	width: 70px;
 }
 
 .string .controls {
@@ -94,12 +94,12 @@ html, body {
 }
 
 #image_wheel_tags_attributes_0_wheel_offset_id {
-	width: 200px;	
-}	
+	width: 200px;
+}
 
 #image_wheel_tags_attributes_0_wheel_color_id {
-	width: 200px;	
-}	
+	width: 200px;
+}
 
 #image_url {
 	width: 600px;
@@ -335,17 +335,26 @@ html, body {
 	margin-bottom: 20px;
 }
 
+/* Navbar */
 
 .navbar {
-	background: image-url("escheresque_ste.png");
+	// background: image-url("escheresque_ste.png");
 }
 
 .navbar-inner {
-	background: image-url("escheresque_ste.png");
+	// background: image-url("escheresque_ste.png");
 }
 
-.navbar li:hover {
+nav > ul > li {
+	padding-bottom: 2px;
+}
+
+nav > ul > li:hover {
 	border-bottom: solid 2px red;
+	// border-left: solid 2px red;
+	// border-right: solid 2px red;
+	// padding-bottom: 8px;
+	padding-bottom: 0px;
 }
 
 .image-order-toggler {
@@ -369,10 +378,10 @@ html, body {
 .search-form-wrapper {
 	padding-bottom: 15px;
 	position: fixed;
-	/*background: white;*/
-	background: image-url("escheresque.png");
+	background: white;
+	// background: image-url("escheresque.png");
 	width: 940px;
-	top: 42px;
+	top: 40px;
 	padding-top: 40px;
 	z-index: 10;
 }
@@ -396,23 +405,23 @@ html, body {
 
 
 body {
-	background: image-url("escheresque.png");
+	// background: image-url("escheresque.png");
 /*	padding-top: 60px;*/
 	width: 100%;
 }
 
 .spacer {
 	height: 40px;
-	/*background: white;*/
-	background: image-url("escheresque.png");
-	padding-top: 42px;
+	background: white;
+	// background: image-url("escheresque.png");
+	padding-top: 40px;
 	position: relative;
 	z-index: 1000;
 }
 
 .main {
 	/*background: white;*/
-	background: image-url("escheresque.png");
+	// background: image-url("escheresque.png");
 	min-height: 100%;
 }
 
@@ -420,8 +429,9 @@ body {
 	font-family: 'Playball', cursive;
 	color: #9933cc;
 	float: left;
+	margin-left: 5px;
 	margin-right: 10px;
-	font-size: 2em;
+	font-size: 30px;
 	/*color: white;*/
 	letter-spacing: 1px;
 	padding-top: 7px;

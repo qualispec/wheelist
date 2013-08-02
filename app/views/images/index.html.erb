@@ -1,12 +1,12 @@
 <div class="search-form-wrapper">
 
-	<% search_form_class = 'form-horizontal clearfix' 
+	<% search_form_class = 'form-horizontal clearfix'
 	search_form_class += ' search-form-show' if @dropdown %>
 
-	<%= simple_form_for(@image, :url => search_images_path, 
-															:method => :get, 
-															:remote => true, 
-															:html => { id: 'search-form', 
+	<%= simple_form_for(@image, :url => search_images_path,
+															:method => :get,
+															:remote => true,
+															:html => { id: 'search-form',
 																				 class: search_form_class }) do |f| %>
 
 		<%= f.simple_fields_for :car_tags do |car_tag| %>
@@ -14,14 +14,14 @@
 																			- #{car_mfg.id}", car_mfg.id] } %>
 
 			<%#= f.input :car_mfg_id, collection: car_mfgs.sort, input_html:
-			{ name: "anything" } %> 
+			{ name: "anything" } %>
 
-			<%# car_models = CarModel.all.map { |car_model| ["#{car_model.year} 
+			<%# car_models = CarModel.all.map { |car_model| ["#{car_model.year}
 											#{car_model.model} - #{car_model.id}", car_model.id] } %>
 
 			<div class="car-inputs">
 				<% car_models = CarModel.all
-																.select { |car_model| 
+																.select { |car_model|
 																	CarTag.where(:car_model_id => car_model.id).exists? }
 																.map { |car_model| ["#{car_model.year} #{car_model.model}
 																				 - #{car_model.id}", car_model.id] } %>
@@ -34,7 +34,7 @@
 				<% car_colors = CarColor.all
 																.select { |car_color|
 																	CarTag.where(:car_color_id => car_color.id).exists? }
-																.map { |car_color| ["#{car_color.paint_name} - 
+																.map { |car_color| ["#{car_color.paint_name} -
 																	#{car_color.color } - #{car_color.id}", car_color.id] } %>
 
 				<%= car_tag.input :car_color_id, collection: car_colors.sort %>
@@ -45,11 +45,11 @@
 
 			<div class="wheel-inputs model-size">
 				<% wheel_models = WheelModel.all
-																		.select { |wheel_model| 
+																		.select { |wheel_model|
 																			WheelTag.where(:wheel_model_id => wheel_model.id).exists? }
-																		.map { |wheel_model| ["#{wheel_model.model} 
+																		.map { |wheel_model| ["#{wheel_model.model}
 																			- #{wheel_model.id}", wheel_model.id] } %>
-				
+
 				<%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
 
 				<% wheel_sizes = WheelSize.all
@@ -64,8 +64,8 @@
 			<div class="wheel-inputs offset-color">
 				<% wheel_offsets = WheelOffset.all
 																			.select { |wheel_offset|
-																				WheelTag.where(:wheel_offset_id => wheel_offset.id).exists? }	
-																			.map { |wheel_offset|  
+																				WheelTag.where(:wheel_offset_id => wheel_offset.id).exists? }
+																			.map { |wheel_offset|
 						["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
 
 				<%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
@@ -73,7 +73,7 @@
 				<% wheel_colors = WheelColor.all
 																		.select { |wheel_color|
 																			WheelTag.where(:wheel_color_id => wheel_color.id).exists? }
-																		.map { |wheel_color| 
+																		.map { |wheel_color|
 					["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
 						wheel_color.id] } %>
 
@@ -85,8 +85,8 @@
 	<% end %>
 
 	<div class="image-order-toggler">
-		<a href="#" id="most-popular" class="btn">Sort by Most Popular</a>
-		<a href="#" id="most-recent" class="btn btn-pressed">Sort by Most Recent</a>
+		<a href="#" id="most-popular" class="btn">Popular</a>
+		<a href="#" id="most-recent" class="btn btn-pressed">Latest</a>
 	</div>
 </div>
 
@@ -133,7 +133,7 @@
 			} else {
 				$(this).closest('.like-button').addClass('liked');
 			};
-	
+
 			$(this).closest('.image-tile').find('.like-count').html(data + ' likes');
 		});
 
@@ -172,7 +172,7 @@
 				$('#search-form').slideUp('slow');
 				$('#images').animate({ 'margin-top': '40px' });
 				// $('#search-form').removeClass('search-form-show');
-				// $('#images').removeClass('dropdown');				
+				// $('#images').removeClass('dropdown');
 			} else {
 				$('#search-form').slideDown('slow');
 				$('#images').animate({ 'margin-top': '140px' });
