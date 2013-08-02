@@ -13,7 +13,7 @@
 
   <div class="image-caption clearfix">
     <%= @image.caption if @image.caption %>
-  </div> 
+  </div>
 
   <div class="wheel-box clearfix">
     <b>Wheels</b>
@@ -56,12 +56,12 @@
   <div id="edit-tag-btn" class="btn btn-primary btn-small">Edit Tags</div>
 
   <div>
-    <%= simple_form_for(@image, :url => image_path(@image), 
+    <%= simple_form_for(@image, :url => image_path(@image),
                                 :method => :put,
-                                :remote => true, 
-                                :html => { id: "edit-form", 
+                                :remote => true,
+                                :html => { id: "edit-form",
                                            class: "form-horizontal" } ) do |f| %>
-      
+
       <%#= f.input :caption, label: "Caption" %>
 
       <%= f.simple_fields_for :car_tags do |car_tag| %>
@@ -82,22 +82,22 @@
 
       <%= f.simple_fields_for :wheel_tags do |wheel_tag| %>
 
-        <% wheel_models = WheelModel.all.map { |wheel_model| 
+        <% wheel_models = WheelModel.all.map { |wheel_model|
             ["#{wheel_model.model} - #{wheel_model.id}", wheel_model.id] } %>
 
         <%= wheel_tag.input :wheel_model_id, collection: wheel_models.sort %>
 
-        <% wheel_sizes = WheelSize.all.map { |wheel_size| 
+        <% wheel_sizes = WheelSize.all.map { |wheel_size|
             ["#{wheel_size.diameter} x #{wheel_size.width} - #{wheel_size.id}", wheel_size.id] } %>
 
         <%= wheel_tag.input :wheel_size_id, collection: wheel_sizes.sort %>
 
-        <% wheel_offsets = WheelOffset.all.map { |wheel_offset| 
+        <% wheel_offsets = WheelOffset.all.map { |wheel_offset|
             ["#{wheel_offset.offset} - #{wheel_offset.id}", wheel_offset.id] } %>
 
         <%= wheel_tag.input :wheel_offset_id, collection: wheel_offsets.sort %>
 
-        <% wheel_colors = WheelColor.all.map { |wheel_color| 
+        <% wheel_colors = WheelColor.all.map { |wheel_color|
             ["#{wheel_color.paint_name} - #{wheel_color.color} - #{wheel_color.id}",
               wheel_color.id] } %>
 
@@ -117,12 +117,12 @@
     <%= render @comments %>
   </div>
 
-    <%= simple_form_for(@comment, :remote => true, html: { id: 'comment-form', 
+    <%= simple_form_for(@comment, :remote => true, html: { id: 'comment-form',
       class: 'form-horizontal' }) do |f| %>
       <%= f.hidden_field :image_id, :value => @image.id %>
-      
-      <%= f.input :body, 
-                  :label => false, 
+
+      <%= f.input :body,
+                  :label => false,
                   :input_html => { placeholder: "Add a comment...."} %>
 
       <%= f.submit "Add comment", class: "btn btn-primary btn-small" %>

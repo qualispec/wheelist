@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-user_1 = User.create!(user_name: 'qualispec', email: 'vhchang@gmail.com', 
+user_1 = User.create!(user_name: 'qualispec', email: 'vhchang@gmail.com',
 						 					password: 'asdfasdf', password_confirmation: 'asdfasdf')
 
 #-------------------------------------------------------------------------------
@@ -89,77 +89,77 @@ car_model_2 = car_mfg_1.car_models.create!(year: 1997, model: 'Miata NA8')
 car_model_3 = car_mfg_1.car_models.create!(year: 2005, model: 'Miata NB')
 car_model_4 = car_mfg_1.car_models.create!(year: 2006, model: 'Miata NC')
 
-black_cherry_mica = 		CarColor.create!(paint_name: 'Black Cherry Mica',	 
+black_cherry_mica = 		CarColor.create!(paint_name: 'Black Cherry Mica',
 																			    		color: 'Black')
 black_mica = 						CarColor.create!(paint_name: 'Black Mica',
 																	 						color: 'Black')
-blazing_yellow_mica =   CarColor.create!(paint_name: 'Blazing Yellow Mica', 
+blazing_yellow_mica =   CarColor.create!(paint_name: 'Blazing Yellow Mica',
 																							color: 'Yellow')
-brilliant_black =		    CarColor.create!(paint_name: 'Brilliant Black', 		 
+brilliant_black =		    CarColor.create!(paint_name: 'Brilliant Black',
 																							color: 'Black')
-british_racing_green =  CarColor.create!(paint_name: 'British Racing Green', 
+british_racing_green =  CarColor.create!(paint_name: 'British Racing Green',
 																							color: 'Green')
-classic_red = 				  CarColor.create!(paint_name: 'Classic Red', 			 	 
+classic_red = 				  CarColor.create!(paint_name: 'Classic Red',
 																							color: 'Red')
 crystal_blue_metallic = CarColor.create!(paint_name: 'Crystal Blue Metallic',
 																							color: 'Blue')
-crystal_white  = 				CarColor.create!(paint_name: 'Crystal White', 			 
+crystal_white  = 				CarColor.create!(paint_name: 'Crystal White',
 																							color: 'White')
-emerald_mica  = 				CarColor.create!(paint_name: 'Emerald Mica',	 			 
+emerald_mica  = 				CarColor.create!(paint_name: 'Emerald Mica',
 																							color: 'Green')
 evolution_orange_mica = CarColor.create!(paint_name: 'Evolution Orange Mica',
 																							color: 'Orange')
-garnet_red_mica = 			CarColor.create!(paint_name: 'Garnet Red Mica',			 
+garnet_red_mica = 			CarColor.create!(paint_name: 'Garnet Red Mica',
 																							color: 'Red')
-highlight_silver_metallic = CarColor.create!(paint_name: 'Highlight Silver Metallic', 
+highlight_silver_metallic = CarColor.create!(paint_name: 'Highlight Silver Metallic',
 																							color: 'Silver')
-laguna_blue_metallic =  CarColor.create!(paint_name: 'Laguna Blue Metallic', 
+laguna_blue_metallic =  CarColor.create!(paint_name: 'Laguna Blue Metallic',
 																							color: 'Blue')
-laser_blue_mica = 			CarColor.create!(paint_name: 'Laser Blue Mica',		 
+laser_blue_mica = 			CarColor.create!(paint_name: 'Laser Blue Mica',
 																							color: 'Blue')
-lava_orange = 					CarColor.create!(paint_name: 'Lava Orange',				 
+lava_orange = 					CarColor.create!(paint_name: 'Lava Orange',
 																							color: 'Orange')
-mahogany_mica = 				CarColor.create!(paint_name: 'Mahogany Mica', 			 
+mahogany_mica = 				CarColor.create!(paint_name: 'Mahogany Mica',
 																							color: 'Red')
-marina_green_mica =			CarColor.create!(paint_name: 'Marina Green Mica',				 
+marina_green_mica =			CarColor.create!(paint_name: 'Marina Green Mica',
 																							color: 'Green')
-mariner_blue = 					CarColor.create!(paint_name: 'Mariner Blue', 			 
+mariner_blue = 					CarColor.create!(paint_name: 'Mariner Blue',
 																							color: 'Blue' )
-merlot_mica = 					CarColor.create!(paint_name: 'Merlot Mica',				 
+merlot_mica = 					CarColor.create!(paint_name: 'Merlot Mica',
 																							color: 'Red')
-midnight_blue_mica = 		CarColor.create!(paint_name: 'Midnight Blue Mica',	 
+midnight_blue_mica = 		CarColor.create!(paint_name: 'Midnight Blue Mica',
 																							color: 'Blue')
-montego_blue_mica = 		CarColor.create!(paint_name: 'Montego Blue Mica',	 
+montego_blue_mica = 		CarColor.create!(paint_name: 'Montego Blue Mica',
 																							color: 'Blue')
-nordic_green_mica = 		CarColor.create!(paint_name: 'Nordic Green Mica',	 
+nordic_green_mica = 		CarColor.create!(paint_name: 'Nordic Green Mica',
 																							color: 'Green')
-pure_white = 						CarColor.create!(paint_name: 'Pure White',		 			 
+pure_white = 						CarColor.create!(paint_name: 'Pure White',
 																							color: 'White')
-razor_blue_metallic = 	CarColor.create!(paint_name: 'Razor Blue Metallic', 
+razor_blue_metallic = 	CarColor.create!(paint_name: 'Razor Blue Metallic',
 																							color: 'Blue')
-sapphire_blue = 				CarColor.create!(paint_name: 'Sapphire Blue', 			 
+sapphire_blue = 				CarColor.create!(paint_name: 'Sapphire Blue',
 																							color: 'Blue')
 silver_stone_metallic = CarColor.create!(paint_name: 'Silver Stone Metallic',
 																							color: 'Silver')
-splash_green_mica = 		CarColor.create!(paint_name: 'Splash Green Mica',	 
+splash_green_mica = 		CarColor.create!(paint_name: 'Splash Green Mica',
 																							color: 'Green')
-starlight_mica = 				CarColor.create!(paint_name: 'Starlight Mica',			 
+starlight_mica = 				CarColor.create!(paint_name: 'Starlight Mica',
 																							color: 'Green')
-strato_blue_mica = 			CarColor.create!(paint_name: 'Strato Blue Mica',		 
+strato_blue_mica = 			CarColor.create!(paint_name: 'Strato Blue Mica',
 																							color: 'Blue')
-sunburst_yellow = 			CarColor.create!(paint_name: 'Sunburst Yellow',		 
+sunburst_yellow = 			CarColor.create!(paint_name: 'Sunburst Yellow',
 																							color: 'Yellow')
-sunlight_silver_metallic = CarColor.create!(paint_name: 'Sunlight Silver Metallic', 
+sunlight_silver_metallic = CarColor.create!(paint_name: 'Sunlight Silver Metallic',
 																							color: 'Silver')
-titanium_gray_metallic = CarColor.create!(paint_name: 'Titanium Gray Metallic', 
+titanium_gray_metallic = CarColor.create!(paint_name: 'Titanium Gray Metallic',
 																							color: 'Gray')
-twilight_blue_mica = 		CarColor.create!(paint_name: 'Twilight Blue Mica',			 
+twilight_blue_mica = 		CarColor.create!(paint_name: 'Twilight Blue Mica',
 																							color: 'Blue' )
-velocity_red = 					CarColor.create!(paint_name: 'Velocity Red',				 
+velocity_red = 					CarColor.create!(paint_name: 'Velocity Red',
 																							color: 'Red')
-vivid_yellow = 					CarColor.create!(paint_name: 'Vivid Yellow',				 
+vivid_yellow = 					CarColor.create!(paint_name: 'Vivid Yellow',
 																							color: 'Yellow')
-white = 								CarColor.create!(paint_name: 'White',							 
+white = 								CarColor.create!(paint_name: 'White',
 																							color: 'White' )
 
 
@@ -170,16 +170,16 @@ white = 								CarColor.create!(paint_name: 'White',
 miata_na6_colors = [brilliant_black, british_racing_green, classic_red, crystal_white,
 									  mariner_blue, silver_stone_metallic, sunburst_yellow]
 
-miata_na8_colors = [brilliant_black, classic_red, laguna_blue_metallic, marina_green_mica, 
+miata_na8_colors = [brilliant_black, classic_red, laguna_blue_metallic, marina_green_mica,
 										merlot_mica, montego_blue_mica, starlight_mica, twilight_blue_mica, white]
 
-miata_nb_colors = [black_cherry_mica, black_mica, blazing_yellow_mica, brilliant_black, 
-									 british_racing_green, classic_red, crystal_blue_metallic, emerald_mica, 
-									 evolution_orange_mica, garnet_red_mica, highlight_silver_metallic, 
+miata_nb_colors = [black_cherry_mica, black_mica, blazing_yellow_mica, brilliant_black,
+									 british_racing_green, classic_red, crystal_blue_metallic, emerald_mica,
+									 evolution_orange_mica, garnet_red_mica, highlight_silver_metallic,
 									 laser_blue_mica, lava_orange, mahogany_mica, midnight_blue_mica,
-									 nordic_green_mica, pure_white, razor_blue_metallic, sapphire_blue, 
-									 splash_green_mica, strato_blue_mica, sunlight_silver_metallic, 
-									 titanium_gray_metallic, twilight_blue_mica, velocity_red, 
+									 nordic_green_mica, pure_white, razor_blue_metallic, sapphire_blue,
+									 splash_green_mica, strato_blue_mica, sunlight_silver_metallic,
+									 titanium_gray_metallic, twilight_blue_mica, velocity_red,
 									 vivid_yellow, white]
 
 miata_na6_colors.each do |color|
@@ -199,7 +199,7 @@ image_1 = Image.create!(url: 'http://i643.photobucket.com/albums/uu157/DoubleO86
 												user_id: user_1.id)
 
 car_tag_1 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_1.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -213,22 +213,24 @@ wheel_tag_1 = WheelTag.create!(
 
 # 15x8, matte_bronze
 
-image_2 = Image.create!(url: 'http://i643.photobucket.com/albums/uu157/DoubleO86/6UL8pmdriver.jpg',
-												caption: 'test caption',
-												user_id: user_1.id)
+# image_2 is dead
 
-car_tag_2 = CarTag.create!(
-									:user_id => user_1.id, 
-									:image_id => image_2.id,
-									:car_model_id => car_model_3.id,
-	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
+# image_2 = Image.create!(url: 'http://i643.photobucket.com/albums/uu157/DoubleO86/6UL8pmdriver.jpg',
+# 												caption: 'test caption',
+# 												user_id: user_1.id)
 
-wheel_tag_2 = WheelTag.create!(
-									:image_id => image_2.id,
-									:wheel_model_id => wheel_6ul.id,
-									:wheel_size_id => size_15x8.id,
-									:wheel_offset_id => offset_36.id,
-									:wheel_color_id => wheel_matte_bronze.id)
+# car_tag_2 = CarTag.create!(
+# 									:user_id => user_1.id,
+# 									:image_id => image_2.id,
+# 									:car_model_id => car_model_3.id,
+# 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
+
+# wheel_tag_2 = WheelTag.create!(
+# 									:image_id => image_2.id,
+# 									:wheel_model_id => wheel_6ul.id,
+# 									:wheel_size_id => size_15x8.id,
+# 									:wheel_offset_id => offset_36.id,
+# 									:wheel_color_id => wheel_matte_bronze.id)
 
 # 15x8, matte_bronze
 
@@ -237,7 +239,7 @@ image_3 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181277-2/P6
 												user_id: user_1.id)
 
 car_tag_3 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_3.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -256,7 +258,7 @@ image_4 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181280-2/P6
 												user_id: user_1.id)
 
 car_tag_4 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_4.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -275,7 +277,7 @@ image_5 = Image.create!(url: 'http://i442.photobucket.com/albums/qq148/jaymoneil
 												user_id: user_1.id)
 
 car_tag_5 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_5.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -293,7 +295,7 @@ image_6 = Image.create!(url: 'http://i442.photobucket.com/albums/qq148/jaymoneil
 												user_id: user_1.id)
 
 car_tag_6 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_6.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -312,7 +314,7 @@ image_7 = Image.create!(url: 'http://i442.photobucket.com/albums/qq148/jaymoneil
 												user_id: user_1.id)
 
 car_tag_7 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_7.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -331,7 +333,7 @@ image_8 = Image.create!(url: 'http://www.949racing.com/genii/15x8_6ULN_KW_1.jpg'
 												user_id: user_1.id)
 
 car_tag_8 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_8.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -350,7 +352,7 @@ image_9 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181289-2/P6
 												user_id: user_1.id)
 
 car_tag_9 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_9.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -369,7 +371,7 @@ image_10 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181301-2/P
 												user_id: user_1.id)
 
 car_tag_10 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_10.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -388,7 +390,7 @@ image_11 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181310-2/P
 												user_id: user_1.id)
 
 car_tag_11 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_11.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -407,7 +409,7 @@ image_12 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181307-2/P
 												user_id: user_1.id)
 
 car_tag_12 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_12.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -426,7 +428,7 @@ image_13 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181304-2/P
 												user_id: user_1.id)
 
 car_tag_13 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_13.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -445,7 +447,7 @@ image_14 = Image.create!(url: 'http://i81.photobucket.com/albums/j221/cococarbin
 												user_id: user_1.id)
 
 car_tag_14 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_14.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
@@ -464,7 +466,7 @@ image_15 = Image.create!(url: 'http://i81.photobucket.com/albums/j221/cococarbin
 												user_id: user_1.id)
 
 car_tag_15 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_15.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
@@ -483,7 +485,7 @@ image_16 = Image.create!(url: 'http://chows.smugmug.com/photos/574274739_rQcC6-L
 												user_id: user_1.id)
 
 car_tag_16 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_16.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
@@ -502,7 +504,7 @@ image_17 = Image.create!(url: 'http://chows.smugmug.com/photos/574238810_G9Pjx-L
 												user_id: user_1.id)
 
 car_tag_17 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_17.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
@@ -521,7 +523,7 @@ image_18 = Image.create!(url: 'http://chows.smugmug.com/photos/574240232_jeWEj-L
 												user_id: user_1.id)
 
 car_tag_18 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_18.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
@@ -540,7 +542,7 @@ image_19 = Image.create!(url: 'http://i514.photobucket.com/albums/t346/84im2008/
 												user_id: user_1.id)
 
 car_tag_19 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_19.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
@@ -559,7 +561,7 @@ image_20 = Image.create!(url: 'http://i514.photobucket.com/albums/t346/84im2008/
 												user_id: user_1.id)
 
 car_tag_20 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_20.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
@@ -578,7 +580,7 @@ image_21 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/6ul_2.
 												user_id: user_1.id)
 
 car_tag_21 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_21.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -597,7 +599,7 @@ image_22 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/6ul_3.
 												user_id: user_1.id)
 
 car_tag_22 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_22.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -616,7 +618,7 @@ image_23 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/6ul_1.
 												user_id: user_1.id)
 
 car_tag_23 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_23.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -635,7 +637,7 @@ image_24 = Image.create!(url: 'http://i131.photobucket.com/albums/p288/ej815/2.j
 												user_id: user_1.id)
 
 car_tag_24 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_24.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -654,7 +656,7 @@ image_25 = Image.create!(url: 'http://lh6.ggpht.com/_Isc5Ihv4tU0/Smpr8JurXaI/AAA
 												user_id: user_1.id)
 
 car_tag_25 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_25.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
@@ -673,7 +675,7 @@ image_26 = Image.create!(url: 'http://farm3.static.flickr.com/2448/3758845237_ee
 												user_id: user_1.id)
 
 car_tag_26 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_26.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -687,22 +689,24 @@ wheel_tag_26 = WheelTag.create!(
 
 # 15x8, black
 
-image_27 = Image.create!(url: 'http://farm3.static.flickr.com/2646/3759643438_06c880dc25_o.jpg',
-												caption: 'test caption',
-												user_id: user_1.id)
+# image_27 is dead
 
-car_tag_27 = CarTag.create!(
-									:user_id => user_1.id, 
-									:image_id => image_27.id,
-									:car_model_id => car_model_2.id,
-	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+# image_27 = Image.create!(url: 'http://farm3.static.flickr.com/2646/3759643438_06c880dc25_o.jpg',
+# 												caption: 'test caption',
+# 												user_id: user_1.id)
 
-wheel_tag_27 = WheelTag.create!(
-									:image_id => image_27.id,
-									:wheel_model_id => wheel_6ul.id,
-									:wheel_size_id => size_15x8.id,
-									:wheel_offset_id => offset_36.id,
-									:wheel_color_id => wheel_black.id)
+# car_tag_27 = CarTag.create!(
+# 									:user_id => user_1.id,
+# 									:image_id => image_27.id,
+# 									:car_model_id => car_model_2.id,
+# 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
+
+# wheel_tag_27 = WheelTag.create!(
+# 									:image_id => image_27.id,
+# 									:wheel_model_id => wheel_6ul.id,
+# 									:wheel_size_id => size_15x8.id,
+# 									:wheel_offset_id => offset_36.id,
+# 									:wheel_color_id => wheel_black.id)
 
 # 15x8, black
 
@@ -711,7 +715,7 @@ image_28 = Image.create!(url: 'http://farm3.static.flickr.com/2647/3759642414_43
 												user_id: user_1.id)
 
 car_tag_28 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_28.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -730,7 +734,7 @@ image_29 = Image.create!(url: 'http://farm4.static.flickr.com/3439/3758846729_ce
 												user_id: user_1.id)
 
 car_tag_29 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_29.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -749,7 +753,7 @@ image_30 = Image.create!(url: 'http://chows.smugmug.com/photos/606574126_yDoNC-X
 												user_id: user_1.id)
 
 car_tag_30 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_30.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
@@ -768,7 +772,7 @@ image_31 = Image.create!(url: 'http://i27.photobucket.com/albums/c194/Nis01/Digi
 												user_id: user_1.id)
 
 car_tag_31 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_31.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'White').first.id)
@@ -787,7 +791,7 @@ image_32 = Image.create!(url: 'http://www.travisharrell.com/gallery/d/181622-2/P
 												user_id: user_1.id)
 
 car_tag_32 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_32.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
@@ -806,7 +810,7 @@ image_33 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/p
 												user_id: user_1.id)
 
 car_tag_33 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_33.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
@@ -825,7 +829,7 @@ image_34 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/p
 												user_id: user_1.id)
 
 car_tag_34 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_34.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
@@ -844,7 +848,7 @@ image_35 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/p
 												user_id: user_1.id)
 
 car_tag_35 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_35.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
@@ -863,7 +867,7 @@ image_36 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/p
 												user_id: user_1.id)
 
 car_tag_36 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_36.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
@@ -882,7 +886,7 @@ image_37 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/p
 												user_id: user_1.id)
 
 car_tag_37 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_37.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
@@ -901,7 +905,7 @@ image_38 = Image.create!(url: 'http://i165.photobucket.com/albums/u49/mx5racer/p
 												user_id: user_1.id)
 
 car_tag_38 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_38.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
@@ -920,7 +924,7 @@ image_39 = Image.create!(url: 'http://chows.smugmug.com/photos/576363591_xZmc9-M
 												user_id: user_1.id)
 
 car_tag_39 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_39.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
@@ -939,7 +943,7 @@ image_40 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_40 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_40.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -958,7 +962,7 @@ image_41 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_41 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_41.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -977,7 +981,7 @@ image_42 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_42 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_42.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -996,7 +1000,7 @@ image_43 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_43 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_43.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1015,7 +1019,7 @@ image_44 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_44 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_44.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1034,7 +1038,7 @@ image_45 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_45 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_45.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1053,7 +1057,7 @@ image_46 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_46 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_46.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1072,7 +1076,7 @@ image_47 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_47 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_47.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1091,7 +1095,7 @@ image_48 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_48 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_48.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1110,7 +1114,7 @@ image_49 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_49 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_49.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1129,7 +1133,7 @@ image_50 = Image.create!(url: 'http://i698.photobucket.com/albums/vv343/markpciv
 												user_id: user_1.id)
 
 car_tag_50 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_50.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1148,7 +1152,7 @@ image_51 = Image.create!(url: 'http://i43.tinypic.com/2pzzjv4.jpg',
 												user_id: user_1.id)
 
 car_tag_51 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_51.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
@@ -1167,7 +1171,7 @@ image_52 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied
 												user_id: user_1.id)
 
 car_tag_52 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_52.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -1186,7 +1190,7 @@ image_53 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied
 												user_id: user_1.id)
 
 car_tag_53 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_53.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -1205,7 +1209,7 @@ image_54 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied
 												user_id: user_1.id)
 
 car_tag_54 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_54.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -1224,7 +1228,7 @@ image_55 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied
 												user_id: user_1.id)
 
 car_tag_55 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_55.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -1243,7 +1247,7 @@ image_56 = Image.create!(url: 'http://i112.photobucket.com/albums/n178/zekdafied
 												user_id: user_1.id)
 
 car_tag_56 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_56.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -1262,7 +1266,7 @@ image_57 = Image.create!(url: 'http://farm3.static.flickr.com/2720/4305473494_9d
 												user_id: user_1.id)
 
 car_tag_57 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_57.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1281,7 +1285,7 @@ image_58 = Image.create!(url: 'http://farm3.static.flickr.com/2749/4305474196_a1
 												user_id: user_1.id)
 
 car_tag_58 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_58.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1300,7 +1304,7 @@ image_59 = Image.create!(url: 'http://farm3.static.flickr.com/2708/4304732117_7f
 												user_id: user_1.id)
 
 car_tag_59 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_59.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1319,7 +1323,7 @@ image_60 = Image.create!(url: 'http://farm5.static.flickr.com/4016/4305475532_22
 												user_id: user_1.id)
 
 car_tag_60 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_60.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1338,7 +1342,7 @@ image_61 = Image.create!(url: 'http://farm5.static.flickr.com/4065/4304733371_10
 												user_id: user_1.id)
 
 car_tag_61 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_61.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1357,7 +1361,7 @@ image_62 = Image.create!(url: 'http://i47.tinypic.com/i3733l.jpg',
 												user_id: user_1.id)
 
 car_tag_62 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_62.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
@@ -1376,7 +1380,7 @@ image_63 = Image.create!(url: 'http://www.steveandlee.com/galleries/miata/sidesk
 												user_id: user_1.id)
 
 car_tag_63 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_63.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -1395,7 +1399,7 @@ image_64 = Image.create!(url: 'http://photos-d.ak.fbcdn.net/hphotos-ak-ash1/hs43
 												user_id: user_1.id)
 
 car_tag_64 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_64.id,
 									:car_model_id => car_model_3.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
@@ -1414,7 +1418,7 @@ image_65 = Image.create!(url: 'http://i640.photobucket.com/albums/uu128/97mmiata
 												user_id: user_1.id)
 
 car_tag_65 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_65.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
@@ -1433,7 +1437,7 @@ image_66 = Image.create!(url: 'http://i640.photobucket.com/albums/uu128/97mmiata
 												user_id: user_1.id)
 
 car_tag_66 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_66.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
@@ -1452,7 +1456,7 @@ image_67 = Image.create!(url: 'http://farm3.static.flickr.com/2775/4518592608_8b
 												user_id: user_1.id)
 
 car_tag_67 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_67.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1471,7 +1475,7 @@ image_68 = Image.create!(url: 'http://farm4.static.flickr.com/3141/3165211747_12
 												user_id: user_1.id)
 
 car_tag_68 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_68.id,
 									:car_model_id => car_model_1.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
@@ -1490,7 +1494,7 @@ image_69 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/200
 												user_id: user_1.id)
 
 car_tag_69 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_69.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
@@ -1509,7 +1513,7 @@ image_70 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/200
 												user_id: user_1.id)
 
 car_tag_70 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_70.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
@@ -1528,7 +1532,7 @@ image_71 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/201
 												user_id: user_1.id)
 
 car_tag_71 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_71.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
@@ -1547,7 +1551,7 @@ image_72 = Image.create!(url: 'http://revlimiter.net/blog/wp-content/uploads/201
 												user_id: user_1.id)
 
 car_tag_72 = CarTag.create!(
-									:user_id => user_1.id, 
+									:user_id => user_1.id,
 									:image_id => image_72.id,
 									:car_model_id => car_model_2.id,
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)

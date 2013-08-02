@@ -1,5 +1,5 @@
 <div class="image-tile">
-  <div class="image-frame 
+  <div class="image-frame
     <% if image.car_tags.first.car_color %>
       <%= image.car_tags.first.car_color.color.downcase %>
     <% else %>
@@ -10,7 +10,7 @@
   	</div>
   </div>
 
-	<div class="image-footer 
+	<div class="image-footer
     <% if image.wheel_tags.first.wheel_color %>
       <%= image.wheel_tags.first.wheel_color.color.downcase %>
     <% else %>
@@ -49,7 +49,7 @@
 
   <div class="like-box">
     <span class="like-button <%= "liked" if current_user && image.image_likes.where(:user_id => current_user.id).present? %>">
-      
+
       <% if current_user %>
         <%= link_to raw("<i class=\"icon-wrench icon-white\"></i> Unlike"),
           unlike_image_path(image),
@@ -70,10 +70,10 @@
           new_user_session_path,
           id: "like_image_#{image.id}",
           class: 'btn btn-primary btn-small' %>
-      <% end %>          
+      <% end %>
     </span>
 
-    <%= link_to("Comment", image_path(image), 
+    <%= link_to("Comment", image_path(image),
                 class: "comment-button btn btn-primary btn-small") %>
   </div>
 </div>
