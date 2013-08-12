@@ -205,6 +205,7 @@ car_tag_1 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_1 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_1.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -245,6 +246,7 @@ car_tag_3 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_3 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_3.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -264,6 +266,7 @@ car_tag_4 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_4 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_4.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -283,6 +286,7 @@ car_tag_5 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_5 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_5.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -301,6 +305,7 @@ car_tag_6 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_6 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_6.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -320,6 +325,7 @@ car_tag_7 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_7 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_7.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -339,6 +345,7 @@ car_tag_8 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_8 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_8.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -358,6 +365,7 @@ car_tag_9 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_9 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_9.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -377,6 +385,7 @@ car_tag_10 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_10 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_10.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -396,6 +405,7 @@ car_tag_11 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_11 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_11.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -415,6 +425,7 @@ car_tag_12 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_12 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_12.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -434,6 +445,7 @@ car_tag_13 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_13 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_13.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -453,6 +465,7 @@ car_tag_14 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
 wheel_tag_14 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_14.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -472,6 +485,7 @@ car_tag_15 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
 wheel_tag_15 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_15.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -491,6 +505,7 @@ car_tag_16 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
 
 wheel_tag_16 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_16.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -510,6 +525,7 @@ car_tag_17 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
 
 wheel_tag_17 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_17.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -529,6 +545,7 @@ car_tag_18 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
 
 wheel_tag_18 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_18.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -548,6 +565,7 @@ car_tag_19 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
 
 wheel_tag_19 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_19.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -567,6 +585,7 @@ car_tag_20 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
 
 wheel_tag_20 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_20.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -586,6 +605,7 @@ car_tag_21 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_21 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_21.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -605,6 +625,7 @@ car_tag_22 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_22 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_22.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -624,6 +645,7 @@ car_tag_23 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_23 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_23.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -643,6 +665,7 @@ car_tag_24 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_24 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_24.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -662,6 +685,7 @@ car_tag_25 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
 wheel_tag_25 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_25.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -681,6 +705,7 @@ car_tag_26 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_26 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_26.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -721,6 +746,7 @@ car_tag_28 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_28 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_28.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -740,6 +766,7 @@ car_tag_29 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_29 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_29.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -759,6 +786,7 @@ car_tag_30 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
 
 wheel_tag_30 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_30.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -778,6 +806,7 @@ car_tag_31 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'White').first.id)
 
 wheel_tag_31 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_31.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -797,6 +826,7 @@ car_tag_32 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Emerald Mica').first.id)
 
 wheel_tag_32 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_32.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -816,6 +846,7 @@ car_tag_33 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
 
 wheel_tag_33 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_33.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -835,6 +866,7 @@ car_tag_34 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
 
 wheel_tag_34 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_34.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -854,6 +886,7 @@ car_tag_35 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
 
 wheel_tag_35 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_35.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -873,6 +906,7 @@ car_tag_36 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
 
 wheel_tag_36 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_36.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -892,6 +926,7 @@ car_tag_37 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
 
 wheel_tag_37 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_37.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -911,6 +946,7 @@ car_tag_38 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Silver Stone Metallic').first.id)
 
 wheel_tag_38 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_38.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -930,6 +966,7 @@ car_tag_39 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Sapphire Blue').first.id)
 
 wheel_tag_39 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_39.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -949,6 +986,7 @@ car_tag_40 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_40 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_40.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -968,6 +1006,7 @@ car_tag_41 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_41 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_41.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -987,6 +1026,7 @@ car_tag_42 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_42 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_42.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1006,6 +1046,7 @@ car_tag_43 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_43 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_43.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1025,6 +1066,7 @@ car_tag_44 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_44 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_44.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1044,6 +1086,7 @@ car_tag_45 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_45 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_45.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1063,6 +1106,7 @@ car_tag_46 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_46 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_46.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1082,6 +1126,7 @@ car_tag_47 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_47 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_47.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1101,6 +1146,7 @@ car_tag_48 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_48 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_48.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1120,6 +1166,7 @@ car_tag_49 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_49 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_49.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1139,6 +1186,7 @@ car_tag_50 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_50 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_50.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1158,6 +1206,7 @@ car_tag_51 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
 
 wheel_tag_51 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_51.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1177,6 +1226,7 @@ car_tag_52 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_52 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_52.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1196,6 +1246,7 @@ car_tag_53 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_53 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_53.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1215,6 +1266,7 @@ car_tag_54 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_54 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_54.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1234,6 +1286,7 @@ car_tag_55 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_55 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_55.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1253,6 +1306,7 @@ car_tag_56 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_56 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_56.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1272,6 +1326,7 @@ car_tag_57 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_57 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_57.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -1291,6 +1346,7 @@ car_tag_58 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_58 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_58.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -1310,6 +1366,7 @@ car_tag_59 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_59 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_59.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -1329,6 +1386,7 @@ car_tag_60 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_60 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_60.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -1348,6 +1406,7 @@ car_tag_61 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_61 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_61.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -1367,6 +1426,7 @@ car_tag_62 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Marina Green Mica').first.id)
 
 wheel_tag_62 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_62.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1386,6 +1446,7 @@ car_tag_63 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_63 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_63.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x9.id,
@@ -1405,6 +1466,7 @@ car_tag_64 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Brilliant Black').first.id)
 
 wheel_tag_64 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_64.id,
 									:wheel_model_id => wheel_6ul.id,
 									:wheel_size_id => size_15x8.id,
@@ -1424,6 +1486,7 @@ car_tag_65 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
 
 wheel_tag_65 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_65.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_14x7.id,
@@ -1443,6 +1506,7 @@ car_tag_66 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'British Racing Green').first.id)
 
 wheel_tag_66 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_66.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_14x7.id,
@@ -1462,6 +1526,7 @@ car_tag_67 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_67 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_67.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_15x7.id,
@@ -1481,6 +1546,7 @@ car_tag_68 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Classic Red').first.id)
 
 wheel_tag_68 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_68.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_15x7.id,
@@ -1500,6 +1566,7 @@ car_tag_69 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
 wheel_tag_69 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_69.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_14x7.id,
@@ -1519,6 +1586,7 @@ car_tag_70 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
 wheel_tag_70 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_70.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_14x7.id,
@@ -1538,6 +1606,7 @@ car_tag_71 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
 wheel_tag_71 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_71.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_14x7.id,
@@ -1557,6 +1626,7 @@ car_tag_72 = CarTag.create!(
 	 								:car_color_id => CarColor.where(paint_name: 'Montego Blue Mica').first.id)
 
 wheel_tag_72 = WheelTag.create!(
+									:user_id => user_1.id,
 									:image_id => image_72.id,
 									:wheel_model_id => wheel_rpf1.id,
 									:wheel_size_id => size_14x7.id,

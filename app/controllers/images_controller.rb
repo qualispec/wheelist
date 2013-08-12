@@ -5,6 +5,8 @@ class ImagesController < ApplicationController
 		@image.user_id = current_user.id
 
 		if @image.save
+			@image.car_tags.first.update_attributes(user_id: current_user.id)
+			@image.wheel_tags.first.update_attributes(user_id: current_user.id)
 			redirect_to images_path
 			# redirect_to current_user
 			# redirect_to user_images_path(current_user)
@@ -44,7 +46,7 @@ class ImagesController < ApplicationController
 		@images = Image.by_most_recent.page(params[:page]).per(18)
 
 		@dropdown = !!params[:dropdown]
-	
+
 		if request.xhr?				# if it's an AJAX request
 			render '_search', :layout => false
 		else
@@ -65,11 +67,11 @@ class ImagesController < ApplicationController
 		car_params   = params[:image][:car_tags_attributes]["0"]
 		wheel_params = params[:image][:wheel_tags_attributes]["0"]
 
-	  @image.car_tags.build(car_model_id: car_params[:car_model_id], 
+	  @image.car_tags.build(car_model_id: car_params[:car_model_id],
 	  											car_color_id: car_params[:car_color_id])
-	  @image.wheel_tags.build(wheel_model_id: wheel_params[:wheel_model_id], 
+	  @image.wheel_tags.build(wheel_model_id: wheel_params[:wheel_model_id],
 	  												wheel_size_id: wheel_params[:wheel_size_id],
-	  												wheel_offset_id: wheel_params[:wheel_offset_id], 
+	  												wheel_offset_id: wheel_params[:wheel_offset_id],
 	  												wheel_color_id: wheel_params[:wheel_color_id])
 
 		@images = Image

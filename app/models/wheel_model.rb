@@ -5,7 +5,7 @@ class WheelModel < ActiveRecord::Base
 
   has_many :wheel_size_options
   has_many :wheel_sizes, through: :wheel_size_options
-	 
+
   has_many :wheel_offset_options
   has_many :wheel_offsets, through: :wheel_offset_options
 

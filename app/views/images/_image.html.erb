@@ -1,14 +1,15 @@
 <div class="image-tile">
-  <div class="image-frame
-    <% if image.car_tags.first.car_color %>
-      <%= image.car_tags.first.car_color.color.downcase %>
-    <% else %>
-      <%= "white" %>
-    <% end %> ">
+  <!-- <div class="image-frame -->
+    <%# if image.car_tags.first.car_color %>
+      <%#= image.car_tags.first.car_color.color.downcase %>
+    <%# else %>
+      <%#= "white" %>
+    <!-- <%# end %> "> -->
     <div class="image-thumbnail">
   		<%= link_to(image_tag(image.url), image_path(image)) %>
+<!--       <div class="test"></div> -->
   	</div>
-  </div>
+  <!-- </div> -->
 
 	<div class="image-footer
     <% if image.wheel_tags.first.wheel_color %>
@@ -44,7 +45,6 @@
         <%= image.comments_count %> comments
       </div>
     </div>
-
 	</div>
 
   <div class="like-box">

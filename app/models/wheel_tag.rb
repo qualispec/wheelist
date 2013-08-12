@@ -1,6 +1,8 @@
 class WheelTag < ActiveRecord::Base
-  attr_accessible :user_id, :image_id, :wheel_model_id, :wheel_size_id, 
+  attr_accessible :user_id, :image_id, :wheel_model_id, :wheel_size_id,
   								:wheel_offset_id, :wheel_color_id
+
+  validates :image_id, presence: true
 
   belongs_to :user
   belongs_to :image
