@@ -4,6 +4,13 @@
   			<%= @image.car_tags.first.car_model.model if @image.car_tags.first.car_model %><br>
   			<%= @image.car_tags.first.car_color.paint_name if @image.car_tags.first.car_color %><br>
   	</h3>
+    <p>
+      posted
+      <% unless @image.user.nil? %>
+        by <strong><%= @image.user.user_name %></strong>
+      <% end %>
+      <em><%= time_ago_in_words(@image.created_at) %> ago</em>
+    </p>
 </div>
 
 <div class="image-modification-container">
