@@ -1,33 +1,19 @@
 <div class="image-tile">
-  <!-- <div class="image-frame -->
-    <%# if image.car_tags.first.car_color %>
-      <%#= image.car_tags.first.car_color.color.downcase %>
-    <%# else %>
-      <%#= "white" %>
-    <!-- <%# end %> "> -->
-    <div class="image-thumbnail">
-  		<%= link_to(image_tag(image.url), image_path(image)) %>
-<!--       <div class="test"></div> -->
-  	</div>
-  <!-- </div> -->
+  <div class="image-thumbnail">
+  	<%= link_to(image_tag(image.url), image_path(image)) %>
+  </div>
 
-	<div class="image-footer
-    <% if image.wheel_tags.first.wheel_color %>
-      <%= image.wheel_tags.first.wheel_color.color.downcase %>
-    <% else %>
-      <%= "white" %>
-    <% end %> ">
-
+	<div class="image-footer">
 		<div class="image-description">
       <h3>
-				  <%= image.car_tags.first.car_model.car_mfg.mfg if image.car_tags.first.car_model %>
-				  <%= image.car_tags.first.car_model.model if image.car_tags.first.car_model %>
-          on
-          <%= image.wheel_tags.first.wheel_model.wheel_mfg.mfg if image.wheel_tags.first.wheel_model %>
-          <%= image.wheel_tags.first.wheel_model.model if image.wheel_tags.first.wheel_model %>
+			  <%= image.car_tags.first.car_model.car_mfg.mfg if image.car_tags.first.car_model %>
+			  <%= image.car_tags.first.car_model.model if image.car_tags.first.car_model %>
+        on
+        <%= image.wheel_tags.first.wheel_model.wheel_mfg.mfg if image.wheel_tags.first.wheel_model %>
+        <%= image.wheel_tags.first.wheel_model.model if image.wheel_tags.first.wheel_model %>
       </h3>
 		</div>
-		<div class="image-post-info">
+		<div class="image-wheel-detail">
       <table>
         <thead>
           <tr>
@@ -63,18 +49,9 @@
         </tbody>
       </table>
     </div>
-<!--     <div class="image-like-comment">
-      <div class="like-count">
-        <%= image.image_likes_count %> likes
-      </div>
-
-      <div class="comment-count">
-        <%= image.comments_count %>
-      </div>
-    </div> -->
 	</div>
 
-  <div class="like-box">
+  <div class="user-name-like-comment">
     <span class="user-name">
       <% unless image.user.nil? %>
         <%= image.user.user_name %>
@@ -87,37 +64,36 @@
         <%= link_to raw("<i class=\"icon-star icon-white\"></i>"),
           unlike_image_path(image),
           id: "unlike_image_#{image.id}",
-          class: 'unlike-btn',
+          class: "unlike-btn",
           remote: true,
           method: :delete %>
 
         <%= link_to raw("<i class=\"icon-star-empty icon-white\"></i>"),
           like_image_path(image),
           id: "like_image_#{image.id}",
-          class: 'like-btn',
+          class: "like-btn",
           remote: true,
           method: :post %>
 
       <% else %>
-        <%= link_to raw("<i class=\"icon-wrench icon-white\"></i> Like"),
+        <%= link_to raw("<i class=\"icon-star-empty icon-white\"></i>"),
           new_user_session_path,
           id: "like_image_#{image.id}",
-          class: 'btn btn-primary btn-small' %>
+          class: "like-btn" %>
       <% end %>
     </span>
 
     <%= link_to raw("<i class=\"icon-comment icon-white\"></i>"),
-                image_path(image),
-                class: "comment-button" %>
+      image_path(image),
+      class: "comment-button" %>
 
-    <div class="image-like-comment">
-      <div class="like-count">
+    <span class="image-like-comment-counts">
+      <span class="like-count">
         <%= image.image_likes_count %>
-      </div>
-
-      <div class="comment-count">
+      </span>
+      <span class="comment-count">
         <%= image.comments_count %>
-      </div>
-    </div>
+      </span>
+    </span>
   </div>
 </div>

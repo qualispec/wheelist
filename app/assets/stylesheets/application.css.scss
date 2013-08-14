@@ -15,8 +15,8 @@
 @import "bootstrap";
 @import "bootstrap-styles";
 
-$bronze:							#cd7f32;
-$silver:							#c0c0c0;
+// $bronze:							#cd7f32;
+// $silver:							#c0c0c0;
 
 html, body {
 	height: 100%;
@@ -109,7 +109,7 @@ html, body {
 	width: 600px;
 }
 
-/* Sign up page */
+/* Sign up page --------------------------------------------------------------*/
 
 .signup-form label.string.control-label {
 	width: 160px;
@@ -119,183 +119,15 @@ html, body {
 	margin-left: 180px;
 }
 
-
 .form-wrapper {
 	/*background: $grayLight;*/
-}
-
-/* Image Tile */
-
-.image-tile {
-	background: white;
-	width: 300px;
-	height: 300px;
-	float: left;
-	margin: 5px;
-	/*padding: 1px;*/
-	border: solid 1px $grayLighter;
-	overflow: hidden;
-	position: relative;
-
-/*	-moz-box-shadow: -1px 1px 2px #000;
-	-webkit-box-shadow: -0.5px 0.5px 1px #000;
-	box-shadow: -1px 1px 2px #000;*/
-}
-
-.image-tile:hover {
-
-	// .image-frame.black {
-	// 	background: rgba(0, 0, 0, 0.7);
-	// }
-
-	// .image-frame.blue {
-	// 	background: rgba(0, 0, 255, 0.7);
-	// }
-
-	// .image-frame.gray {
-	// 	background: rgba(190, 190, 190, 0.7);
-	// }
-
-	// .image-frame.green {
-	// 	background: rgba(0, 255, 0, 0.7);
-	// }
-
-	// .image-frame.orange {
-	// 	background: rgba(255, 165, 0, 0.7);
-	// }
-
-	// .image-frame.red {
-	// 	background: rgba(255, 0, 0, 0.7);
-	// }
-
-	// .image-frame.silver {
-	// 	background: rgba(192, 192, 192, 0.7);
-	// }
-
-	// .image-frame.white {
-	// 	background: rgba(255, 255, 255, 0.7);
-	// }
-
-	// .image-footer.black {
-	// 	background: rgba(0, 0, 0, 0.7);
-	// 	/*z-index: 1;*/
-
-	// 	h3 {
-	// 		color: white;
-	// 	}
-	// 	p {
-	// 		color: white;
-	// 	}
-	// 	.like-count {
-	// 		color: white;
-	// 	}
-	// 	.comment-count {
-	// 		color: white;
-	// 	}
-	// }
-
-	// .image-footer.bronze {
-	// 	background: rgba(205, 127, 50, 0.7);
-	// }
-
-	// .image-footer.chrome {
-	// 	background: rgba(192, 192, 192, 0.7);
-	// }
-
-	// .image-footer.silver {
-	// 	background: rgba(192, 192, 192, 0.7);
-	// }
-
-	// .image-footer.white {
-	// 	background: rgba(255, 255, 255, 0.7);
-	// }
-
-}
-
-// .image-frame {
-// 	width: auto;
-// 	height: 235px;
-// }
-
-.image-footer {
-	text-align: left;
-	width: auto;
-	height: 95px;
-	position: relative;
-	z-index: 1;
-}
-
-.image-post-info {
-	th {
-		width: 64px;
-		line-height: 15px;
-		text-align: center;
-		color: $grayLight;
-		border-right: solid 1px $grayLighter;
-		font-size: 12px;
-		font-weight: normal;
-	}
-	td {
-		width: 64px;
-		line-height: 35px;
-		text-align: center;
-		font-size: 30px;
-		border-right: solid 1px $grayLighter;
-	}
-
-}
-
-.image-thumbnail {
-	width: 300px;
-	height: 225px;
-	overflow: hidden;
-	// margin: auto;
-}
-
-.image-thumbnail img {
-	width: auto;
-	max-width: inherit;
-	height: 100%;
-	display: block;
-	// margin: auto;
-}
-
-.image-tile h3 {
-	margin: 0;
-	padding-left: 5px;
-	font-size: 14px;
-	line-height: 24px;
-	border-bottom: solid 1px $grayLighter;
-}
-
-.user-name {
-	padding-left: 5px;
-}
-
-.image-like-comment {
-	height: 25px;
-	vertical-align: middle;
-}
-
-.image-like-comment .like-count {
-	position: absolute;
-	text-align: right;
-	bottom: 0px;
-	right: 70px;
-}
-
-.image-like-comment .comment-count {
-	position: absolute;
-	text-align: right;
-	bottom: 0px;
-	right: 20px;
 }
 
 #edit-form {
 	display: none;
 }
 
-/* Image Show page */
+/* Image Show page -----------------------------------------------------------*/
 
 .car-tags {
 	padding: 10px;
@@ -313,8 +145,7 @@ html, body {
 	width: 200px;
 }
 
-
-/* Comments */
+/* Comments ------------------------------------------------------------------*/
 
 .comments-container {
 	width: 210px;
@@ -341,14 +172,13 @@ html, body {
 	height: 50px;
 }
 
-
 .image-preview {
 	width: 50%;
 	margin: auto;
 	margin-bottom: 20px;
 }
 
-/* Navbar */
+/* Navbar --------------------------------------------------------------------*/
 
 .navbar {
 	// background: image-url("escheresque_ste.png");
@@ -416,7 +246,6 @@ nav > ul > li:hover {
 	display: block;
 }
 
-
 body {
 	// background: image-url("escheresque.png");
 /*	padding-top: 60px;*/
@@ -450,71 +279,16 @@ body {
 	padding-top: 7px;
 	/*font-weight: bold;*/
 	line-height: 1;
+	&:hover {
+		text-decoration: none;
+	}
 }
-
-#logo:hover {
-	text-decoration: none;
-}
-
 
 h2 {
 	clear:both;
 }
 
-/* Like Button */
-
-.like-button {
-/*	padding: 2px 15px;*/
-	position: absolute;
-	right: 80px;
-}
-
-.like-button .like-btn {
-	display: inline-block;
-	// width: 51px;
-}
-
-.like-button.liked .like-btn {
-	display: none;
-}
-
-.like-button .unlike-btn {
-	display: none;
-}
-
-.like-button.liked .unlike-btn {
-	display: inline-block;
-}
-
-.like-box {
-	width: 100%;
-	height: 20px;
-	color: white;
-	text-align: left;
-	position: absolute;
-	bottom: -20px;
-	background: rgba(0, 0, 0, 0.5);
-	// background: rgba(255, 255, 255, 0.5);
-	z-index: 1000;
-
-	// transition: bottom 0.5s;
-	// -moz-transition: bottom 0.5s; /* Firefox 4 */
-	// -webkit-transition: bottom 0.5s; /* Safari and Chrome */
-	// -o-transition: bottom 0.5s; /* Opera */
-}
-
-.image-tile:hover {
-	.like-box {
-	bottom: 75px;
-	}
-}
-
-.comment-button {
-	position: absolute;
-	right: 30px;
-}
-
-/* Pagination */
+/* Pagination ----------------------------------------------------------------*/
 
 .pagination {
 	clear: both;
@@ -529,7 +303,7 @@ h2 {
 	right: 10px;
 }
 
-/* Debug and misc */
+/* Debug and misc ------------------------------------------------------------*/
 
 .debug_dump {
 	clear: both;

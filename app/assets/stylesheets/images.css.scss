@@ -1,3 +1,138 @@
 // Place all the styles related to the images controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-styles";
+
+/* Image Tile --------------------------------------------------------------- */
+
+.image-tile {
+  background: white;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 5px;
+  border: solid 1px $grayLighter;
+  overflow: hidden;
+  position: relative;
+  h3 {
+    margin: 0;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    border-bottom: solid 1px $grayLighter;
+  }
+  &:hover {
+    .user-name-like-comment {
+      bottom: 75px;
+    }
+  }
+
+/*  -moz-box-shadow: -1px 1px 2px #000;
+  -webkit-box-shadow: -0.5px 0.5px 1px #000;
+  box-shadow: -1px 1px 2px #000;*/
+}
+
+.image-footer {
+  text-align: left;
+  width: auto;
+  height: 95px;
+  position: relative;
+  z-index: 1;
+}
+
+.image-wheel-detail {
+  th {
+    width: 64px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+    color: $grayLight;
+    border-right: solid 1px $grayLighter;
+  }
+  td {
+    width: 64px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 30px;
+    border-right: solid 1px $grayLighter;
+  }
+}
+
+.image-thumbnail {
+  width: 300px;
+  height: 225px;
+  overflow: hidden;
+  // margin: auto;
+  img {
+    width: auto;
+    max-width: inherit;
+    height: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.user-name {
+  padding-left: 5px;
+}
+
+.image-like-comment-counts {
+  height: 25px;
+  vertical-align: middle;
+  text-align: right;
+  bottom: 0px;
+  .like-count {
+    position: absolute;
+    right: 70px;
+  }
+  .comment-count {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+/* User Name, Like, Comment Box ----------------------------------------------*/
+
+.user-name-like-comment {
+  width: 100%;
+  height: 20px;
+  color: white;
+  text-align: left;
+  position: absolute;
+  bottom: -20px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+
+  // transition: bottom 0.5s;
+  // -moz-transition: bottom 0.5s; /* Firefox 4 */
+  // -webkit-transition: bottom 0.5s; /* Safari and Chrome */
+  // -o-transition: bottom 0.5s; /* Opera */
+}
+
+.like-button {
+  position: absolute;
+  right: 80px;
+  .like-btn {
+    display: inline-block;
+  }
+  .unlike-btn {
+    display: none;
+  }
+}
+
+.like-button.liked .like-btn {
+  display: none;
+}
+
+.like-button.liked .unlike-btn {
+  display: inline-block;
+}
+
+.comment-button {
+  position: absolute;
+  right: 30px;
+}
+
+/* -------------------------------------------------------------------------- */
