@@ -11,8 +11,8 @@
     <% unless @image.wheel_tags.first.wheel_size.nil? %>
       <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_size.diameter %>x<%= @image.wheel_tags.first.wheel_size.width %></div>
     <% end %>
-    
-    <% unless @image.wheel_tags.first.wheel_offset.nil? %> 
+
+    <% unless @image.wheel_tags.first.wheel_offset.nil? %>
       <div class="wheel-tag"><%= @image.wheel_tags.first.wheel_offset.offset %></div>
     <% end %>
 

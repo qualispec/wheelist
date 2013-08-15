@@ -4,9 +4,9 @@
 			<%= link_to "wheellist", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li class="nav-search-btn"><%= link_to "Search", images_path(:dropdown => true) %></li>
+					<li class="nav-search-btn"><%= link_to "Filter", images_path(:dropdown => true) %></li>
 					<% if user_signed_in? %>
-						<li><%= link_to "Post", new_image_path %>
+						<li><%= link_to "Tag", new_image_path %>
 
 						<li id="fat-menu" class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
