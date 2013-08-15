@@ -1,9 +1,9 @@
 <div class="search-form-wrapper">
 
 	<% search_form_class = 'form-horizontal clearfix'
-	search_form_class += ' search-form-show' if @dropdown %>
+	search_form_class += ' search-form-show' %>
 
-	<%= simple_form_for(@image, :url => search_images_path,
+	<%= simple_form_for(@image, :url => images_path,
 															:method => :get,
 															:remote => true,
 															:html => { id: 'search-form',
@@ -91,13 +91,8 @@
 </div>
 
 
-<div id="images" class="<%= 'dropdown' if @dropdown %>">
-	<% unless @images.empty? %>
-		<%= render @images %>
-	<% else %>
-		<h1>Sorry, no matches found.</h1>
-	<% end %>
-	<%= paginate @images, :remote => true %>
+<div id="images" class="dropdown">
+	<%= render 'index' %>
 </div>
 
 
@@ -160,24 +155,23 @@
 			$('#most-popular').removeClass('btn-pressed');
 		});
 
-		$('.nav-search-btn').click(function(event) {
-			if($('#search-form').length == 0) {
-				return true;
-			} else {
-				event.preventDefault();
-			}
+		// $('.nav-search-btn').click(function(event) {
+		// 	if($('#search-form').length == 0) {
+		// 		return true;
+		// 	} else {
+		// 		event.preventDefault();
+		// 	}
 
-			if($('#search-form').is(':visible')) {
-				$('#search-form').slideUp('slow');
-				$('#images').animate({ 'margin-top': '40px' });
-				// $('#search-form').removeClass('search-form-show');
-				// $('#images').removeClass('dropdown');
-			} else {
-				$('#search-form').slideDown('slow');
-				$('#images').animate({ 'margin-top': '140px' });
-			};
-
-		});
+			// if($('#search-form').is(':visible')) {
+			// 	$('#search-form').slideUp('slow');
+			// 	$('#images').animate({ 'margin-top': '40px' });
+			// 	// $('#search-form').removeClass('search-form-show');
+			// 	// $('#images').removeClass('dropdown');
+			// } else {
+			// 	$('#search-form').slideDown('slow');
+			// 	$('#images').animate({ 'margin-top': '140px' });
+			// };
+		// });
 
 		$('#images').on('ajax:success', '.pagination li', function(event, data) {
 				console.log(data);

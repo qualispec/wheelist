@@ -39,58 +39,38 @@ class ImagesController < ApplicationController
 
 	def index
 		@image = Image.new
-		@image.car_tags.build
-		@image.wheel_tags.build
-
-		# @images = Image.by_most_recent.all
-		@images = Image.by_most_recent.page(params[:page]).per(18)
-
-		@dropdown = !!params[:dropdown]
-
-		if request.xhr?				# if it's an AJAX request
-			render '_search', :layout => false
-		else
-			render 'index'
-		end
-	end
-
-	def show
-		@image = Image.find(params[:id])
-
-		@comment = Comment.new
-		@comments = Comment.where(:image_id => params[:id]).all
-	end
-
-	def search
-		@image = Image.new
-
-		car_params   = params[:image][:car_tags_attributes]["0"]
-		wheel_params = params[:image][:wheel_tags_attributes]["0"]
-
-	  @image.car_tags.build(car_model_id: car_params[:car_model_id],
-	  											car_color_id: car_params[:car_color_id])
-	  @image.wheel_tags.build(wheel_model_id: wheel_params[:wheel_model_id],
-	  												wheel_size_id: wheel_params[:wheel_size_id],
-	  												wheel_offset_id: wheel_params[:wheel_offset_id],
-	  												wheel_color_id: wheel_params[:wheel_color_id])
-
 		@images = Image
 
-		car_params.each do |key, value|
-			if value.present?
-				@images = @images.joins(:car_tags)
-												 .where(car_tags: { key => value } )
-												 # .by_most_popular
-			end
-		end
+		if params[:image]		# if there are filter parameters, then filter
+			car_params   = params[:image][:car_tags_attributes]["0"]
+			wheel_params = params[:image][:wheel_tags_attributes]["0"]
 
-		wheel_params.each do |key, value|
-			if value.present?
-				@images = @images.joins(:wheel_tags)
-												 .where(wheel_tags: { key => value} )
-												 # .order('image_likes_count DESC')
-												 # .order('id DESC')
+	  	@image.car_tags.build(car_model_id: car_params[:car_model_id],
+	  												car_color_id: car_params[:car_color_id])
+	  	@image.wheel_tags.build(wheel_model_id: wheel_params[:wheel_model_id],
+		  												wheel_size_id: wheel_params[:wheel_size_id],
+		  												wheel_offset_id: wheel_params[:wheel_offset_id],
+		  												wheel_color_id: wheel_params[:wheel_color_id])
+
+			car_params.each do |key, value|
+				if value.present?
+					@images = @images.joins(:car_tags)
+													 .where(car_tags: { key => value } )
+													 # .by_most_popular
+				end
 			end
+
+			wheel_params.each do |key, value|
+				if value.present?
+					@images = @images.joins(:wheel_tags)
+													 .where(wheel_tags: { key => value} )
+													 # .order('image_likes_count DESC')
+													 # .order('id DESC')
+				end
+			end
+		else	# if no filter parameters, then just return all images
+			@image.car_tags.build
+			@image.wheel_tags.build
 		end
 
 		if params[:most_popular]
@@ -103,10 +83,17 @@ class ImagesController < ApplicationController
 		end
 
 		if request.xhr?				# if it's an AJAX request
-			render '_search', :layout => false
+			render '_index', :layout => false
 		else
 			render 'index'
 		end
+	end
+
+	def show
+		@image = Image.find(params[:id])
+
+		@comment = Comment.new
+		@comments = Comment.where(:image_id => params[:id]).all
 	end
 
 	def like

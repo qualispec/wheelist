@@ -64,19 +64,19 @@ html, body {
 }
 
 .car-inputs {
-	background: $grayLighter;
+	background: white;
 	float: left;
 	width: 33%;
 }
 
 .wheel-inputs.model-size {
-	background: $grayLighter;
+	background: white;
 	float: left;
 	width: 33%;
 }
 
 .wheel-inputs.offset-color {
-	background: $grayLighter;
+	background: white;
 	float: left;
 	width: 33%;
 }
@@ -237,10 +237,10 @@ nav > ul > li:hover {
 	margin-top: 140px;
 }
 
-#search-form {
-	display: none;
-	/*position: fixed;*/
-}
+// #search-form {
+// 	display: none;
+// 	/*position: fixed;*/
+// }
 
 #search-form.search-form-show {
 	display: block;

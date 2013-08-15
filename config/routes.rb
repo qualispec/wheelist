@@ -11,9 +11,9 @@ Wheelist::Application.routes.draw do
   end
 
   resources :images do
-  	collection do
-  		get 'search'
-  	end
+  	# collection do
+  	# 	get 'search'
+  	# end
 
     member do
       post 'like'
